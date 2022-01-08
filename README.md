@@ -19,3 +19,9 @@
 - chitietsanpham.html
 - sitemap.html
 - giohang.html (không ưu tiên)
+
+### CSS
+
+### JS
+
+### IMG
