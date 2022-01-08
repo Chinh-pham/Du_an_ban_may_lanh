@@ -1,10 +1,13 @@
 # HTCNWeb
-**HTCNWeb**
+**HTCNWeb Folders**:
 
-> HTML
-> CSS
-> JS
-> IMG
+> **HTML** (8 files)
+>
+> **CSS**
+>
+> **JS**
+>
+> **IMG**
 
 **HTML**
 
@@ -15,4 +18,4 @@
 - danhsachsanpham.html
 - chitietsanpham.html
 - sitemap.html
-- gioihang.html
+- giohang.html (không ưu tiên)
