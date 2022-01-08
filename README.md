@@ -11,7 +11,7 @@
 - trangchu.html
 - dangky.html
 - dangnhap.html
-- gioithieu_website_thanhvienthuchien.html
+- gioithieu_website_thanhvien.html
 - danhsachsanpham.html
 - chitietsanpham.html
 - sitemap.html
