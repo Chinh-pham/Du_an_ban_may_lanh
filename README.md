@@ -1,5 +1,5 @@
 # HTCNWeb
-**HTCNWeb Folders**:
+## HTCNWeb Folders:
 
 > **HTML** (8 files)
 >
@@ -9,7 +9,7 @@
 >
 > **IMG**
 
-**HTML**
+### HTML
 
 - trangchu.html
 - dangky.html
