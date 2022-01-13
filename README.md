@@ -1,15 +1,15 @@
 # HTCNWeb
 ## HTCNWeb Folders:
 
-> **HTML** (8 files)
+> **[HTML](#html)** (8 files)
 >
-> **CSS**
+> **[CSS](#css)**
 >
-> **JS**
+> **[JS](#js)**
 >
-> **IMG**
+> **[IMG](#img)**
 
-### HTML
+### HTML <a name="html"></a>
 
 - trangchu.html
 - dangky.html
@@ -20,8 +20,8 @@
 - sitemap.html
 - giohang.html (không ưu tiên)
 
-### CSS
+### CSS <a name="css"></a>
 
-### JS
+### JS <a name="js"></a>
 
-### IMG
+### IMG <a name="img"></a>
