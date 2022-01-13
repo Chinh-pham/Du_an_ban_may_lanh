@@ -10,15 +10,18 @@
 > **[IMG](#img)**
 
 ### HTML <a name="html"></a>
+***Phần 1***
+1. trangchu.html
+2. danhsachsanpham.html
+3. chitietsanpham.html
+4. giohang.html
 
-- trangchu.html
-- dangky.html
-- dangnhap.html
-- gioithieu_website_thanhvien.html
-- danhsachsanpham.html
-- chitietsanpham.html
-- sitemap.html
-- giohang.html (không ưu tiên)
+***Phần 2***
+
+5. dangky.html
+6. dangnhap.html
+7. gioithieu_website_thanhvien.html
+8. sitemap.html
 
 ### CSS <a name="css"></a>
 
