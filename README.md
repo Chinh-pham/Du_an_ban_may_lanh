@@ -28,3 +28,13 @@
 ### JS <a name="js"></a>
 
 ### IMG <a name="img"></a>
+- [bocongthuong.png](https://doananhtingithub40102.github.io/HTCNWeb/img/bocongthuong.png)
+- [iconMaylanh.ico](https://doananhtingithub40102.github.io/HTCNWeb/img/iconMaylanh.ico)
+- [logoMaylanh.png](https://doananhtingithub40102.github.io/HTCNWeb/img/logoMaylanh.png)
+- [daikinInverter1HP.png](https://doananhtingithub40102.github.io/HTCNWeb/img/daikinInverter1HP.png)
+- [daikinInverter1.5HP.png](https://doananhtingithub40102.github.io/HTCNWeb/img/daikinInverter1.5HP.png)
+- [lgInverter1HP.png](https://doananhtingithub40102.github.io/HTCNWeb/img/lgInverter1HP.png)
+- [panasonicInverter1HP.png](https://doananhtingithub40102.github.io/HTCNWeb/img/panasonicInverter1HP.png)
+- [samsungInverter1HP.png](https://doananhtingithub40102.github.io/HTCNWeb/img/samsungInverter1HP.png)
+- [sharpInverter1HP.png](https://doananhtingithub40102.github.io/HTCNWeb/img/sharpInverter1HP.png)
+- [toshibaInverter1HP.png](https://doananhtingithub40102.github.io/HTCNWeb/img/toshibaInverter1HP.png)
