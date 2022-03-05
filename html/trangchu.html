@@ -7,179 +7,184 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trang chủ - CleanAir mang lại "không khí trong lành" cho gia đình Việt</title>
     <link rel="shortcut icon" href="../img/iconMaylanh.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css">
     <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
+        main{
+            border-top: 1px solid #706e6e;
+            border-bottom: 1px solid #706e6e;
+            width: 100%;
+            margin: 50px 0;
         }
-        
-        img {
-            max-height: 100%;
-            max-width: 100%;
+        main>div{
+            margin: 60px 15%;
+        }
+        main>div div:first-child, main>div div:last-child{
+            margin-bottom: 30px;
         }
     </style>
 </head>
 
 <body>
-    <header style="border: 1px solid black; width: 100%; height: 50px;">
-        <div style="margin: 0 15%; height: 100%;">
-            <a href="" style="text-decoration: none; color: black;">
+    <header>
+        <div>
+            <a id="logo" href="trangchu.html">
                 <img src="../img/logoMaylanh.png" width="30" height="30" alt="logo Máy lạnh">
-                <h2 style="display: inline-block;position: relative;top: -6px;font-weight: 400;font-style: italic;">CleanAir</h2>
+                <h2>CleanAir</h2>
             </a>
-            <form action="" style="display: inline-block;position: relative; top: -10px;margin-left: 100px;">
-                <input type="text" placeholder="Nhập sản phẩm bạn muốn tìm kiếm ..." style="width: 250px;height: 25px;">
-                <button style="height: 31px;margin-left: -5px;">Tìm kiếm</button>
+            <form id="formSearch" action="">
+                <input type="text" placeholder="Nhập sản phẩm bạn muốn tìm kiếm ...">
+                <button>Tìm kiếm</button>
             </form>
-            <div style="display: inline-block; float: right;position: relative;top: 15px;">
-                <a style="text-decoration: none;margin:0 20px;" href="giohang.html">
-                    <div style="display: inline-block;height: 40px;border: 2px solid #0DCAF0;position: relative;top: -12px;padding: 0 15px;">
-                        <span style="position: relative;top: 15px;">Giỏ hàng</span>
+            <div id="headerRight">
+                <a id="gioHang" href="giohang.html">
+                    <div>
+                        <span>Giỏ hàng</span>
                     </div>
                 </a>
-                <a style="text-decoration: none;margin:0 20px;" href="dangky.html">Đăng ký</a>
-                <a style="text-decoration: none;margin:0 20px;" href="dangnhap.html">Đăng nhập</a>
+                <a id="dangKy" href="dangky.html">Đăng ký</a>
+                <a id="dangNhap" href="dangnhap.html">Đăng nhập</a>
             </div>
         </div>
     </header>
-    <nav style="border: 1px solid black; width: 100%; height: 50px;background-color:lightblue;">
-        <div style="margin: 0 15%; height: 100%;padding-top: 15px;">
-            <a style="text-decoration: none;color: black;font-size: 20px;margin-right: 60px;" href="">Trang chủ</a>
-            <a style="text-decoration: none;color: black;font-size: 20px;margin-right: 60px;" href="danhsachsanpham.html">Danh sách sản phẩm</a>
-            <a style="text-decoration: none;color: black;font-size: 20px;margin-right: 60px;" href="gioithieu_website_thanhvien.html">Giới thiệu website</a>
-            <a style="text-decoration: none;color: black;font-size: 20px;margin-right: 60px;" href="sitemap.html">Site map</a>
-            <a style="text-decoration: none;color: black;font-size: 20px;margin-right: 60px;" href="">Liên hệ</a>
-            <a style="text-decoration: none;color: black;font-size: 20px;" href="">Khuyến mãi</a>
+    <nav>
+        <div style="">
+            <a href="trangchu.html">Trang chủ</a>
+            <a href="danhsachsanpham.html">Danh sách sản phẩm</a>
+            <a href="gioithieu_website_thanhvien.html">Giới thiệu website</a>
+            <a href="sitemap.html">Site map</a>
+            <a href="#">Liên hệ</a>
+            <a id="khuyenMai" href="#">Khuyến mãi</a>
         </div>
     </nav>
-    <main style="border-top: 1px solid #706e6e;border-bottom: 1px solid #706e6e;width: 100%; margin: 50px 0;">
-        <div style="margin: 60px 15%;">
-            <div style="margin-bottom: 30px;">
-                <a href="chitietsanpham.html" style="text-decoration: none;">
-                    <div style="border: 1px solid #d1cccc;width: 250px;height: 258px;display: inline-block;">
-                        <div style="text-align: center;padding-top: 30px;height: 75px;"><img src="../img/panasonicInverter1HP.png" alt=""></div>
-                        <h3 style="color: black;padding-left: 10px;font-weight: lighter;height: 43px;">Panasonic Inverter 1 HP CU/CS-PU9WKH-8M</h3>
-                        <div style="color: black;padding-left: 10px;font-weight: bold;">10.590.000<sup>đ</sup></div>
-                        <div style="border: 1px solid black;margin-top: 20px;padding: 15px;text-align: center;background-color: #DDDDDD;">
-                            <span style="font-weight: bold;color: #0A7EC3;">THÊM VÀO GIỎ HÀNG</span>
+    <main>
+        <div>
+            <div>
+                <a class="product" href="chitietsanpham.html">
+                    <div>
+                        <div class="productImg"><img src="../img/panasonicInverter1HP.png" alt=""></div>
+                        <h3 class="productTen">Panasonic Inverter 1 HP CU/CS-PU9WKH-8M</h3>
+                        <div class="productGia">10.590.000<sup>đ</sup></div>
+                        <div class="productThemGioHang">
+                            <span>THÊM VÀO GIỎ HÀNG</span>
                         </div>
                     </div>
                 </a>
-                <a href="chitietsanpham.html" style="text-decoration: none;">
-                    <div style="border: 1px solid #d1cccc;width: 250px;height: 258px;display: inline-block;">
-                        <div style="text-align: center;padding-top: 30px;height: 75px;"><img src="../img/panasonicInverter1HP.png" alt=""></div>
-                        <h3 style="color: black;padding-left: 10px;font-weight: lighter;height: 43px;">Panasonic Inverter 1.5 HP CU/CS-PU12WKH-8M</h3>
-                        <div style="color: black;padding-left: 10px;font-weight: bold;">12.890.000<sup>đ</sup></div>
-                        <div style="border: 1px solid black;margin-top: 20px;padding: 15px;text-align: center;background-color: #DDDDDD;">
-                            <span style="font-weight: bold;color: #0A7EC3;">THÊM VÀO GIỎ HÀNG</span>
+                <a class="product" href="chitietsanpham.html">
+                    <div>
+                        <div class="productImg"><img src="../img/panasonicInverter1.5HP.png" alt=""></div>
+                        <h3 class="productTen">Panasonic Inverter 1.5 HP CU/CS-PU12WKH-8M</h3>
+                        <div class="productGia">12.890.000<sup>đ</sup></div>
+                        <div class="productThemGioHang">
+                            <span>THÊM VÀO GIỎ HÀNG</span>
                         </div>
                     </div>
                 </a>
-                <a href="chitietsanpham.html" style="text-decoration: none;">
-                    <div style="border: 1px solid #d1cccc;width: 250px;height: 258px;display: inline-block;">
-                        <div style="text-align: center;padding-top: 30px;height: 75px;"><img src="../img/daikinInverter1HP.png" alt=""></div>
-                        <h3 style="color: black;padding-left: 10px;font-weight: lighter;height: 43px;">Daikin Inverter 1 HP FTKA25VMVMV</h3>
-                        <div style="color: black;padding-left: 10px;font-weight: bold;">10.590.000<sup>đ</sup></div>
-                        <div style="border: 1px solid black;margin-top: 20px;padding: 15px;text-align: center;background-color: #DDDDDD;">
-                            <span style="font-weight: bold;color: #0A7EC3;">THÊM VÀO GIỎ HÀNG</span>
+                <a class="product" href="chitietsanpham.html">
+                    <div>
+                        <div class="productImg"><img src="../img/daikinInverter1HP.png" alt=""></div>
+                        <h3 class="productTen">Daikin Inverter 1 HP FTKA25VMVMV</h3>
+                        <div class="productGia">10.590.000<sup>đ</sup></div>
+                        <div class="productThemGioHang">
+                            <span>THÊM VÀO GIỎ HÀNG</span>
                         </div>
                     </div>
                 </a>
-                <a href="chitietsanpham.html" style="text-decoration: none;">
-                    <div style="border: 1px solid #d1cccc;width: 250px;height: 258px;display: inline-block;">
-                        <div style="text-align: center;padding-top: 30px;height: 75px;"><img src="../img/daikinInverter1.5HP.png" alt=""></div>
-                        <h3 style="color: black;padding-left: 10px;font-weight: lighter;height: 43px;">Daikin Inverter 1.5 HP FTKA35VMVMV</h3>
-                        <div style="color: black;padding-left: 10px;font-weight: bold;">12.990.000<sup>đ</sup></div>
-                        <div style="border: 1px solid black;margin-top: 20px;padding: 15px;text-align: center;background-color: #DDDDDD;">
-                            <span style="font-weight: bold;color: #0A7EC3;">THÊM VÀO GIỎ HÀNG</span>
+                <a class="product" href="chitietsanpham.html">
+                    <div>
+                        <div class="productImg"><img src="../img/daikinInverter1.5HP.png" alt=""></div>
+                        <h3 class="productTen">Daikin Inverter 1.5 HP FTKA35VMVMV</h3>
+                        <div class="productGia">12.990.000<sup>đ</sup></div>
+                        <div class="productThemGioHang">
+                            <span>THÊM VÀO GIỎ HÀNG</span>
                         </div>
                     </div>
                 </a>
             </div>
-            <div style="margin-bottom: 30px;">
-                <a href="chitietsanpham.html" style="text-decoration: none;">
-                    <div style="border: 1px solid #d1cccc;width: 250px;height: 258px;display: inline-block;">
-                        <div style="text-align: center;padding-top: 30px;height: 75px;"><img src="../img/sharpInverter1HP.png" alt=""></div>
-                        <h3 style="color: black;padding-left: 10px;font-weight: lighter;height: 43px;">Sharp Inverter 1 HP AH-X9XEW</h3>
-                        <div style="color: black;padding-left: 10px;font-weight: bold;">8.990.000<sup>đ</sup></div>
-                        <div style="border: 1px solid black;margin-top: 20px;padding: 15px;text-align: center;background-color: #DDDDDD;">
-                            <span style="font-weight: bold;color: #0A7EC3;">THÊM VÀO GIỎ HÀNG</span>
+            <div>
+                <a class="product" href="chitietsanpham.html">
+                    <div>
+                        <div class="productImg"><img src="../img/sharpInverter1HP.png" alt=""></div>
+                        <h3 class="productTen">Sharp Inverter 1 HP AH-X9XEW</h3>
+                        <div class="productGia">8.990.000<sup>đ</sup></div>
+                        <div class="productThemGioHang">
+                            <span>THÊM VÀO GIỎ HÀNG</span>
                         </div>
                     </div>
                 </a>
-                <a href="chitietsanpham.html" style="text-decoration: none;">
-                    <div style="border: 1px solid #d1cccc;width: 250px;height: 258px;display: inline-block;">
-                        <div style="text-align: center;padding-top: 30px;height: 75px;"><img src="../img/lgInverter1HP.png" alt=""></div>
-                        <h3 style="color: black;padding-left: 10px;font-weight: lighter;height: 43px;">LG Inverter 1 HP V10ENH1</h3>
-                        <div style="color: black;padding-left: 10px;font-weight: bold;">9.790.000<sup>đ</sup></div>
-                        <div style="border: 1px solid black;margin-top: 20px;padding: 15px;text-align: center;background-color: #DDDDDD;">
-                            <span style="font-weight: bold;color: #0A7EC3;">THÊM VÀO GIỎ HÀNG</span>
+                <a class="product" href="chitietsanpham.html">
+                    <div>
+                        <div class="productImg"><img src="../img/lgInverter1HP.png" alt=""></div>
+                        <h3 class="productTen">LG Inverter 1 HP V10ENH1</h3>
+                        <div class="productGia">9.790.000<sup>đ</sup></div>
+                        <div class="productThemGioHang">
+                            <span>THÊM VÀO GIỎ HÀNG</span>
                         </div>
                     </div>
                 </a>
-                <a href="chitietsanpham.html" style="text-decoration: none;">
-                    <div style="border: 1px solid #d1cccc;width: 250px;height: 258px;display: inline-block;">
-                        <div style="text-align: center;padding-top: 30px;height: 75px;"><img src="../img/samsungInverter1HP.png" alt=""></div>
-                        <h3 style="color: black;padding-left: 10px;font-weight: lighter;height: 43px;">Samsung Inverter 1 HP AR10TYHYCWKNSV</h3>
-                        <div style="color: black;padding-left: 10px;font-weight: bold;">9.790.000<sup>đ</sup></div>
-                        <div style="border: 1px solid black;margin-top: 20px;padding: 15px;text-align: center;background-color: #DDDDDD;">
-                            <span style="font-weight: bold;color: #0A7EC3;">THÊM VÀO GIỎ HÀNG</span>
+                <a class="product" href="chitietsanpham.html">
+                    <div>
+                        <div class="productImg"><img src="../img/samsungInverter1HP.png" alt=""></div>
+                        <h3 class="productTen">Samsung Inverter 1 HP AR10TYHYCWKNSV</h3>
+                        <div class="productGia">9.790.000<sup>đ</sup></div>
+                        <div class="productThemGioHang">
+                            <span>THÊM VÀO GIỎ HÀNG</span>
                         </div>
                     </div>
                 </a>
-                <a href="chitietsanpham.html" style="text-decoration: none;">
-                    <div style="border: 1px solid #d1cccc;width: 250px;height: 258px;display: inline-block;">
-                        <div style="text-align: center;padding-top: 30px;height: 75px;"><img src="../img/toshibaInverter1HP.png" alt=""></div>
-                        <h3 style="color: black;padding-left: 10px;font-weight: lighter;height: 43px;">Toshiba Inverter 1 HP RAS-H10D2KCVG-V</h3>
-                        <div style="color: black;padding-left: 10px;font-weight: bold;">9.990.000<sup>đ</sup></div>
-                        <div style="border: 1px solid black;margin-top: 20px;padding: 15px;text-align: center;background-color: #DDDDDD;">
-                            <span style="font-weight: bold;color: #0A7EC3;">THÊM VÀO GIỎ HÀNG</span>
+                <a class="product" href="chitietsanpham.html">
+                    <div>
+                        <div class="productImg"><img src="../img/toshibaInverter1HP.png" alt=""></div>
+                        <h3 class="productTen">Toshiba Inverter 1 HP RAS-H10D2KCVG-V</h3>
+                        <div class="productGia">9.990.000<sup>đ</sup></div>
+                        <div class="productThemGioHang">
+                            <span>THÊM VÀO GIỎ HÀNG</span>
                         </div>
                     </div>
                 </a>
             </div>
         </div>
     </main>
-    <footer style="background-color: #303030; width: 100%; height: 280px;">
-        <div style="margin: 0 15%;">
-            <div style="display: inline-block;margin-right: 130px;">
-                <ul style="padding: 25px 0; position: relative; top: -20px;">
-                    <span style="font-size: 16px;color: white;display: block; margin-bottom: 10px;">Thông tin về</span>
-                    <li style="font-family: 'Open Sans,sans-serif';color: rgb(212, 201, 201);margin-bottom: 5px;"><a href="" style="text-decoration: none;color: rgb(212, 201, 201);">Giới thiệu website</a></li>
-                    <li style="font-family: 'Open Sans,sans-serif';color: rgb(212, 201, 201);margin-bottom: 5px;"><a href="" style="text-decoration: none;color: rgb(212, 201, 201);">Các thành viên thực hiện</a></li>
+    <footer>
+        <div>
+            <div>
+                <ul>
+                    <span>Thông tin về</span>
+                    <li><a href="gioithieu_website_thanhvien.html">Giới thiệu website</a></li>
+                    <li><a href="gioithieu_website_thanhvien.html#phan-0">Các thành viên thực hiện</a></li>
                 </ul>
             </div>
-            <div style="display: inline-block;margin-right: 130px;">
-                <ul style="padding: 25px 0;">
-                    <span style="font-size: 16px;color: white;display: block; margin-bottom: 10px;">Dịch vụ khách hàng</span>
-                    <li style="font-family: 'Open Sans,sans-serif';color: rgb(212, 201, 201);margin-bottom: 5px;"><a href="" style="text-decoration: none;color: rgb(212, 201, 201);">Liên hệ chúng tôi</a></li>
-                    <li style="font-family: 'Open Sans,sans-serif';color: rgb(212, 201, 201);margin-bottom: 5px;"><a href="" style="text-decoration: none;color: rgb(212, 201, 201);">Site Map</a></li>
-                    <li style="font-family: 'Open Sans,sans-serif';color: rgb(212, 201, 201);margin-bottom: 5px;"><a href="" style="text-decoration: none;color: rgb(212, 201, 201);">Khuyến mãi</a></li>
+            <div>
+                <ul>
+                    <span>Dịch vụ khách hàng</span>
+                    <li><a href="#">Liên hệ chúng tôi</a></li>
+                    <li><a href="sitemap.html">Site Map</a></li>
+                    <li><a href="#">Khuyến mãi</a></li>
                 </ul>
             </div>
-            <div style="display: inline-block;margin-right: 130px;">
-                <ul style="padding: 25px 0;">
-                    <span style="font-size: 16px;color: white;display: block; margin-bottom: 10px;">Tài khoản</span>
-                    <li style="font-family: 'Open Sans,sans-serif';color: rgb(212, 201, 201);margin-bottom: 5px;"><a href="" style="text-decoration: none;color: rgb(212, 201, 201);">Tài khoản của tôi</a></li>
-                    <li style="font-family: 'Open Sans,sans-serif';color: rgb(212, 201, 201);margin-bottom: 5px;"><a href="" style="text-decoration: none;color: rgb(212, 201, 201);">Đăng nhập</a></li>
-                    <li style="font-family: 'Open Sans,sans-serif';color: rgb(212, 201, 201);margin-bottom: 5px;"><a href="" style="text-decoration: none;color: rgb(212, 201, 201);">Đăng ký</a></li>
+            <div>
+                <ul>
+                    <span>Tài khoản</span>
+                    <li><a href="#">Tài khoản của tôi</a></li>
+                    <li><a href="dangnhap.html">Đăng nhập</a></li>
+                    <li><a href="dangky.html">Đăng ký</a></li>
                 </ul>
             </div>
-            <div style="display: inline-block;">
-                <ul style="padding: 25px 0;">
-                    <span style="font-size: 16px;color: white;display: block; margin-bottom: 10px;">Sản phẩm</span>
-                    <li style="font-family: 'Open Sans,sans-serif';color: rgb(212, 201, 201);margin-bottom: 5px;"><a href="" style="text-decoration: none;color: rgb(212, 201, 201);">Giỏ hàng của tôi</a></li>
-                    <li style="font-family: 'Open Sans,sans-serif';color: rgb(212, 201, 201);margin-bottom: 5px;"><a href="" style="text-decoration: none;color: rgb(212, 201, 201);">Khuyến mãi</a></li>
-                    <li style="font-family: 'Open Sans,sans-serif';color: rgb(212, 201, 201);margin-bottom: 5px;"><a href="" style="text-decoration: none;color: rgb(212, 201, 201);">Kinh nghiệm mua hàng</a></li>
+            <div>
+                <ul>
+                    <span>Sản phẩm</span>
+                    <li><a href="giohang.html">Giỏ hàng của tôi</a></li>
+                    <li><a href="#">Khuyến mãi</a></li>
+                    <li><a href="#">Kinh nghiệm mua hàng</a></li>
                 </ul>
             </div>
-            <div style="border-top: 1px solid rgb(212, 201, 201);margin-left: -20px;">
-                <div style="font-family: 'Open Sans,sans-serif';margin-left: 20px;display: inline-block;">
-                    <p style="margin-bottom: -12px;color: rgb(212, 201, 201);">CleanAir Store© 2022. Công ty thiết bị máy lạnh TPHCM.</p>
-                    <p style="color: rgb(212, 201, 201);">Address: 999 Nguyễn Kiệm, Phường 3, Gò Vấp, Thành phố Hồ Chí Minh, Việt Nam</p>
+            <div>
+                <div>
+                    <p>CleanAir Store© 2022. Công ty thiết bị máy lạnh TPHCM.</p>
+                    <p>Address: 999 Nguyễn Kiệm, Phường 3, Gò Vấp, Thành phố Hồ Chí Minh, Việt Nam</p>
                 </div>
-                <div style="font-family: 'Open Sans,sans-serif';margin-left: 150px;display: inline-block;">
-                    <p style="margin-bottom: -12px;color: rgb(212, 201, 201);position: relative;"><a href="" style="text-decoration: none;color: rgb(212, 201, 201);">Powered By Open Cart</a></p>
-                    <span style="position: relative; top: 15px;">
+                <div>
+                    <p><a href="#">Powered By Open Cart</a></p>
+                    <span>
                         <img src="../img/bocongthuong.png" alt="" width="90">
                     </span>
                 </div>

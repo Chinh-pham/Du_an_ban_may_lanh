@@ -1,0 +1,40 @@
+main{
+    border-top: 1px solid #706e6e;
+    width: 100%;
+    margin: 50px 0;
+    min-height: 700px;
+}
+main>div{
+    margin: 30px 15%;
+}
+main>div>div{
+    border-bottom: 1px solid #c7c5c5;
+}
+main .phan-wrapper{
+    background: #dbedf9 none repeat scroll 0% 0%;
+    border: 1px solid #c7e4f4;
+    border-radius: 4px;
+    padding: 5px;
+    margin-top: 5px;
+}
+main .phan-wrapper .phan-header{
+    text-align: center;
+    font-size: 16px;
+}
+main #imgMayLanh{
+    float: right;
+}
+main #bangTomTat {
+    list-style: none;
+}
+main #bangTomTat .tomtat{
+    text-decoration: none;
+}
+main #bangTomTat .tomtat:hover{
+    color: blue;
+}
+#backToTop{
+    position: fixed;
+    right: 60px;
+    bottom: 10px;
+}

@@ -1,0 +1,192 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+img {
+    max-height: 100%;
+    max-width: 100%;
+}
+header{
+    border: 1px solid black;
+    width: 100%;
+    height: 50px;
+}
+header>div{
+    margin: 0 15%;
+    height: 100%;
+}
+#logo{
+    text-decoration: none; color: black;
+}
+#logo h2{
+    display: inline-block;
+    position: relative;
+    top: -6px;
+    font-weight: 400;
+    font-style: italic;
+}
+#formSearch{
+    display: inline-block;
+    position: relative;
+    top: -10px;
+    margin-left: 100px;
+}
+#formSearch input{
+    width: 250px;
+    height: 25px;
+}
+#formSearch button{
+    height: 31px;
+    margin-left: -5px;
+}
+#headerRight{
+    display: inline-block;
+    position: relative;
+    top: -10px;
+    right: -80px;
+}
+#headerRight #gioHang{
+    text-decoration: none;
+    margin:0 20px;
+}
+#gioHang div{
+    display: inline-block;
+    height: 40px;
+    border: 2px solid #0DCAF0;
+    position: relative;
+    top: -12px;
+    padding: 0 15px;
+}
+#gioHang div span{
+    position: relative;
+    top: 15px;
+}
+#headerRight #dangKy, #headerRight #dangNhap{
+    text-decoration: none;
+    margin:0 20px;
+}
+nav{
+    border: 1px solid black;
+    width: 100%;
+    height: 50px;
+    background-color:lightblue;
+}
+nav div{
+    margin: 0 15%;
+    height: 100%;
+    padding-top: 15px;
+}
+nav div a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    margin-right: 60px;
+}
+nav div #khuyenMai{
+    margin-right: 0;
+}
+
+/* Main */
+main .product{
+    text-decoration: none;
+}
+.product>div{
+    border: 1px solid #d1cccc;
+    width: 250px;
+    height: 258px;
+    display: inline-block;
+}
+.product>div .productImg{
+    text-align: center;
+    padding-top: 30px;
+    height: 75px;
+}
+.product>div .productTen{
+    color: black;
+    padding-left: 10px;
+    font-weight: lighter;
+    height: 43px;
+}
+.product>div .productGia{
+    color: black;
+    padding-left: 10px;
+    font-weight: bold;
+}
+.product>div .productThemGioHang{
+    border: 1px solid black;
+    margin-top: 20px;
+    padding: 15px;
+    text-align: center;
+    background-color: #DDDDDD;
+}
+.product>div .productThemGioHang span{
+    font-weight: bold;
+    color: #0A7EC3;
+}
+
+/* Footer */
+footer{
+    background-color: #303030;
+    width: 100%;
+    height: 280px;
+}
+footer>div{
+    margin: 0 15%;
+}
+footer>div>div:nth-child(1){
+    display: inline-block;
+    margin-right: 130px;
+    position: relative;
+    top: -25px;
+}
+footer>div>div:nth-child(2){
+    display: inline-block;
+    margin-right: 130px;
+}
+footer>div>div:nth-child(3){
+    display: inline-block;
+    margin-right: 130px;
+}
+footer>div>div:nth-child(4){
+    display: inline-block;
+}
+footer>div>div:nth-child(5){
+    border-top: 1px solid rgb(212, 201, 201);
+    margin-left: -20px;
+}
+footer>div>div:nth-child(5) div{
+    font-family: 'Open Sans,sans-serif';
+    margin-left: 20px;
+    display: inline-block;
+}
+footer>div>div:nth-child(5) div:last-child{
+    position: relative;
+    right: -180px;
+}
+footer>div>div:nth-child(5) p{
+    margin-bottom: -12px;
+    color: rgb(212, 201, 201);
+}
+footer>div>div:nth-child(5) span{
+    position: relative;
+    top: 15px;
+}
+footer ul{
+    padding: 25px 0;
+}
+footer ul span{
+    font-size: 16px;
+    color: white;
+    display: block;
+    margin-bottom: 10px;
+}
+footer ul li{
+    font-family: 'Open Sans,sans-serif';
+    color: rgb(212, 201, 201);
+    margin-bottom: 5px;
+}
+footer a{
+    text-decoration: none;
+    color: rgb(212, 201, 201);
+}
