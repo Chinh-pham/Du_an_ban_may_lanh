@@ -1,0 +1,70 @@
+main{
+    border-top: 1px solid #706e6e;
+    width: 100%;
+    margin: 50px 0;
+    min-height: 700px;
+}
+main>div{
+    margin: 30px 15%;
+}
+main>div>div:first-child{
+    border-bottom: 1px solid #c7c5c5;
+}
+main>div>div:last-child{
+    margin-top: 10px;
+}
+main>div div:last-child #mainLeft{
+    width: 55%;
+    display: block;
+    margin-right: 20px;
+    float: left;
+}
+#mainLeft .product:first-child{
+    margin-left: 37px;
+}
+main>div div:last-child #mainRight{
+    width: 40%;
+    display: block;
+    padding: 0 10px;
+    float: right;
+}
+#mainRight>span:nth-child(1){
+    font-weight: bold;
+    font-size: 20px;
+}
+#mainRight>span:nth-child(2){
+    color: red;
+    font-weight: bold;
+    font-size: 25px;
+}
+#mainRight>div:nth-child(3){
+    margin-top: 10px;
+}
+#mainRight>div:nth-child(3) button{
+    background-color: orangered;
+    width: 100%;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 7px;
+}
+#mainRight #thongSoKyThuat div{
+    clear: both;
+}
+#thongSoKyThuat div span{
+    float: left;
+    padding: 5px;
+}
+#thongSoKyThuat div span:first-child{
+    width: 33%;
+}
+#thongSoKyThuat div span:last-child{
+    width: 60%;
+    margin-top: 10px;
+}
+#mainRight #thongSoKyThuat div:first-child{
+    clear: none;
+}
+#mainRight #thongSoKyThuat div:first-child span{
+    margin-top: 0;
+}
