@@ -1,0 +1,33 @@
+.col-6 {
+    float: left;
+    width: 50%;
+}
+
+.clear {
+    clear: both;
+}
+
+.input-box input[type='date']{
+    width: 100%;
+    border: 1px solid #cccccc;
+    outline: none;
+    font-size: 16px;
+    display: inline-block;
+    height: 40px;
+    color: #666666;
+}
+
+.input-box select {
+    padding: 7.5px 15px;
+    width: 100%;
+    border: 1px solid #cccccc;
+    outline: none;
+    font-size: 16px;
+    display: inline-block;
+    height: 42px;
+    color: #666666;
+}
+
+.input-box option {
+    font-size: 16px;
+}

@@ -5,103 +5,108 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng nhập</title>
-    <style>
-        body {
-            background: url('../images/bg.jpeg');
-            background-size: cover;
-            background-position-y: -80px;
-            font-size: 16px;
-        }
-        
-        #wrapper {
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        #form-login {
-            max-width: 400px;
-            background: rgba(233, 155, 11, 0.8);
-            flex-grow: 1;
-            padding: 30px 30px 40px;
-            box-shadow: 0px 0px 17px 2px rgba(247, 2, 255, 0.8);
-        }
-        
-        .form-heading {
-            font-size: 25px;
-            color: #f5f5f5;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        
-        .form-group {
-            border-bottom: 1px solid #fff;
-            margin-top: 15px;
-            margin-bottom: 20px;
-            display: flex;
-        }
-        
-        .form-group i {
-            color: #fff;
-            font-size: 14px;
-            padding-top: 5px;
-            padding-right: 10px;
-        }
-        
-        .form-input {
-            background: transparent;
-            border: 0;
-            outline: 0;
-            color: #f5f5f5;
-            flex-grow: 1;
-        }
-        
-        .form-input::placeholder {
-            color: #f5f5f5;
-        }
-        
-        #eye i {
-            padding-right: 0;
-            cursor: pointer;
-        }
-        
-        .form-submit {
-            background: transparent;
-            border: 1px solid #f5f5f5;
-            color: #fff;
-            width: 100%;
-            text-transform: uppercase;
-            padding: 6px 10px;
-            transition: 0.25s ease-in-out;
-            margin-top: 30px;
-        }
-        
-        .form-submit:hover {
-            border: 1px solid #54a0ff;
-        }
-    </style>
+    <title>Đăng nhập tài khoản - CleanAir mang lại "không khí trong lành" cho gia đình Việt</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/styleTaikhoan.css">
 </head>
 
 <body>
-    <div id="wrapper">
-        <form action="" id="form-login">
-            <h1 class="form-heading">Form đăng nhập</h1>
-            <div class="form-group">
-                <i class="far fa-user"></i>
-                <input type="text" class="form-input" placeholder="Tên đăng nhập">
+    <header>
+        <div>
+            <a id="logo" href="trangchu.html">
+                <img src="../img/logoMaylanh.png" width="30" height="30" alt="logo Máy lạnh">
+                <h2>CleanAir</h2>
+            </a>
+            <form id="formSearch" action="">
+                <input type="text" placeholder="Nhập sản phẩm bạn muốn tìm kiếm ...">
+                <button>Tìm kiếm</button>
+            </form>
+            <div id="headerRight">
+                <a id="gioHang" href="giohang.html">
+                    <div>
+                        <span>Giỏ hàng</span>
+                    </div>
+                </a>
+                <a id="dangKy" href="dangky.html">Đăng ký</a>
+                <a id="dangNhap" href="dangnhap.html">Đăng nhập</a>
             </div>
-            <div class="form-group">
-                <i class="fas fa-key"></i>
-                <input type="password" class="form-input" placeholder="Mật khẩu">
-                <div id="eye">
-                    <i class="far fa-eye"></i>
+        </div>
+    </header>
+    <nav>
+        <div style="">
+            <a href="trangchu.html">Trang chủ</a>
+            <a href="danhsachsanpham.html">Danh sách sản phẩm</a>
+            <a href="gioithieu_website_thanhvien.html">Giới thiệu website</a>
+            <a href="sitemap.html">Site map</a>
+            <a href="#">Liên hệ</a>
+            <a id="khuyenMai" href="#">Khuyến mãi</a>
+        </div>
+    </nav>
+    <main>
+        <div class="container">
+            <div class="register-form">
+                <form action="">
+                    <h1>Đăng Nhập Tài Khoản</h1>
+                    <div class="input-box">
+                        <input type="text" placeholder="Tên đăng nhập">
+                    </div>
+                    <div class="input-box">
+                        <input type="password" placeholder="Mật khẩu">
+                    </div>
+                    <div class="btn-box">
+                        <button type="submit">Đăng nhập</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div>
+            <div>
+                <ul>
+                    <span>Thông tin về</span>
+                    <li><a href="gioithieu_website_thanhvien.html">Giới thiệu website</a></li>
+                    <li><a href="gioithieu_website_thanhvien.html#phan-0">Các thành viên thực hiện</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <span>Dịch vụ khách hàng</span>
+                    <li><a href="#">Liên hệ chúng tôi</a></li>
+                    <li><a href="sitemap.html">Site Map</a></li>
+                    <li><a href="#">Khuyến mãi</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <span>Tài khoản</span>
+                    <li><a href="#">Tài khoản của tôi</a></li>
+                    <li><a href="dangnhap.html">Đăng nhập</a></li>
+                    <li><a href="dangky.html">Đăng ký</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <span>Sản phẩm</span>
+                    <li><a href="giohang.html">Giỏ hàng của tôi</a></li>
+                    <li><a href="#">Khuyến mãi</a></li>
+                    <li><a href="#">Kinh nghiệm mua hàng</a></li>
+                </ul>
+            </div>
+            <div>
+                <div>
+                    <p>CleanAir Store© 2022. Công ty thiết bị máy lạnh TPHCM.</p>
+                    <p>Address: 999 Nguyễn Kiệm, Phường 3, Gò Vấp, Thành phố Hồ Chí Minh, Việt Nam</p>
+                </div>
+                <div>
+                    <p><a href="#">Powered By Open Cart</a></p>
+                    <span>
+                        <img src="../img/bocongthuong.png" alt="" width="90">
+                    </span>
                 </div>
             </div>
-            <input type="submit" value="Đăng nhập" class="form-submit">
-        </form>
-    </div>
+        </div>
+    </footer>
 </body>
 
 </html>
