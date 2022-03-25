@@ -20,15 +20,12 @@ main>div div:nth-child(1){
 }
 main>div div:nth-child(2){
     float: right;
-    margin-right: 32px;
+    margin-right: 55px;
     margin-bottom: 10px;
 }
 main>div div:nth-child(3){
     clear: both;
 }
-main>div div:nth-child(3),
-main>div div:nth-child(4),
-main>div div:nth-child(5),
-main>div div:nth-child(6){
+main>div div{
     margin-bottom: 30px;
 }

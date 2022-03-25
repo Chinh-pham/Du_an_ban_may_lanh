@@ -8,6 +8,7 @@
     <title>Trang chủ - CleanAir mang lại "không khí trong lành" cho gia đình Việt</title>
     <link rel="shortcut icon" href="../img/iconMaylanh.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/jquery-3.6.0.min.js"></script>
     <style>
         main{
             border-top: 1px solid #706e6e;
@@ -15,13 +16,18 @@
             width: 100%;
             margin: 50px 0;
         }
-        main>div{
+        #products{
             margin: 60px 15%;
         }
-        main>div div:first-child, main>div div:last-child{
+        main #products>div{
             margin-bottom: 30px;
         }
     </style>
+    <script type="module">
+        import { arrSP_Trangchu } from "../js/sanpham_array.js"
+        import {themSanpham} from "../js/themsanpham.js"
+        themSanpham(arrSP_Trangchu)
+    </script>
 </head>
 
 <body>
@@ -57,92 +63,7 @@
         </div>
     </nav>
     <main>
-        <div>
-            <div>
-                <a class="product" href="chitietsanpham.html">
-                    <div>
-                        <div class="productImg"><img src="../img/panasonicInverter1HP.png" alt=""></div>
-                        <h3 class="productTen">Panasonic Inverter 1 HP CU/CS-PU9WKH-8M</h3>
-                        <div class="productGia">10.590.000<sup>đ</sup></div>
-                        <div class="productThemGioHang">
-                            <span>THÊM VÀO GIỎ HÀNG</span>
-                        </div>
-                    </div>
-                </a>
-                <a class="product" href="chitietsanpham.html">
-                    <div>
-                        <div class="productImg"><img src="../img/panasonicInverter1.5HP.png" alt=""></div>
-                        <h3 class="productTen">Panasonic Inverter 1.5 HP CU/CS-PU12WKH-8M</h3>
-                        <div class="productGia">12.890.000<sup>đ</sup></div>
-                        <div class="productThemGioHang">
-                            <span>THÊM VÀO GIỎ HÀNG</span>
-                        </div>
-                    </div>
-                </a>
-                <a class="product" href="chitietsanpham.html">
-                    <div>
-                        <div class="productImg"><img src="../img/daikinInverter1HP.png" alt=""></div>
-                        <h3 class="productTen">Daikin Inverter 1 HP FTKA25VMVMV</h3>
-                        <div class="productGia">10.590.000<sup>đ</sup></div>
-                        <div class="productThemGioHang">
-                            <span>THÊM VÀO GIỎ HÀNG</span>
-                        </div>
-                    </div>
-                </a>
-                <a class="product" href="chitietsanpham.html">
-                    <div>
-                        <div class="productImg"><img src="../img/daikinInverter1.5HP.png" alt=""></div>
-                        <h3 class="productTen">Daikin Inverter 1.5 HP FTKA35VMVMV</h3>
-                        <div class="productGia">12.990.000<sup>đ</sup></div>
-                        <div class="productThemGioHang">
-                            <span>THÊM VÀO GIỎ HÀNG</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div>
-                <a class="product" href="chitietsanpham.html">
-                    <div>
-                        <div class="productImg"><img src="../img/sharpInverter1HP.png" alt=""></div>
-                        <h3 class="productTen">Sharp Inverter 1 HP AH-X9XEW</h3>
-                        <div class="productGia">8.990.000<sup>đ</sup></div>
-                        <div class="productThemGioHang">
-                            <span>THÊM VÀO GIỎ HÀNG</span>
-                        </div>
-                    </div>
-                </a>
-                <a class="product" href="chitietsanpham.html">
-                    <div>
-                        <div class="productImg"><img src="../img/lgInverter1HP.png" alt=""></div>
-                        <h3 class="productTen">LG Inverter 1 HP V10ENH1</h3>
-                        <div class="productGia">9.790.000<sup>đ</sup></div>
-                        <div class="productThemGioHang">
-                            <span>THÊM VÀO GIỎ HÀNG</span>
-                        </div>
-                    </div>
-                </a>
-                <a class="product" href="chitietsanpham.html">
-                    <div>
-                        <div class="productImg"><img src="../img/samsungInverter1HP.png" alt=""></div>
-                        <h3 class="productTen">Samsung Inverter 1 HP AR10TYHYCWKNSV</h3>
-                        <div class="productGia">9.790.000<sup>đ</sup></div>
-                        <div class="productThemGioHang">
-                            <span>THÊM VÀO GIỎ HÀNG</span>
-                        </div>
-                    </div>
-                </a>
-                <a class="product" href="chitietsanpham.html">
-                    <div>
-                        <div class="productImg"><img src="../img/toshibaInverter1HP.png" alt=""></div>
-                        <h3 class="productTen">Toshiba Inverter 1 HP RAS-H10D2KCVG-V</h3>
-                        <div class="productGia">9.990.000<sup>đ</sup></div>
-                        <div class="productThemGioHang">
-                            <span>THÊM VÀO GIỎ HÀNG</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
+        <div id="products"></div>
     </main>
     <footer>
         <div>

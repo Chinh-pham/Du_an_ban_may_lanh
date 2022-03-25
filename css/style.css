@@ -82,7 +82,7 @@ nav div a{
     text-decoration: none;
     color: black;
     font-size: 20px;
-    margin-right: 60px;
+    margin-right: 50px;
 }
 nav div #khuyenMai{
     margin-right: 0;
@@ -91,6 +91,7 @@ nav div #khuyenMai{
 /* Main */
 main .product{
     text-decoration: none;
+    margin-right: 4px;
 }
 .product>div{
     border: 1px solid #d1cccc;
