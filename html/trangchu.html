@@ -9,25 +9,23 @@
     <link rel="shortcut icon" href="../img/iconMaylanh.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/style.css">
     <script src="../js/jquery-3.6.0.min.js"></script>
+    <script type="module" src="../js/trangchu.js"></script>
     <style>
-        main{
+        main {
             border-top: 1px solid #706e6e;
             border-bottom: 1px solid #706e6e;
             width: 100%;
             margin: 50px 0;
         }
-        #products{
+
+        #products {
             margin: 60px 15%;
         }
-        main #products>div{
+
+        main #products>div {
             margin-bottom: 30px;
         }
     </style>
-    <script type="module">
-        import { arrSP_Trangchu } from "../js/sanpham_array.js"
-        import {themSanpham} from "../js/themsanpham.js"
-        themSanpham(arrSP_Trangchu)
-    </script>
 </head>
 
 <body>
@@ -37,9 +35,9 @@
                 <img src="../img/logoMaylanh.png" width="30" height="30" alt="logo Máy lạnh">
                 <h2>CleanAir</h2>
             </a>
-            <form id="formSearch" action="">
-                <input type="text" placeholder="Nhập sản phẩm bạn muốn tìm kiếm ...">
-                <button>Tìm kiếm</button>
+            <form id="formSearch">
+                <input type="text" placeholder="Nhập sản phẩm bạn muốn tìm kiếm ..." id="inputTimkiem">
+                <button id="btnTimkiem">Tìm kiếm</button>
             </form>
             <div id="headerRight">
                 <a id="gioHang" href="giohang.html">

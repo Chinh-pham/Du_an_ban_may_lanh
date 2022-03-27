@@ -10,11 +10,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/danhsachsanpham.css">
     <script src="../js/jquery-3.6.0.min.js"></script>
-    <script type="module">
-        import { arrSP_DSSP } from "../js/sanpham_array.js"
-        import {themSanpham} from "../js/themsanpham.js"
-        themSanpham(arrSP_DSSP)
-    </script>
+    <script type="module" src="../js/danhsachsanpham.js"></script>
 </head>
 
 <body>
@@ -24,10 +20,10 @@
                 <img src="../img/logoMaylanh.png" width="30" height="30" alt="logo Máy lạnh">
                 <h2>CleanAir</h2>
             </a>
-            <form id="formSearch" action="">
-                <input type="text" placeholder="Nhập sản phẩm bạn muốn tìm kiếm ...">
-                <button>Tìm kiếm</button>
-            </form>
+            <div id="formSearch">
+                <input type="text" placeholder="Nhập sản phẩm bạn muốn tìm kiếm ..." id="inputTimkiem">
+                <button id="btnTimkiem">Tìm kiếm</button>
+            </div>
             <div id="headerRight">
                 <a id="gioHang" href="giohang.html">
                     <div>
@@ -51,14 +47,14 @@
     </nav>
     <main>
         <div id="products">
-            <div>
+            <div id="bolocThongtinSP">
                 <select name="congsuat" id="congsuat" class="boloc">
                     <option value="congsuat">Công suất làm lạnh</option>
-                    <option value="1HP">1 HP</option>
-                    <option value="1.5HP">1.5 HP</option>
-                    <option value="2HP">2 HP</option>
-                    <option value="2.5HP">2.5 HP</option>
-                    <option value="up2.5HP">>2.5 HP</option>
+                    <option value="1">1 HP</option>
+                    <option value="1.5">1.5 HP</option>
+                    <option value="2">2 HP</option>
+                    <option value="2.5">2.5 HP</option>
+                    <option value="up2.5">>2.5 HP</option>
                 </select>
                 <select name="hang" id="hang" class="boloc">
                     <option value="hang">Hãng</option>
@@ -79,7 +75,7 @@
                     <option value="7to9tr">Từ 7tr - 9tr</option>
                     <option value="9to12tr">Từ 9tr - 12tr</option>
                     <option value="12to15tr">Từ 12tr - 15tr</option>
-                    <option value="up20tr">Trên 20 triệu</option>
+                    <option value="up20tr">Trên 15 triệu</option>
                 </select>
                 <select name="tienich" id="tienich" class="boloc">
                     <option value="tienich">Tiện ích</option>
@@ -91,10 +87,9 @@
                     <option value="tukhoidong">Tự khởi động lại khi có điện</option>
                 </select>
             </div>
-            <div>
+            <div id="boloc_theo_gia">
                 <select name="xeptheo" id="xeptheo" style="font-size: 13px;">
-                    <option value="noibat">Xếp theo: nổi bật</option>
-                    <option value="banchay">Xếp theo: bán chạy</option>
+                    <option value="macdinh">Xếp theo: Mặc định</option>
                     <option value="caodenthap">Xếp theo: Giá cao đến thấp</option>
                     <option value="thapdencao">Xếp theo: Giá thấp đến cao</option>
                 </select>

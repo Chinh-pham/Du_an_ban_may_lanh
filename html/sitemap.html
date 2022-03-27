@@ -5,11 +5,346 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SiteMap</title>
+    <link rel="shortcut icon" href="../img/iconMaylanh.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/giohang.css">
+    <script src="https://kit.fontawesome.com/92c6e77706.js" crossorigin="anonymous"></script>
+    <title>Giỏ hàng - CleanAir mang lại "không khí trong lành" cho gia đình Việt</title>
+    <style>
+        body {
+            background-color: rgb(242, 246, 250);
+
+        }
+
+        main>div {
+            width: 75%;
+            margin: 0 auto;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            max-height: 100%;
+            max-width: 100%;
+        }
+
+        header {
+            border: 1px solid black;
+            width: 100%;
+            height: 50px;
+            background-color: rgb(242, 246, 250);
+        }
+
+        header>div {
+            margin: 0 15%;
+            height: 100%;
+        }
+
+        #logo {
+            text-decoration: none;
+            color: black;
+        }
+
+        #logo h2 {
+            display: inline-block;
+            position: relative;
+            top: -6px;
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        #formSearch {
+            display: inline-block;
+            position: relative;
+            top: -10px;
+            margin-left: 100px;
+        }
+
+        #formSearch input {
+            width: 250px;
+            height: 25px;
+        }
+
+        #formSearch button {
+            height: 31px;
+            margin-left: -5px;
+        }
+
+        #headerRight {
+            display: inline-block;
+            position: relative;
+            top: -10px;
+            right: -80px;
+        }
+
+        #headerRight #gioHang {
+            text-decoration: none;
+            margin: 0 20px;
+        }
+
+        #gioHang div {
+            display: inline-block;
+            height: 40px;
+            border: 2px solid #0DCAF0;
+            position: relative;
+            top: -12px;
+            padding: 0 15px;
+        }
+
+        #gioHang div span {
+            position: relative;
+            top: 15px;
+        }
+
+        #headerRight #dangKy,
+        #headerRight #dangNhap {
+            text-decoration: none;
+            margin: 0 20px;
+        }
+
+        nav {
+            border: 1px solid black;
+            width: 100%;
+            height: 50px;
+            background-color: lightblue;
+        }
+
+        nav div {
+            margin: 0 15%;
+            height: 100%;
+            padding-top: 15px;
+        }
+
+        nav div a {
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+            margin-right: 50px;
+        }
+
+        nav div #khuyenMai {
+            margin-right: 0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #303030;
+            width: 100%;
+            height: 280px;
+        }
+
+        footer>div {
+            margin: 0 15%;
+        }
+
+        footer>div>div:nth-child(1) {
+            display: inline-block;
+            margin-right: 130px;
+            position: relative;
+            top: -25px;
+        }
+
+        footer>div>div:nth-child(2) {
+            display: inline-block;
+            margin-right: 130px;
+        }
+
+        footer>div>div:nth-child(3) {
+            display: inline-block;
+            margin-right: 130px;
+        }
+
+        footer>div>div:nth-child(4) {
+            display: inline-block;
+        }
+
+        footer>div>div:nth-child(5) {
+            border-top: 1px solid rgb(212, 201, 201);
+            margin-left: -20px;
+        }
+
+        footer>div>div:nth-child(5) div {
+            font-family: 'Open Sans,sans-serif';
+            margin-left: 20px;
+            display: inline-block;
+        }
+
+        footer>div>div:nth-child(5) div:last-child {
+            position: relative;
+            right: -180px;
+        }
+
+        footer>div>div:nth-child(5) p {
+            margin-bottom: -12px;
+            color: rgb(212, 201, 201);
+        }
+
+        footer>div>div:nth-child(5) span {
+            position: relative;
+            top: 15px;
+        }
+
+        footer ul {
+            padding: 25px 0;
+        }
+
+        footer ul span {
+            font-size: 16px;
+            color: white;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        footer ul li {
+            font-family: 'Open Sans,sans-serif';
+            color: rgb(212, 201, 201);
+            margin-bottom: 5px;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: rgb(212, 201, 201);
+        }
+    </style>
 </head>
 
 <body>
+    <header>
+        <div>
+            <a id="logo" href="trangchu.html">
+                <img src="../img/logoMaylanh.png" width="30" height="30" alt="logo Máy lạnh">
+                <h2>CleanAir</h2>
+            </a>
+            <form id="formSearch" action="">
+                <input type="text" placeholder="Nhập sản phẩm bạn muốn tìm kiếm ...">
+                <button>Tìm kiếm</button>
+            </form>
+            <div id="headerRight">
+                <a id="gioHang" href="giohang.html">
+                    <div>
+                        <span>Giỏ hàng</span>
+                    </div>
+                </a>
+                <a id="dangKy" href="dangky.html">Đăng ký</a>
+                <a id="dangNhap" href="dangnhap.html">Đăng nhập</a>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <div style="">
+            <a href="trangchu.html">Trang chủ</a>
+            <a href="danhsachsanpham.html">Danh sách sản phẩm</a>
+            <a href="gioithieu_website_thanhvien.html">Giới thiệu website</a>
+            <a href="sitemap.html">Site map</a>
+            <a href="#">Liên hệ</a>
+            <a id="khuyenMai" href="#">Khuyến mãi</a>
+        </div>
+    </nav>
+    <main>
+        <div class="Menu">
+            <ul>
+                <STRong>
+                    <font size="6" color="red">MENU</font>
+                </STRong>
+                <li><a href="https://doananhtingithub40102.github.io/HTCNWeb/html/trangchu.html">Trang chủ</a></li>
+                <ul class="Trang chủ" </ul>
+                    <li><a href="#">Sản phẩm</a></li>
+                </ul>
+                <li><a href="https://doananhtingithub40102.github.io/HTCNWeb/html/danhsachsanpham.html">Danh sách sản
+                        phẩm</a></li>
+                <ul class="Danh sách sản phẩm" </ul>
 
+                    <li><a href="https://doananhtingithub40102.github.io/HTCNWeb/html/chitietsanpham.html">Chi tiết sản
+                            phẩm</a></li>
+                </ul>
+                <li><a href="https://doananhtingithub40102.github.io/HTCNWeb/html/gioithieu_website_thanhvien.html">Giới
+                        thiệu website_Thành viên</a></li>
+                <ul class="Giới thiệu website" </ul>
+                    <li><a
+                            href="https://doananhtingithub40102.github.io/HTCNWeb/html/gioithieu_website_thanhvien.html#phan-0">Các
+                            thành viên</a></li>
+                    <li><a
+                            href="https://doananhtingithub40102.github.io/HTCNWeb/html/gioithieu_website_thanhvien.html#phan-1">Công
+                            dụng của điều hòa máy lạnh</a></li>
+                    <li><a
+                            href="https://doananhtingithub40102.github.io/HTCNWeb/html/gioithieu_website_thanhvien.html#phan-2">Các
+                            loại điều hòa, máy lạnh</a></li>
+                    <li><a
+                            href="https://doananhtingithub40102.github.io/HTCNWeb/html/gioithieu_website_thanhvien.html#phan-3">Lưu
+                            ý khi chọn mua điều hòa,máy lạnh</a></li>
+                    <li><a
+                            href="https://doananhtingithub40102.github.io/HTCNWeb/html/gioithieu_website_thanhvien.html#phan-4">Nên
+                            mua điều hòa, máy lạnh hãng nào tốt</a></li>
+                    <li><a
+                            href="https://doananhtingithub40102.github.io/HTCNWeb/html/gioithieu_website_thanhvien.html#phan-5">Gía
+                            điều hòa, máy lạnh bao nhiêu</a></li>
+                    <li><a
+                            href="https://doananhtingithub40102.github.io/HTCNWeb/html/gioithieu_website_thanhvien.html#phan-6">Mua
+                            điều hòa, máy lạnh ở đâu tốt, giá rẻ</a></li>
+                </ul>
+                <li><a href="https://doananhtingithub40102.github.io/HTCNWeb/html/giohang.html">Giỏ hàng</a></li>
+                <ul class="Giỏ hàng" </ul>
+                </ul>
+                <li><a href="https://doananhtingithub40102.github.io/HTCNWeb/html/dangky.html">Đăng Kí</a></li>
+                <ul class="Đăng kí" </ul>
+                </ul>
+                <li><a href="https://doananhtingithub40102.github.io/HTCNWeb/html/dangnhap.html">Đăng nhập</a></li>
+                <ul class="Đăng nhập" </ul>
+                </ul>
+        </div>
+
+    </main>
+    <footer>
+        <div>
+            <div>
+                <ul>
+                    <span>Thông tin về</span>
+                    <li><a href="gioithieu_website_thanhvien.html">Giới thiệu website</a></li>
+                    <li><a href="gioithieu_website_thanhvien.html#phan-0">Các thành viên thực hiện</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <span>Dịch vụ khách hàng</span>
+                    <li><a href="#">Liên hệ chúng tôi</a></li>
+                    <li><a href="sitemap.html">Site Map</a></li>
+                    <li><a href="#">Khuyến mãi</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <span>Tài khoản</span>
+                    <li><a href="#">Tài khoản của tôi</a></li>
+                    <li><a href="dangnhap.html">Đăng nhập</a></li>
+                    <li><a href="dangky.html">Đăng ký</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <span>Sản phẩm</span>
+                    <li><a href="giohang.html">Giỏ hàng của tôi</a></li>
+                    <li><a href="#">Khuyến mãi</a></li>
+                    <li><a href="#">Kinh nghiệm mua hàng</a></li>
+                </ul>
+            </div>
+            <div>
+                <div>
+                    <p>CleanAir Store© 2022. Công ty thiết bị máy lạnh TPHCM.</p>
+                    <p>Address: 999 Nguyễn Kiệm, Phường 3, Gò Vấp, Thành phố Hồ Chí Minh, Việt Nam</p>
+                </div>
+                <div>
+                    <p><a href="#">Powered By Open Cart</a></p>
+                    <span>
+                        <img src="../img/bocongthuong.png" alt="" width="90">
+                    </span>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
