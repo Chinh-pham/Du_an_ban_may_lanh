@@ -1,7 +1,23 @@
 import { arrSP_DSSP } from "../js/Sanpham_array.js"
 import { Sanpham } from "../js/Sanpham.js"
 const sp = new Sanpham()
-sp.themSanpham(arrSP_DSSP)
+
+let stringTimkiem = sessionStorage.getItem("timkiemDSSP")
+let stringBoloc = sessionStorage.getItem("boloc")
+
+if (stringTimkiem != null){
+    sp.timkiemSanpham(stringTimkiem, arrSP_DSSP)
+} else if (stringBoloc != null){
+    let objBoloc = JSON.parse(stringBoloc)
+    sp.locSanpham(objBoloc, arrSP_DSSP)
+} else{
+    sp.themSanpham(arrSP_DSSP)
+}
+
+$("#dssp").click(function(){
+    sessionStorage.removeItem("timkiemDSSP")
+    sessionStorage.removeItem("boloc")
+})
 
 $("#formSearch").submit(function (event) {
     event.preventDefault()

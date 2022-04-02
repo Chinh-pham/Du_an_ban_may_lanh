@@ -27,7 +27,7 @@ class Sanpham {
         rowProducts.attr("class", "rowProducts")
         let lengthProducts_in_Row = 0
         for (let i = 0; i < arr.length; i++) {
-            rowProducts.append("<a class='product' href='chitietsanpham.html'><div><div class='productImg'><img src='" + arr[i].hinhanh + "' alt=''></div><h3 class='productTen'>" + arr[i].ten + "</h3><div class='productGia'>" + arr[i].gia + "<sup>đ</sup></div><div class='productThemGioHang'><span>THÊM VÀO GIỎ HÀNG</span></div></div></a>")
+            rowProducts.append("<a class='product' href='../html/chitietsanpham.html'><div><div class='productImg'><img src='" + arr[i].hinhanh[0] + "' alt=''></div><h3 class='productTen'>" + arr[i].ten + "</h3><div class='productGia'>" + arr[i].gia + "<sup>đ</sup></div><div class='productThemGioHang'><span>THÊM VÀO GIỎ HÀNG</span></div></div></a>")
             lengthProducts_in_Row += 1
             if (lengthProducts_in_Row == 4 || ((lengthProducts_in_Row < 4) && (i + 1 == arr.length))) {
                 $("#products").append(rowProducts)
@@ -36,6 +36,43 @@ class Sanpham {
                 rowProducts.attr("class", "rowProducts")
             }
         }
+
+        $(".product").click(function () {
+            let tensanpham = $(this)[0].childNodes[0].childNodes[1].innerText
+            for (let i = 0; i < arr.length; i++) {
+                if (tensanpham == arr[i].ten) {
+                    sessionStorage.setItem("TTCT_SP", JSON.stringify(arr[i]))
+                    $("#tenSP").text(tensanpham)
+                    $("#giaSP").text(arr[i].gia)
+                    break
+                }
+            }
+        })
+        $(".productThemGioHang").click(function () {
+            $(".product").removeAttr("href")
+
+            // Get the modal
+            var modal = document.getElementById("myModal")
+            $("#myModal").css("display", "block")
+
+            const autoClose = setTimeout(function () {
+                clearTimeout(autoClose)
+                $(".product").attr("href", "../html/chitietsanpham.html")
+            }, 1000)
+
+            // When the user clicks on <span> (x), close the modal
+            $(".close").click(function () {
+                $("#myModal").css("display", "none")
+            })
+
+            // When the user clicks anywhere outside of the modal, close it
+            $(window).click(function (event) {
+                if (event.target == modal) {
+                    $("#myModal").css("display", "none")
+                }
+            })
+
+        })
     }
     locSanpham(boloc, arr) {
         $("#inputTimkiem").val("")
@@ -84,6 +121,7 @@ class Sanpham {
                     continue
                 }
 
+
                 // Thêm sản phẩm thỏa mãn bộ lọc vào arr
                 arrSPtoShow.push(arr[i])
             }
@@ -103,6 +141,9 @@ class Sanpham {
             } else {
                 // Hiển thị các sản phẩm thỏa mãn bộ lọc lên giao diện
                 this.themSanpham(arrSPtoShow)
+
+                sessionStorage.setItem("boloc", JSON.stringify(boloc))
+                sessionStorage.removeItem("timkiemDSSP")
             }
         }
     }
@@ -118,15 +159,15 @@ class Sanpham {
             .replace(/[\\\-\(\)/,]/g, "")
         let arrSPtoShow = []
         for (let i = 0; i < arr.length; i++) {
-            let ten, kieudang, noiSanxuat, loaimay, khangkhuan, congngheTietkiemDien = ""
+            let ten, kieudang, noiSanxuat, loaimay, khangkhuan, congngheTietkiemDien, tienich = ""
             ten = arr[i].ten.toLowerCase().replace(/[ \-]/g, "")
             kieudang = chuyendoiChuoi(arr[i].kieudang)
             noiSanxuat = chuyendoiChuoi(arr[i].noiSanxuat).replace(/\//g, "")
             loaimay = chuyendoiChuoi(arr[i].loaimay).replace(/\(\)/g, "")
             khangkhuan = chuyendoiChuoi(arr[i].khangkhuan).replace(/,/g, "")
             congngheTietkiemDien = chuyendoiChuoi(arr[i].congngheTietkiemDien).replace(/,/g, "")
-            arr[i].tienich = chuyendoiChuoi(arr[i].tienich).replace(/,\-\(\)/g, "")
-            if (ten.indexOf(input) > -1 || kieudang.indexOf(input) > -1 || noiSanxuat.indexOf(input) > -1 || loaimay.indexOf(input) > -1 || khangkhuan.indexOf(input) > -1 || congngheTietkiemDien.indexOf(input) > -1) {
+            tienich = chuyendoiChuoi(arr[i].tienich).replace(/,-\(\)/g, "")
+            if (ten.indexOf(input) > -1 || kieudang.indexOf(input) > -1 || noiSanxuat.indexOf(input) > -1 || loaimay.indexOf(input) > -1 || khangkhuan.indexOf(input) > -1 || congngheTietkiemDien.indexOf(input) > -1 || tienich.indexOf(input) > -1) {
                 arrSPtoShow.push(arr[i])
             }
         }
@@ -140,6 +181,12 @@ class Sanpham {
         } else {
             // Hiển thị các sản phẩm phù hợp kết quả tìm kiếm
             this.themSanpham(arrSPtoShow)
+            if (arr.length == 16) {
+                sessionStorage.setItem("timkiemDSSP", input)
+                sessionStorage.removeItem("boloc")
+            } else {
+                sessionStorage.setItem("timkiemTrangchu", input)
+            }
         }
     }
 }

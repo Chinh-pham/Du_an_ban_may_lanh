@@ -8,6 +8,7 @@
     <title>Trang chủ - CleanAir mang lại "không khí trong lành" cho gia đình Việt</title>
     <link rel="shortcut icon" href="../img/iconMaylanh.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/modal.css">
     <script src="../js/jquery-3.6.0.min.js"></script>
     <script type="module" src="../js/trangchu.js"></script>
     <style>
@@ -31,7 +32,7 @@
 <body>
     <header>
         <div>
-            <a id="logo" href="trangchu.html">
+            <a id="logo" href="trangchu.html" class="trangchu">
                 <img src="../img/logoMaylanh.png" width="30" height="30" alt="logo Máy lạnh">
                 <h2>CleanAir</h2>
             </a>
@@ -52,7 +53,7 @@
     </header>
     <nav>
         <div style="">
-            <a href="trangchu.html">Trang chủ</a>
+            <a href="trangchu.html" class="trangchu">Trang chủ</a>
             <a href="danhsachsanpham.html">Danh sách sản phẩm</a>
             <a href="gioithieu_website_thanhvien.html">Giới thiệu website</a>
             <a href="sitemap.html">Site map</a>
@@ -110,6 +111,23 @@
             </div>
         </div>
     </footer>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Đã thêm vào giỏ hàng</h2>
+            </div>
+            <div class="modal-body">
+                <h3 id="tenSP">Some text in the Modal Body</h3>
+                <p id="giaSP">Some other text...</p>
+            </div>
+            <div class="modal-footer">
+                <p>Xin cảm ơn!</p>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

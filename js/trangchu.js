@@ -1,9 +1,20 @@
 import { arrSP_Trangchu } from "../js/Sanpham_array.js"
 import { Sanpham } from "../js/Sanpham.js"
 const sp = new Sanpham()
-sp.themSanpham(arrSP_Trangchu)
 
-$("#formSearch").submit(function(event){
+let stringTimkiem = sessionStorage.getItem("timkiemTrangchu")
+
+if (stringTimkiem != null){
+    sp.timkiemSanpham(stringTimkiem, arrSP_Trangchu)
+} else{
+    sp.themSanpham(arrSP_Trangchu)
+}
+
+$(".trangchu").click(function(){
+    sessionStorage.removeItem("timkiemTrangchu")
+})
+
+$("#formSearch").submit(function (event) {
     event.preventDefault()
 })
 

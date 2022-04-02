@@ -8,6 +8,8 @@
     <link rel="shortcut icon" href="../img/iconMaylanh.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/chitietsanpham.css">
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script type="module" src="../js/chitietsanpham.js"></script>
     <title>Chi tiết sản phẩm - CleanAir mang lại "không khí trong lành" cho gia đình Việt</title>
 </head>
 
@@ -46,54 +48,54 @@
     <main>
         <div>
             <div>
-                <h3>Máy lạnh (tên sản phẩm)</h3>
+                <h3>Máy lạnh <span class="tenSP"></span></h3>
             </div>
             <div>
                 <div id="mainLeft">
                     <div>
-                        <img src="../img/panasonicInverter1HP_2.png" alt="">
+                        <img src="../img/panasonicInverter1HP_2.png" alt="" id="hinhanhSP">
                     </div>
-                    <div>
+                    <div id="cacSP_tuongtu">
                         <h3>Các sản phẩm tương tự khác:</h3>
-                        <div>
-                            <a class="product" href="">
-                                <div>
-                                    <div class="productImg"><img src="../img/panasonicInverter1HP.png" alt=""></div>
-                                    <h3 class="productTen">Panasonic Inverter 1.5 HP CU/CS-PU12WKH-8M</h3>
-                                    <div class="productGia">12.890.000<sup>đ</sup></div>
-                                </div>
-                            </a>
-                            <a class="product" href="">
-                                <div>
-                                    <div class="productImg"><img src="../img/panasonicInverter1HP.png" alt=""></div>
-                                    <h3 class="productTen">Panasonic Inverter 1.5 HP CU/CS-PU12WKH-8M</h3>
-                                    <div class="productGia">12.890.000<sup>đ</sup></div>
-                                </div>
-                            </a>
-                        </div>
                     </div>
                 </div>
                 <div id="mainRight">
                     <span>GIÁ: </span>
-                    <span>1.000.000đ</span>
+                    <span id="gia"></span>
                     <div>
                         <button>MUA NGAY</button>
                     </div>
                     <h3>
-                        Thông số kỹ thuật Máy lạnh (tên sản phẩm)
+                        Thông số kỹ thuật Máy lạnh <span class="tenSP"></span>
                     </h3>
                     <div id="thongSoKyThuat">
-                        <div>
-                            <span>Phạm vi làm lạnh hiệu quả:</span>
-                            <span>Dưới 15m² (từ 30 đến 45m³)</span>
+                        <div class="row">
+                            <span class="colTitle">Loại máy:</span>
+                            <span class="colContent" id="loaiMay"></span>
                         </div>
-                        <div>
-                            <span>Tiện ích:</span>
-                            <span>Chế độ ngủ đêm Sleep cho người già, trẻ nhỏ, Chức năng hút ẩm, Chức năng tự chẩn đoán lỗi, Cánh đảo gió Big Flap đưa hơi lạnh đi xa hơn, Hoạt động siêu êm Quiet, Hẹn giờ bật tắt máy, Làm lạnh nhanh tức thì, Tự khởi động lại khi có điện, Điều khiển từ xa với ứng dụng Comfort Cloud</span>
+                        <div class="row">
+                            <span class="colTitle">Công suất làm lạnh:</span>
+                            <span class="colContent" id="congsuat"></span>
                         </div>
-                        <div>
-                            <span>Tiện ích:</span>
-                            <span>Chế độ ngủ đêm Sleep cho người già, trẻ nhỏ, Chức năng hút ẩm, Chức năng tự chẩn đoán lỗi, Cánh đảo gió Big Flap đưa hơi lạnh đi xa hơn, Hoạt động siêu êm Quiet, Hẹn giờ bật tắt máy, Làm lạnh nhanh tức thì, Tự khởi động lại khi có điện, Điều khiển từ xa với ứng dụng Comfort Cloud</span>
+                        <div class="row">
+                            <span class="colTitle">Phạm vi làm lạnh hiệu quả:</span>
+                            <span class="colContent" id="phamviLamlanh"></span>
+                        </div>
+                        <div class="row">
+                            <span class="colTitle">Tiêu thụ điện:</span>
+                            <span class="colContent" id="tieuthuDien"></span>
+                        </div>
+                        <div class="row">
+                            <span class="colTitle">Công nghệ kháng khuẩn:</span>
+                            <span class="colContent" id="khangkhuan"></span>
+                        </div>
+                        <div class="row">
+                            <span class="colTitle">Công nghệ tiết kiệm điện:</span>
+                            <span class="colContent" id="tietkiemDien"></span>
+                        </div>
+                        <div class="row">
+                            <span class="colTitle">Tiện ích:</span>
+                            <span class="colContent" id="tienich"></span>
                         </div>
                     </div>
                 </div>

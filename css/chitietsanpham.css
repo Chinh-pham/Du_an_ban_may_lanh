@@ -19,6 +19,16 @@ main>div div:last-child #mainLeft{
     margin-right: 20px;
     float: left;
 }
+#mainLeft #cacSP_tuongtu{
+    margin-bottom: 20px;
+}
+#mainLeft .rowSP_tuongtu{
+    margin-bottom: 5px;
+}
+#mainLeft .product{
+    display: inline-block;
+    margin-right: 2px;
+}
 #mainLeft .product:first-child{
     margin-left: 37px;
 }
@@ -51,20 +61,19 @@ main>div div:last-child #mainRight{
 #mainRight #thongSoKyThuat div{
     clear: both;
 }
-#thongSoKyThuat div span{
+#thongSoKyThuat .row{
+    width: 100%;
+    padding: 10px;
+    line-height: 25px;
+}
+#thongSoKyThuat .row .colTitle{
+    width: 40%;
     float: left;
-    padding: 5px;
 }
-#thongSoKyThuat div span:first-child{
-    width: 33%;
-}
-#thongSoKyThuat div span:last-child{
+#thongSoKyThuat .row .colContent{
     width: 60%;
-    margin-top: 10px;
+    float: right;
 }
-#mainRight #thongSoKyThuat div:first-child{
-    clear: none;
-}
-#mainRight #thongSoKyThuat div:first-child span{
-    margin-top: 0;
+footer{
+    clear: both;
 }

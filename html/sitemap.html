@@ -9,9 +9,20 @@
     <link rel="stylesheet" href="../css/style.css">
     <title>Giỏ hàng - CleanAir mang lại "không khí trong lành" cho gia đình Việt</title>
     <style>
+        main {
+            background-image: linear-gradient(to bottom, #dbedf9, #dbedf9, #1495ec);
+        }
+
         main>div {
-            width: 75%;
+            width: 960px;
             margin: 50px auto;
+            padding: 5px 0;
+            padding-bottom: 30px;
+        }
+
+        main>div>img {
+            border-radius: 20px;
+            border: 1px solid blue;
         }
     </style>
 </head>
@@ -49,58 +60,20 @@
         </div>
     </nav>
     <main>
-        <div class="Menu">
-            <ul>
-                <STRong>
-                    <font size="6" color="red">MENU</font>
-                </STRong>
-                <li><a href="https://doananhtingithub40102.github.io/HTCNWeb/html/trangchu.html">Trang chủ</a></li>
-                <ul class="Trang chủ" </ul>
-                    <li><a href="#">Sản phẩm</a></li>
-                </ul>
-                <li><a href="https://doananhtingithub40102.github.io/HTCNWeb/html/danhsachsanpham.html">Danh sách sản
-                        phẩm</a></li>
-                <ul class="Danh sách sản phẩm" </ul>
-
-                    <li><a href="https://doananhtingithub40102.github.io/HTCNWeb/html/chitietsanpham.html">Chi tiết sản
-                            phẩm</a></li>
-                </ul>
-                <li><a href="https://doananhtingithub40102.github.io/HTCNWeb/html/gioithieu_website_thanhvien.html">Giới
-                        thiệu website_Thành viên</a></li>
-                <ul class="Giới thiệu website" </ul>
-                    <li><a
-                            href="https://doananhtingithub40102.github.io/HTCNWeb/html/gioithieu_website_thanhvien.html#phan-0">Các
-                            thành viên</a></li>
-                    <li><a
-                            href="https://doananhtingithub40102.github.io/HTCNWeb/html/gioithieu_website_thanhvien.html#phan-1">Công
-                            dụng của điều hòa máy lạnh</a></li>
-                    <li><a
-                            href="https://doananhtingithub40102.github.io/HTCNWeb/html/gioithieu_website_thanhvien.html#phan-2">Các
-                            loại điều hòa, máy lạnh</a></li>
-                    <li><a
-                            href="https://doananhtingithub40102.github.io/HTCNWeb/html/gioithieu_website_thanhvien.html#phan-3">Lưu
-                            ý khi chọn mua điều hòa,máy lạnh</a></li>
-                    <li><a
-                            href="https://doananhtingithub40102.github.io/HTCNWeb/html/gioithieu_website_thanhvien.html#phan-4">Nên
-                            mua điều hòa, máy lạnh hãng nào tốt</a></li>
-                    <li><a
-                            href="https://doananhtingithub40102.github.io/HTCNWeb/html/gioithieu_website_thanhvien.html#phan-5">Gía
-                            điều hòa, máy lạnh bao nhiêu</a></li>
-                    <li><a
-                            href="https://doananhtingithub40102.github.io/HTCNWeb/html/gioithieu_website_thanhvien.html#phan-6">Mua
-                            điều hòa, máy lạnh ở đâu tốt, giá rẻ</a></li>
-                </ul>
-                <li><a href="https://doananhtingithub40102.github.io/HTCNWeb/html/giohang.html">Giỏ hàng</a></li>
-                <ul class="Giỏ hàng" </ul>
-                </ul>
-                <li><a href="https://doananhtingithub40102.github.io/HTCNWeb/html/dangky.html">Đăng Kí</a></li>
-                <ul class="Đăng kí" </ul>
-                </ul>
-                <li><a href="https://doananhtingithub40102.github.io/HTCNWeb/html/dangnhap.html">Đăng nhập</a></li>
-                <ul class="Đăng nhập" </ul>
-                </ul>
+        <div>
+            <h1>Site map</h1>
+            <img src="../img/sitemap.png" alt="" width="90%" usemap="#sitemap">
+            <map name="sitemap">
+                <area shape="circle" coords="460, 55, 35" href="trangchu.html" alt="">
+                <area shape="rect" coords="70, 190, 140, 253" alt="" href="danhsachsanpham.html">
+                <area shape="circle" coords="285, 225, 35" href="dangky.html" alt="">
+                <area shape="circle" coords="460, 225, 35" href="dangnhap.html" alt="">
+                <area shape="circle" coords="640, 225, 35" href="gioithieu_website_thanhvien.html" alt="">
+                <area shape="circle" coords="820, 225, 25" href="giohang.html" alt="">
+                <area shape="circle" coords="555, 420, 35" href="gioithieu_website_thanhvien.html" alt="">
+                <area shape="circle" coords="735, 420, 30" href="gioithieu_website_thanhvien.html#phan-0" alt="">
+            </map>
         </div>
-
     </main>
     <footer>
         <div>
