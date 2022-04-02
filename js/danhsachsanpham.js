@@ -1,5 +1,5 @@
-import { arrSP_DSSP } from "../js/Sanpham_array.js"
-import { Sanpham } from "../js/Sanpham.js"
+import { arrSP_DSSP } from "../js/sanpham_array.js"
+import { Sanpham } from "../js/sanpham.js"
 const sp = new Sanpham()
 
 let stringTimkiem = sessionStorage.getItem("timkiemDSSP")

@@ -1,5 +1,5 @@
-import { arrSP_Trangchu } from "../js/Sanpham_array.js"
-import { Sanpham } from "../js/Sanpham.js"
+import { arrSP_Trangchu } from "./sanpham_array.js"
+import { Sanpham } from "./sanpham.js"
 const sp = new Sanpham()
 
 let stringTimkiem = sessionStorage.getItem("timkiemTrangchu")

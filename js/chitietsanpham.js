@@ -1,4 +1,4 @@
-import {arrSP_DSSP} from "./Sanpham_array.js"
+import {arrSP_DSSP} from "./sanpham_array.js"
 
 $(document).ready(function () {
     let stringSP = sessionStorage.getItem("TTCT_SP")
