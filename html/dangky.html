@@ -6,9 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng ký tài khoản - CleanAir mang lại "không khí trong lành" cho gia đình Việt</title>
+    <link rel="shortcut icon" href="../img/iconMaylanh.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/dangky.css">
-    <link rel="stylesheet" href="../css/styleTaikhoan.css">
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/dangky.js"></script>
+    <script src="../js/taikhoan.js"></script>
 </head>
 
 <body>
@@ -18,7 +21,7 @@
                 <img src="../img/logoMaylanh.png" width="30" height="30" alt="logo Máy lạnh">
                 <h2>CleanAir</h2>
             </a>
-            <form id="formSearch" action="">
+            <form id="formSearch">
                 <input type="text" placeholder="Nhập sản phẩm bạn muốn tìm kiếm ...">
                 <button>Tìm kiếm</button>
             </form>
@@ -30,6 +33,21 @@
                 </a>
                 <a id="dangKy" href="dangky.html">Đăng ký</a>
                 <a id="dangNhap" href="dangnhap.html">Đăng nhập</a>
+                <div id="divTaikhoan">
+                    <span id="taikhoan"></span>
+                    <div id="ttTaikhoan">
+                        <ul id="info">
+                            <li><b>Tên đăng nhập: </b><span id="tenDangnhap"></span></li>
+                            <li><b>Mật khẩu: </b><span id="matkhau"></span><span id="passEye"><img width="22" src="../img/closePassEye.png" alt=""></span></li>
+                            <li><b>Họ và tên: </b><span id="hoten"></span></li>
+                            <li><b>Số điện thoại: </b><span id="sdt"></span></li>
+                        </ul>
+                        <div>
+                            <button type="button" id="doiMK">Đổi mật khẩu</button>
+                            <button type="button" id="dangXuat">Đăng xuất</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
@@ -46,38 +64,78 @@
     <main>
         <div class="container">
             <div class="register-form">
+                <h2>Đăng Ký Tài Khoản</h2>
                 <form action="">
-                    <h1>Đăng Ký Tài Khoản</h1>
-                    <div class="input-box">
-                        <input type="text" placeholder="Tên đăng nhập">
-                    </div>
-                    <div class="input-box">
-                        <input type="password" placeholder="Mật khẩu">
-                    </div>
-                    <div class="input-box">
-                        <input type="password" placeholder="Nhập lại mật khẩu">
-                    </div>
-                    <div class="input-box">
-                        <div class="col-6">
-                            <label for="ngaysinh">Ngày sinh</label>
-                            <br>
-                            <input type="date" id="ngaysinh" />
+                    <div class="row">
+                        <label for="txtTenDangnhap">Tên đăng nhập:</label>
+                        <input type="text" id="txtTenDangnhap" placeholder="Nhập vào tên đăng nhập" required>
+                        <span>*</span>
+                        <div>
+                            <span id="messTenDangnhap"></span>
                         </div>
-                        <div class="col-6">
-                            <label for="gioitinh">Giới tính</label>
-                            <br>
-                            <select id="gioitinh">
-                                <option value="nam">Nam</option>
-                                <option value="nu">Nữ</option>
-                            </select>
+                    </div>
+                    <div class="row">
+                        <label for="txtMatkhau">Mật khẩu:</label>
+                        <input type="password" id="txtMatkhau" placeholder="Nhập vào mật khẩu" required>
+                        <span>*</span>
+                        <div>
+                            <span id="messMatkhau"></span>
                         </div>
-                        <div class="clear"></div>
                     </div>
-                    <div class="input-box">
-                        <input type="password" placeholder="Nhập địa chỉ ">
+                    <div class="row">
+                        <label for="txtNLMK">Nhập lại mật khẩu:</label>
+                        <input type="password" id="txtNLMK" placeholder="Nhập vào xác nhận mật khẩu" required>
+                        <span>*</span>
+                        <div>
+                            <span id="messNLMK"></span>
+                        </div>
                     </div>
-                    <div class="btn-box">
-                        <button type="submit">Đăng ký</button>
+                    <h4>THÔNG TIN CÁ NHÂN</h4>
+                    <div class="row">
+                        <label for="txtHoten">Họ và tên:</label>
+                        <input type="text" id="txtHoten" placeholder="Nhập vào họ tên" required>
+                        <span>*</span>
+                        <div>
+                            <span id="messHoten"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label for="ngaysinh">Ngày sinh:</label>
+                        <input type="date" id="ngaysinh">
+                        <div>
+                            <span id="messNgaysinh"></span>
+                        </div>
+                    </div>
+                    <div class="row" id="gioitinh">
+                        <label for="" style="margin-left: 13%;">Giới tính:</label>
+                        <input type="radio" id="nam" name="gioitinh" checked>
+                        <label for="nam">Nam</label>
+                        <input type="radio" id="nu" name="gioitinh">
+                        <label for="nu">Nữ</label>
+                    </div>
+                    <div class="row">
+                        <label for="txtDiachi">Địa chỉ:</label>
+                        <input type="text" id="txtDiachi" placeholder="Nhập vào địa chỉ">
+                    </div>
+                    <div class="row">
+                        <label for="txtDT">Điện thoại:</label>
+                        <input type="text" id="txtDT" placeholder="Nhập vào số điện thoại (10 số)" required>
+                        <span>*</span>
+                        <div>
+                            <span id="messDT"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label for="txtEmail">Email:</label>
+                        <input type="email" id="txtEmail"
+                            placeholder="Nhập vào email cá nhân theo dạng ten@tencongty.com">
+                        <div>
+                            <span id="messEmail"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <button type="submit" id="dangky">Đăng ký</button>
+                        <button type="reset" id="huy">Hủy</button>
                     </div>
                 </form>
             </div>

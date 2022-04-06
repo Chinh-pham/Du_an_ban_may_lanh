@@ -8,6 +8,8 @@
     <link rel="shortcut icon" href="../img/iconMaylanh.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/gioithieu_website_thanhvien.css">
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/taikhoan.js"></script>
 </head>
 <body>
     <header id="top">
@@ -28,6 +30,21 @@
                 </a>
                 <a id="dangKy" href="dangky.html">Đăng ký</a>
                 <a id="dangNhap" href="dangnhap.html">Đăng nhập</a>
+                <div id="divTaikhoan">
+                    <span id="taikhoan"></span>
+                    <div id="ttTaikhoan">
+                        <ul id="info">
+                            <li><b>Tên đăng nhập: </b><span id="tenDangnhap"></span></li>
+                            <li><b>Mật khẩu: </b><span id="matkhau"></span><span id="passEye"><img width="22" src="../img/closePassEye.png" alt=""></span></li>
+                            <li><b>Họ và tên: </b><span id="hoten"></span></li>
+                            <li><b>Số điện thoại: </b><span id="sdt"></span></li>
+                        </ul>
+                        <div>
+                            <button type="button" id="doiMK">Đổi mật khẩu</button>
+                            <button type="button" id="dangXuat">Đăng xuất</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
@@ -142,28 +159,28 @@
                     <p>CleanAir với trên 10 năm cung cấp các thiết bị sản phẩm điện máy, điện lạnh cam kết bán các loại điều hòa, máy lạnh gia đình chính hãng với mức giá rẻ nhất, bảo hành dài lâu 12 - 36 tháng.</p>
                     <p><strong>Các sản phẩm bán chạy của CleanAir</strong>:</p>
                     <div id="products">
-                        <a class="product" href="chitietsanpham.html">
+                        <a class="product" href="">
                             <div>
                                 <div class="productImg"><img src="../img/panasonicInverter1HP.png" alt=""></div>
                                 <h3 class="productTen">Panasonic Inverter 1.5 HP CU/CS-PU12WKH-8M</h3>
                                 <div class="productGia">12.890.000<sup>đ</sup></div>
                             </div>
                         </a>
-                        <a class="product" href="chitietsanpham.html">
+                        <a class="product" href="">
                             <div>
                                 <div class="productImg"><img src="../img/mideaInverter2HP.png" alt=""></div>
                                 <h3 class="productTen">Midea Inverter 2 HP MSAFA-18CRDN8</h3>
                                 <div class="productGia">14.590.000<sup>đ</sup></div>
                             </div>
                         </a>
-                        <a class="product" href="chitietsanpham.html">
+                        <a class="product" href="">
                             <div>
                                 <div class="productImg"><img src="../img/daikinInverter1HP.png" alt=""></div>
                                 <h3 class="productTen">Daikin Inverter 1 HP FTKA25VMVMV</h3>
                                 <div class="productGia">10.590.000<sup>đ</sup></div>
                             </div>
                         </a>
-                        <a class="product" href="chitietsanpham.html">
+                        <a class="product" href="">
                             <div>
                                 <div class="productImg"><img src="../img/sharpInverter1HP.png" alt=""></div>
                                 <h3 class="productTen">Sharp Inverter 1 HP AH-X9XEW</h3>

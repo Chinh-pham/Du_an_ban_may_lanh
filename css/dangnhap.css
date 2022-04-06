@@ -35,7 +35,7 @@ h1 {
     margin: 20px auto;
     background-color: #ffffff;
     padding: 15px;
-    border: 2px dotted #cccccc;
+    border: 2px solid #cccccc;
     border-radius: 10px;
 }
 
@@ -43,12 +43,15 @@ h1 {
     margin-bottom: 10px;
 }
 
-.input-box input[type='text'],
-.input-box input[type='password']{
+.input-box div{
+    margin-bottom: 5px;
+}
+
+.input-box input{
     width: 100%;
     border: 1px solid #cccccc;
     outline: none;
-    font-size: 17px;
+    font-size: 16px;
     display: inline-block;
     height: 40px;
     color: #666666;

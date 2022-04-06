@@ -13,7 +13,7 @@ $(document).ready(function () {
         $("#loaiMay").text(objSP.loaimay)
         $("#congsuat").text(objSP.congsuatLamlanh + " HP")
         $("#phamviLamlanh").text(objSP.phamviLamlanh)
-        $("#tieuthuDien").text(objSP.tieuthuDien)
+        $("#tieuthuDien").text(objSP.tieuthuDien + " kW/h")
         $("#khangkhuan").text(objSP.khangkhuan)
         $("#tietkiemDien").text(objSP.congngheTietkiemDien)
         $("#tienich").text(objSP.tienich)
@@ -52,6 +52,59 @@ $(document).ready(function () {
                     break
                 }
             }
+        })
+
+        $("#muangay").click(function(){
+            const taiKhoanDN = localStorage.getItem("tkDangnhap")
+            const dsGio = localStorage.getItem("dsGioSP")
+            if (taiKhoanDN == null) {
+                alert("Vui lòng đăng nhập để mua hàng!")
+                return
+            }
+            const taikhoan = JSON.parse(taiKhoanDN)
+            const giohang = {
+                tendangnhap: taikhoan.ten_dangnhap,
+                sanpham: [
+                    {
+                        hinhanh: objSP.hinhanh[0],
+                        ten: objSP.ten,
+                        gia: objSP.gia
+                    }
+                ]
+            }
+            if (dsGio == null){
+                let dsGioSP = []
+                giohang.sanpham[0].soluong = 1
+                dsGioSP.push(giohang)
+                localStorage.setItem("dsGioSP", JSON.stringify(dsGioSP))
+            } else{
+                let objDSGioSP = JSON.parse(dsGio)
+                    let giaodichMoi = true
+                    for (let i = 0; i < objDSGioSP.length; i++) {
+                        if (taikhoan.ten_dangnhap === objDSGioSP[i].tendangnhap) {
+                            giaodichMoi = false
+                            let sanphamDuocThemNhieuLan = false
+                            for (let j = 0; j < objDSGioSP[i].sanpham.length; j++){
+                                if (giohang.sanpham[0].ten === objDSGioSP[i].sanpham[j].ten){
+                                    sanphamDuocThemNhieuLan = true
+                                    objDSGioSP[i].sanpham[j].soluong += 1
+                                    break
+                                }
+                            }
+                            if (!sanphamDuocThemNhieuLan){
+                                giohang.sanpham[0].soluong = 1
+                                objDSGioSP[i].sanpham.push(giohang.sanpham[0])
+                            }
+                            break
+                        }
+                    }
+                    if (giaodichMoi) {
+                        giohang.sanpham[0].soluong = 1
+                        objDSGioSP.push(giohang)
+                    }
+                    localStorage.setItem("dsGioSP", JSON.stringify(objDSGioSP))
+            }
+            location.href = "../html/giohang.html"
         })
     }
 })

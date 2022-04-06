@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../css/modal.css">
     <script src="../js/jquery-3.6.0.min.js"></script>
     <script type="module" src="../js/danhsachsanpham.js"></script>
+    <script src="../js/taikhoan.js"></script>
 </head>
 
 <body>
@@ -33,6 +34,21 @@
                 </a>
                 <a id="dangKy" href="dangky.html">Đăng ký</a>
                 <a id="dangNhap" href="dangnhap.html">Đăng nhập</a>
+                <div id="divTaikhoan">
+                    <span id="taikhoan"></span>
+                    <div id="ttTaikhoan">
+                        <ul id="info">
+                            <li><b>Tên đăng nhập: </b><span id="tenDangnhap"></span></li>
+                            <li><b>Mật khẩu: </b><span id="matkhau"></span><span id="passEye"><img width="22" src="../img/closePassEye.png" alt=""></span></li>
+                            <li><b>Họ và tên: </b><span id="hoten"></span></li>
+                            <li><b>Số điện thoại: </b><span id="sdt"></span></li>
+                        </ul>
+                        <div>
+                            <button type="button" id="doiMK">Đổi mật khẩu</button>
+                            <button type="button" id="dangXuat">Đăng xuất</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </header>

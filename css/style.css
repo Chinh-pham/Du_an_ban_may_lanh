@@ -53,11 +53,14 @@ header>div{
 }
 #gioHang div{
     display: inline-block;
-    height: 40px;
-    border: 2px solid #0DCAF0;
+    height: 30px;
+    border: 2px solid #2566fe;
+    background-color: #0DCAF0;
     position: relative;
-    top: -12px;
+    top: -13px;
+    line-height: 10px;
     padding: 0 15px;
+    padding-bottom: 7px;
 }
 #gioHang div span{
     position: relative;
@@ -67,6 +70,83 @@ header>div{
     text-decoration: none;
     margin:0 20px;
 }
+
+header #divTaikhoan{
+    display: none;
+}
+
+#divTaikhoan #taikhoan{
+    border-radius: 20px;
+    background-color: goldenrod;
+    padding: 10px 15px;
+    font-weight: bold;
+    position: relative;
+}
+
+#divTaikhoan #taikhoan:hover{
+    cursor: pointer;
+}
+
+#divTaikhoan #ttTaikhoan{
+    position: absolute;
+    width: 310px;
+    padding: 0 5px;
+    background-color: goldenrod;
+    box-shadow: 0 0 5px 1px black;
+    top: 32px;
+    border-radius: 8px;
+    display: none;
+    left: 113px;
+    z-index: 99;
+}
+
+#ttTaikhoan #info{
+    list-style: none;
+    width: 100%;
+    margin-left: -35px;
+}
+
+#ttTaikhoan button{
+    font-size: 15px;
+}
+
+#ttTaikhoan button:hover{
+    cursor: pointer;
+}
+
+#info li{
+    margin: 5px;
+}
+
+#info #passEye:hover{
+    cursor: pointer;
+}
+
+#ttTaikhoan div{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#ttTaikhoan div button{
+    padding: 8px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#ttTaikhoan div button:first-child{
+    color: black;
+    font-weight: bold;
+    background-color: white;
+    padding: 10px 15px;
+}
+
+#ttTaikhoan div button:last-child{
+    background-color: #f04449;
+    color: white;
+    padding: 10px 15px;
+    font-weight: bold;
+}
+
 nav{
     border: 1px solid black;
     width: 100%;

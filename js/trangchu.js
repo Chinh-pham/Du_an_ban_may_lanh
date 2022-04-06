@@ -1,16 +1,17 @@
 import { arrSP_Trangchu } from "./sanpham_array.js"
 import { Sanpham } from "./sanpham.js"
+
 const sp = new Sanpham()
 
 let stringTimkiem = sessionStorage.getItem("timkiemTrangchu")
 
-if (stringTimkiem != null){
+if (stringTimkiem != null) {
     sp.timkiemSanpham(stringTimkiem, arrSP_Trangchu)
-} else{
+} else {
     sp.themSanpham(arrSP_Trangchu)
 }
 
-$(".trangchu").click(function(){
+$(".trangchu").click(function () {
     sessionStorage.removeItem("timkiemTrangchu")
 })
 

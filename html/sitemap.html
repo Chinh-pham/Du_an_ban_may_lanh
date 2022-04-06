@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng - CleanAir mang lại "không khí trong lành" cho gia đình Việt</title>
     <link rel="shortcut icon" href="../img/iconMaylanh.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/style.css">
-    <title>Giỏ hàng - CleanAir mang lại "không khí trong lành" cho gia đình Việt</title>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/taikhoan.js"></script>
     <style>
         main {
             background-image: linear-gradient(to bottom, #dbedf9, #dbedf9, #1495ec);
@@ -25,6 +27,18 @@
             border: 1px solid blue;
         }
     </style>
+    <script>
+        const tkDN = localStorage.getItem("tkDangnhap")
+        if (tkDN != null){
+            $(window).click(function(event){
+                if ((event.pageX >= 707) && (event.pageX <= 765) && (event.pageY >= 424) && (event.pageY <= 481)){
+                    $("#areaDN").removeAttr("href")
+                    alert("Vui lòng đăng xuất trước khi đăng nhập vào tài khoản khác!")
+                    location.reload()
+                }
+            })
+        }
+    </script>
 </head>
 
 <body>
@@ -46,6 +60,21 @@
                 </a>
                 <a id="dangKy" href="dangky.html">Đăng ký</a>
                 <a id="dangNhap" href="dangnhap.html">Đăng nhập</a>
+                <div id="divTaikhoan">
+                    <span id="taikhoan"></span>
+                    <div id="ttTaikhoan">
+                        <ul id="info">
+                            <li><b>Tên đăng nhập: </b><span id="tenDangnhap"></span></li>
+                            <li><b>Mật khẩu: </b><span id="matkhau"></span><span id="passEye"><img width="22" src="../img/closePassEye.png" alt=""></span></li>
+                            <li><b>Họ và tên: </b><span id="hoten"></span></li>
+                            <li><b>Số điện thoại: </b><span id="sdt"></span></li>
+                        </ul>
+                        <div>
+                            <button type="button" id="doiMK">Đổi mật khẩu</button>
+                            <button type="button" id="dangXuat">Đăng xuất</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
@@ -65,13 +94,13 @@
             <img src="../img/sitemap.png" alt="" width="90%" usemap="#sitemap">
             <map name="sitemap">
                 <area shape="circle" coords="460, 55, 35" href="trangchu.html" alt="">
-                <area shape="rect" coords="70, 190, 140, 253" alt="" href="danhsachsanpham.html">
+                <area shape="rect" coords="70, 190, 140, 253" href="danhsachsanpham.html" alt="">
                 <area shape="circle" coords="285, 225, 35" href="dangky.html" alt="">
-                <area shape="circle" coords="460, 225, 35" href="dangnhap.html" alt="">
+                <area shape="circle" coords="460, 225, 35" href="dangnhap.html" alt="" id="areaDN">
                 <area shape="circle" coords="640, 225, 35" href="gioithieu_website_thanhvien.html" alt="">
-                <area shape="circle" coords="820, 225, 25" href="giohang.html" alt="">
-                <area shape="circle" coords="555, 420, 35" href="gioithieu_website_thanhvien.html" alt="">
-                <area shape="circle" coords="735, 420, 30" href="gioithieu_website_thanhvien.html#phan-0" alt="">
+                <area shape="circle" coords="790, 205, 25" href="giohang.html" alt="">
+                <area shape="circle" coords="545, 400, 35" href="gioithieu_website_thanhvien.html" alt="">
+                <area shape="circle" coords="707, 405, 30" href="gioithieu_website_thanhvien.html#phan-0" alt="">
             </map>
         </div>
     </main>
