@@ -57,14 +57,21 @@ $(window).ready(function () {
             }
             const xacnhan = confirm("Quý khách có chắc chắn muốn đặt tất cả các sản phẩm trong giỏ hàng?")
             if (xacnhan) {
-                alert("Chúc mừng quý khách đã đặt hàng thành công.\nCảm ơn quý khách đã ủng hộ các sản phẩm của CleanAir.\nMọi thắc mắc xin liên hệ tổng đài của chúng tôi: 0343594010\nXin hẹn gặp lại!")
+                // Get the modal
+                var modal = document.getElementById("myModal")
+                $("#myModal").css("display", "block")
+
+                // When the user clicks on <span> (x), close the modal
+                $(".close").click(function () {
+                    $("#myModal").css("display", "none")
+                })
 
                 xuLyGiohangRong()
 
                 for (let i = 0; i < objDSGioSP.length; i++) {
                     if (tenDN === objDSGioSP[i].tendangnhap) {
                         objDSGioSP.splice(i, 1)
-                        localStorage.setItem("dsGioSP", JSON.stringify(objDSGioSP))   
+                        localStorage.setItem("dsGioSP", JSON.stringify(objDSGioSP))
                     }
                 }
             }

@@ -32,6 +32,58 @@ main>div div:last-child #mainLeft{
 #mainLeft .product:first-child{
     margin-left: 37px;
 }
+#mainLeft #binhluan{
+    margin-bottom: 20px;
+
+}
+#mainLeft #binhluan span{
+    color: red;
+}
+#binhluan #formBinhluan{
+    border: 1px solid silver;
+    background-color: #f1f1f1;
+    padding: 5px 15px;
+    margin-left: 34px;
+    width: 1000px;
+}
+#binhluan #formBinhluan .row{
+    margin-bottom: 10px;
+}
+#binhluan #formBinhluan label{
+    display: inline-block;
+    width: 140px;
+}
+#binhluan #formBinhluan input{
+    width: 345px;
+    height: 24px;
+}
+#binhluan #formBinhluan textarea{
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+#binhluan #formBinhluan #cacBinhluan{
+    border-top: 1px solid blue;
+    padding-top: 20px;
+}
+#binhluan #formBinhluan #cacBinhluan .binhluan{
+    padding-bottom: 15px;
+    border-bottom: 1px solid silver;
+    margin-bottom: 10px;
+}
+#binhluan #formBinhluan #btnThembinhluan{
+    background-color: rgb(47, 84, 186);
+    color: white;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5px;
+}
+#binhluan #formBinhluan #fileList{
+    background-color: white;
+    border-width: 1px;
+    border-style: solid;
+    padding: 5px;
+    display: none;
+}
 main>div div:last-child #mainRight{
     width: 40%;
     display: block;

@@ -138,10 +138,7 @@ class Sanpham {
             let arrSPtoShow = []
             for (let i = 0; i < arr.length; i++) {
                 // Lọc về Công suất
-                if (boloc[0] == "up2.5" && arr[i].congsuatLamlanh <= 2.5) {
-                    continue
-                }
-                if (boloc[0] != "up2.5" && boloc[0] != "congsuat" && eval(boloc[0]) != arr[i].congsuatLamlanh) {
+                if (boloc[0] != "congsuat" && eval(boloc[0]) != arr[i].congsuatLamlanh) {
                     continue
                 }
 
