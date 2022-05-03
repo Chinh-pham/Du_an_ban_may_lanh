@@ -1,5 +1,5 @@
 class Sanpham {
-    constructor(ten, gia, hang, kieudang, hinhanh, noiSanxuat, namSanxuat, loaimay, congsuatLamlanh, phamviLamlanh, khangkhuan, congngheTietkiemDien, tienich, tieuthuDien) {
+    constructor(ten, gia, hang, kieudang, hinhanh, noiSanxuat, namSanxuat, loaimay, congsuatLamlanh, phamviLamlanh, congngheKhangkhuan, congngheTietkiemDien, tienich, tieuthuDien) {
         // 14 thuộc tính
         this.ten = ten
         this.gia = gia
@@ -11,7 +11,7 @@ class Sanpham {
         this.loaimay = loaimay
         this.congsuatLamlanh = congsuatLamlanh
         this.phamviLamlanh = phamviLamlanh
-        this.khangkhuan = khangkhuan
+        this.congngheKhangkhuan = congngheKhangkhuan
         this.congngheTietkiemDien = congngheTietkiemDien
         this.tienich = tienich
         this.tieuthuDien = tieuthuDien
@@ -20,7 +20,7 @@ class Sanpham {
         return "Máy lạnh " + this.ten + " sản xuất tại " + this.noiSanxuat + ". Với kiểu dáng " + this.kieudang + " thuộc hãng " + this.hang + " có giá " + this.gia
     }
     thongsoKythuat() {
-        return "Máy lạnh " + this.ten + " thuộc loại máy " + this.loaimay + ", có công suất làm lạnh " + this.congsuatLamlanh + "trong phạm vi " + this.phamviLamlanh + ", tiêu thụ điện khoảng " + this.tieuthuDien + ". Máy lạnh được trang bị công nghệ kháng khuẩn " + this.khangkhuan + ", công nghệ tiết kiệm điện " + this.congngheTietkiemDien + " đi kèm nhiều tiện ích như: " + this.tienich
+        return "Máy lạnh " + this.ten + " thuộc loại máy " + this.loaimay + ", có công suất làm lạnh " + this.congsuatLamlanh + "trong phạm vi " + this.phamviLamlanh + ", tiêu thụ điện khoảng " + this.tieuthuDien + ". Máy lạnh được trang bị công nghệ kháng khuẩn " + this.congngheKhangkhuan + ", công nghệ tiết kiệm điện " + this.congngheTietkiemDien + " đi kèm nhiều tiện ích như: " + this.tienich
     }
     themSanpham(arr) {
         let rowProducts = $("<div></div>")
@@ -42,6 +42,8 @@ class Sanpham {
             for (let i = 0; i < arr.length; i++) {
                 if (tensanpham == arr[i].ten) {
                     sessionStorage.setItem("TTCT_SP", JSON.stringify(arr[i]))
+
+                    // Gán thông tin trong modal về sản phẩm đã thêm vào giỏ hàng
                     $("#tenSP").text(tensanpham)
                     $("#giaSP").text(arr[i].gia)
                     break
@@ -129,7 +131,7 @@ class Sanpham {
             }, 2000)
         })
     }
-    locSanpham(boloc, arr) {
+    locSanpham(boloc, arr) {    
         $("#inputTimkiem").val("")
         $(".rowProducts").remove()
         if (boloc[0] == "congsuat" && boloc[1] == "hang" && boloc[2] == "gia" && boloc[3] == "tienich" && boloc[4] == "macdinh") {
@@ -211,15 +213,13 @@ class Sanpham {
             .replace(/[\\\-\(\)/,]/g, "")
         let arrSPtoShow = []
         for (let i = 0; i < arr.length; i++) {
-            let ten, kieudang, noiSanxuat, loaimay, khangkhuan, congngheTietkiemDien, tienich = ""
-            ten = arr[i].ten.toLowerCase().replace(/[ \-]/g, "")
-            kieudang = chuyendoiChuoi(arr[i].kieudang)
+            let ten, noiSanxuat, congngheKhangkhuan, congngheTietkiemDien, tienich = ""
+            ten = arr[i].ten.toLowerCase().replace(/[ \-/]/g, "")
             noiSanxuat = chuyendoiChuoi(arr[i].noiSanxuat).replace(/\//g, "")
-            loaimay = chuyendoiChuoi(arr[i].loaimay).replace(/\(\)/g, "")
-            khangkhuan = chuyendoiChuoi(arr[i].khangkhuan).replace(/,/g, "")
+            congngheKhangkhuan = chuyendoiChuoi(arr[i].congngheKhangkhuan).replace(/[,\-\(\)]/g, "")
             congngheTietkiemDien = chuyendoiChuoi(arr[i].congngheTietkiemDien).replace(/,/g, "")
             tienich = chuyendoiChuoi(arr[i].tienich).replace(/,-\(\)/g, "")
-            if (ten.indexOf(input) > -1 || kieudang.indexOf(input) > -1 || noiSanxuat.indexOf(input) > -1 || loaimay.indexOf(input) > -1 || khangkhuan.indexOf(input) > -1 || congngheTietkiemDien.indexOf(input) > -1 || tienich.indexOf(input) > -1) {
+            if (ten.indexOf(input) > -1 || noiSanxuat.indexOf(input) > -1 || congngheKhangkhuan.indexOf(input) > -1 || congngheTietkiemDien.indexOf(input) > -1 || tienich.indexOf(input) > -1) {
                 arrSPtoShow.push(arr[i])
             }
         }
@@ -233,7 +233,7 @@ class Sanpham {
         } else {
             // Hiển thị các sản phẩm phù hợp kết quả tìm kiếm
             this.themSanpham(arrSPtoShow)
-            if (arr.length == 16) {
+            if (arr.length !== 8) {
                 sessionStorage.setItem("timkiemDSSP", input)
                 sessionStorage.removeItem("boloc")
             } else {

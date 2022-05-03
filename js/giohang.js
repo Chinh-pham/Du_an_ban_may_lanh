@@ -20,6 +20,7 @@ $(window).ready(function () {
                 }
 
                 $("#container").prepend(divCacsanpham)
+                break
             }
         }
         if (gioRong) {
@@ -89,7 +90,7 @@ function xuLyGiohangRong() {
 function phantachSoHangnghin(so) {
     let arrHangtram = []
     let soDaduocPhantach = ""
-    let strSo = "" + so
+    let strSo = so + ""
     let end = strSo.length
     let start = end - 3
     while (start > 0) {
