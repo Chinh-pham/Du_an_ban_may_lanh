@@ -145,7 +145,7 @@ function hoten() {
         return false
     }
     if (!regexHoten.test(hoten)) {
-        $("#messHoten").text("Họ tên chỉ chứa chữ (không dấu) và khoảng trắng!")
+        $("#messHoten").text("Họ tên chỉ chứa chữ và khoảng trắng!")
         return false
     }
 
