@@ -17,6 +17,7 @@ $(document).ready(function () {
         $("#khangkhuan").text(objSP.khangkhuan)
         $("#tietkiemDien").text(objSP.congngheTietkiemDien)
         $("#tienich").text(objSP.tienich)
+        $("#noiSanxuat").text(objSP.noiSanxuat)
 
         // Thêm các sản phẩm tương tự (dựa vào hãng hoặc công suất làm lạnh)
         let arraySP_tuongtu = []

@@ -5,16 +5,16 @@ const sp = new Sanpham()
 let stringTimkiem = sessionStorage.getItem("timkiemDSSP")
 let stringBoloc = sessionStorage.getItem("boloc")
 
-if (stringTimkiem != null){
+if (stringTimkiem != null) {
     sp.timkiemSanpham(stringTimkiem, arrSP_DSSP)
-} else if (stringBoloc != null){
+} else if (stringBoloc != null) {
     let objBoloc = JSON.parse(stringBoloc)
     sp.locSanpham(objBoloc, arrSP_DSSP)
-} else{
+} else {
     sp.themSanpham(arrSP_DSSP)
 }
 
-$("#dssp").click(function(){
+$("#dssp").click(function () {
     sessionStorage.removeItem("timkiemDSSP")
     sessionStorage.removeItem("boloc")
 })
@@ -30,6 +30,8 @@ $("#inputTimkiem").keydown(function (event) {
     if (event.which === 13 || event.keyCode === 13) {
         if (this.value.trim() != "") {
             sp.timkiemSanpham(this.value, arrSP_DSSP)
+        } else if (this.value == "") {
+            refreshBoloc()
         }
     }
 })
@@ -39,6 +41,8 @@ $("#btnTimkiem").click(function () {
     input = $("#inputTimkiem").val()
     if (input.trim() != "") {
         sp.timkiemSanpham(input, arrSP_DSSP)
+    } else if (this.value == "") {
+        refreshBoloc()
     }
 })
 
@@ -89,3 +93,15 @@ $("#xeptheo").click(function () {
         sp.locSanpham(boloc, arrSP_DSSP)
     }
 })
+
+function refreshBoloc() {
+    sessionStorage.removeItem("timkiemDSSP")
+    sessionStorage.removeItem("boloc")
+    $("#congsuat").val("congsuat")
+    $("#hang").val("hang")
+    $("#gia").val("gia")
+    $("#tienich").val("tienich")
+    $("#xeptheo").val("macdinh")
+    $(".rowProducts").remove()
+    sp.themSanpham(arrSP_DSSP)
+}
