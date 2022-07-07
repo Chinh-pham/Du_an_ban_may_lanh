@@ -12,7 +12,8 @@ HTML, CSS, Javascript, JQuery
 - JS HTML DOM
 - JS Objects/ Classes
 - JS JSON
-- JS Web APIs - Web Storage API
+- JS Web APIs - Web Storage API'
+- JS Modules (import/ export)
 
 ## Các tính năng đã có
 
