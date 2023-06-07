@@ -3,55 +3,67 @@ body {
     margin: 0;
     padding: 0;
 }
+
 img {
     max-height: 100%;
     max-width: 100%;
 }
-header{
+
+header {
     border: 1px solid black;
     width: 100%;
     height: 50px;
     background-color: rgb(242, 246, 250);
 }
-header>div{
+
+header>div {
     margin: 0 15%;
     height: 100%;
 }
-#logo{
-    text-decoration: none; color: black;
+
+#logo {
+    text-decoration: none;
+    color: black;
 }
-#logo h2{
+
+#logo h2 {
     display: inline-block;
     position: relative;
     top: -6px;
     font-weight: 400;
     font-style: italic;
 }
-#formSearch{
+
+#formSearch {
     display: inline-block;
     position: relative;
     top: -10px;
     margin-left: 100px;
 }
-#formSearch input{
+
+#formSearch input {
     width: 250px;
     height: 25px;
 }
-#formSearch button{
+
+#formSearch button {
     height: 31px;
     margin-left: -5px;
 }
-#headerRight{
+
+#headerRight {
     display: inline-block;
     position: relative;
     top: -10px;
     right: -80px;
 }
-#headerRight #gioHang{
+
+#headerRight #gioHang {
     text-decoration: none;
-    margin:0 20px;
+    margin: 0 20px;
 }
-#gioHang div{
+
+#gioHang div {
     display: inline-block;
     height: 30px;
     border: 2px solid #2566fe;
@@ -62,20 +74,23 @@ header>div{
     padding: 0 15px;
     padding-bottom: 7px;
 }
-#gioHang div span{
+
+#gioHang div span {
     position: relative;
     top: 15px;
 }
-#headerRight #dangKy, #headerRight #dangNhap{
+
+#headerRight #dangKy,
+#headerRight #dangNhap {
     text-decoration: none;
-    margin:0 20px;
+    margin: 0 20px;
 }
 
-header #divTaikhoan{
+header #divTaikhoan {
     display: none;
 }
 
-#divTaikhoan #taikhoan{
+#divTaikhoan #taikhoan {
     border-radius: 20px;
     background-color: goldenrod;
     padding: 10px 15px;
@@ -83,11 +98,11 @@ header #divTaikhoan{
     position: relative;
 }
 
-#divTaikhoan #taikhoan:hover{
+#divTaikhoan #taikhoan:hover {
     cursor: pointer;
 }
 
-#divTaikhoan #ttTaikhoan{
+#divTaikhoan #ttTaikhoan {
     position: absolute;
     width: 310px;
     padding: 0 5px;
@@ -100,175 +115,316 @@ header #divTaikhoan{
     z-index: 99;
 }
 
-#ttTaikhoan #info{
+#ttTaikhoan #info {
     list-style: none;
     width: 100%;
     margin-left: -35px;
 }
 
-#ttTaikhoan button{
+#ttTaikhoan button {
     font-size: 15px;
 }
 
-#ttTaikhoan button:hover{
+#ttTaikhoan button:hover {
     cursor: pointer;
 }
 
-#info li{
+#info li {
     margin: 5px;
 }
 
-#info #passEye:hover{
+#info #passEye:hover {
     cursor: pointer;
 }
 
-#ttTaikhoan div{
+#ttTaikhoan div {
     text-align: center;
     margin-bottom: 10px;
 }
 
-#ttTaikhoan div button{
+#ttTaikhoan div button {
     padding: 8px;
     border: 1px solid black;
     border-radius: 5px;
 }
 
-#ttTaikhoan div button:first-child{
+#ttTaikhoan div button:first-child {
     color: black;
     font-weight: bold;
     background-color: white;
     padding: 10px 15px;
 }
 
-#ttTaikhoan div button:last-child{
+#ttTaikhoan div button:last-child {
     background-color: #f04449;
     color: white;
     padding: 10px 15px;
     font-weight: bold;
 }
 
-nav{
+nav {
     border: 1px solid black;
     width: 100%;
     height: 50px;
-    background-color:lightblue;
+    background-color: lightblue;
 }
-nav div{
+
+nav div {
     margin: 0 15%;
     height: 100%;
     padding-top: 15px;
 }
-nav div a{
+
+nav div a {
     text-decoration: none;
     color: black;
     font-size: 20px;
     margin-right: 50px;
 }
-nav div #khuyenMai{
+
+nav div #khuyenMai {
     margin-right: 0;
 }
 
+main #products .rowProducts {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(245px, 1fr));
+    grid-auto-columns: 20px;
+    row-gap: 25px;
+}
+
 /* Main */
-main .product{
+.rowProducts .product {
     text-decoration: none;
     margin-right: 4px;
 }
-.product>div{
+
+.product>div {
     border: 1px solid #d1cccc;
-    width: 250px;
+    width: 100%;
     height: 258px;
     display: inline-block;
 }
-.product>div .productImg{
+
+.product>div .productImg {
     text-align: center;
     padding-top: 30px;
     height: 75px;
 }
-.product>div .productTen{
+
+.product>div .productTen {
     color: black;
     padding-left: 10px;
     font-weight: lighter;
     height: 43px;
 }
-.product>div .productGia{
+
+.product>div .productGia {
     color: black;
     padding-left: 10px;
     font-weight: bold;
 }
-.product>div .productThemGioHang{
+
+.product>div .productThemGioHang {
     border: 1px solid black;
     margin-top: 20px;
     padding: 15px;
     text-align: center;
     background-color: #DDDDDD;
 }
-.product>div .productThemGioHang span{
+
+.product>div .productThemGioHang span {
     font-weight: bold;
     color: #0A7EC3;
 }
 
 /* Footer */
-footer{
+footer {
     background-color: #303030;
     width: 100%;
-    height: 280px;
+    padding-bottom: 30px;
 }
-footer>div{
+
+footer>div {
     margin: 0 15%;
 }
-footer>div>div:nth-child(1){
+
+footer>div>div:nth-child(1) {
     display: inline-block;
     margin-right: 130px;
     position: relative;
     top: -25px;
 }
-footer>div>div:nth-child(2){
+
+footer>div>div:nth-child(2) {
     display: inline-block;
     margin-right: 130px;
 }
-footer>div>div:nth-child(3){
+
+footer>div>div:nth-child(3) {
     display: inline-block;
     margin-right: 130px;
 }
-footer>div>div:nth-child(4){
+
+footer>div>div:nth-child(4) {
     display: inline-block;
 }
-footer>div>div:nth-child(5){
+
+footer>div>div:nth-child(5) {
     border-top: 1px solid rgb(212, 201, 201);
     margin-left: -20px;
 }
-footer>div>div:nth-child(5) div{
+
+footer>div>div:nth-child(5) div {
     font-family: 'Open Sans,sans-serif';
     margin-left: 20px;
     display: inline-block;
 }
-footer>div>div:nth-child(5) div:last-child{
+
+footer>div>div:nth-child(5) div:last-child {
     position: relative;
     right: -180px;
 }
-footer>div>div:nth-child(5) p{
+
+footer>div>div:nth-child(5) p {
     margin-bottom: -12px;
     color: rgb(212, 201, 201);
 }
-footer>div>div:nth-child(5) span{
+
+footer>div>div:nth-child(5) span {
     position: relative;
     top: 15px;
 }
-footer ul{
+
+footer ul {
     padding: 25px 0;
 }
-footer ul span{
+
+footer ul span {
     font-size: 16px;
     color: white;
     display: block;
     margin-bottom: 10px;
 }
-footer ul li{
+
+footer ul li {
     font-family: 'Open Sans,sans-serif';
     color: rgb(212, 201, 201);
     margin-bottom: 5px;
 }
-footer a{
+
+footer a {
     text-decoration: none;
     color: rgb(212, 201, 201);
+}
+
+@media (min-width:994px) and (max-width:1380px) {
+    footer>div>div:nth-child(1) {
+        margin-right: 40px;
+    }
+
+    footer>div>div:nth-child(2) {
+        margin-right: 40px;
+    }
+
+    footer>div>div:nth-child(3) {
+        margin-right: 40px;
+    }
+
+    footer>div>div:nth-child(5) div:last-child {
+        right: 0;
+    }
+}
+
+@media (max-width:1028px) {
+    footer>div>div:nth-child(5) div {
+        margin-left: 0;
+    }
+}
+
+@media (max-width:994px) {
+    footer>div>div:nth-child(1) {
+        margin-right: 15px;
+    }
+
+    footer>div>div:nth-child(2) {
+        margin-right: 10px;
+    }
+
+    footer>div>div:nth-child(3) {
+        margin-right: 15px;
+    }
+
+    footer>div>div:nth-child(5) div:last-child {
+        right: 0;
+    }
+}
+
+@media (max-width:880px) {
+    footer ul {
+        list-style-type: none;
+    }
+
+    footer>div>div:nth-child(1) {
+        margin-right: 5px;
+    }
+
+    footer>div>div:nth-child(2) {
+        margin-right: 5px;
+    }
+
+    footer>div>div:nth-child(3) {
+        margin-right: 5px;
+    }
+}
+
+@media (max-width:844px) {
+    footer>div>div:nth-child(1) {
+        margin-right: 140px;
+    }
+
+    footer>div>div:nth-child(2) {
+        margin-right: 26px;
+    }
+
+    footer>div>div:nth-child(3) {
+        margin-right: 190px;
+    }
+
+    footer ul {
+        padding-top: 25px;
+        padding-bottom: 0;
+    }
+}
+
+@media (max-width:672px) {
+    footer>div>div:nth-child(1) {
+        margin-right: 100px;
+    }
+
+    footer>div>div:nth-child(3) {
+        margin-right: 149px;
+    }
+}
+
+@media (max-width:616px) {
+    footer>div>div:nth-child(1) {
+        margin-right: 75px;
+    }
+
+    footer>div>div:nth-child(3) {
+        margin-right: 124px;
+    }
+}
+
+@media (max-width:580px) {
+    footer>div div {
+        width: 100%;
+    }
+    footer ul {
+        padding: 0;
+    }
+    footer>div>div:nth-child(1)>ul {
+        padding-top: 50px;
+    }
 }

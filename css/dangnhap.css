@@ -71,3 +71,9 @@ h1 {
     outline: none;
     font-size: large;
 }
+
+@media (max-width:426px) {
+    .register-form {
+        max-width: 260px;
+    }
+}

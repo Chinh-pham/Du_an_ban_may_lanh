@@ -8,35 +8,42 @@
     <title>Giỏ hàng - CleanAir mang lại "không khí trong lành" cho gia đình Việt</title>
     <link rel="shortcut icon" href="../img/iconMaylanh.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/sitemap.css">
     <script src="../js/jquery-3.6.0.min.js"></script>
     <script src="../js/taikhoan.js"></script>
-    <style>
-        main {
-            background-image: linear-gradient(to bottom, #dbedf9, #dbedf9, #1495ec);
-        }
-
-        main>div {
-            width: 960px;
-            margin: 50px auto;
-            padding: 5px 0;
-            padding-bottom: 30px;
-        }
-
-        main>div>img {
-            border-radius: 20px;
-            border: 1px solid blue;
-        }
-    </style>
     <script>
         const tkDN = localStorage.getItem("tkDangnhap")
-        if (tkDN != null){
-            $(window).click(function(event){
-                if ((event.pageX >= 663) && (event.pageX <= 732) && (event.pageY >= 619) && (event.pageY <= 688)){
+        if (tkDN != null) {
+            $(window).click(function (event) {
+                if ((event.pageX >= 663) && (event.pageX <= 732) && (event.pageY >= 619) && (event.pageY <= 688)) {
                     $("#areaDN").removeAttr("href")
                     alert("Vui lòng đăng xuất trước khi đăng nhập vào tài khoản khác!")
                     location.reload()
                 }
             })
+        }
+
+        document.onreadystatechange = function () {
+            // Get the modal
+            var modal = document.getElementById("myModal")
+
+            // Get the image and insert it inside the modal - use its "alt" text as a caption
+            var img = document.getElementById("sitemap")
+            var modalImg = document.getElementById("zoom_sitemap")
+            var captionText = document.getElementById("caption")
+            img.onclick = function () {
+                modal.style.display = "block"
+                modalImg.src = this.src
+                captionText.innerHTML = this.alt
+            }
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0]
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function () {
+                modal.style.display = "none"
+            }
         }
     </script>
 </head>
@@ -65,7 +72,8 @@
                     <div id="ttTaikhoan">
                         <ul id="info">
                             <li><b>Tên đăng nhập: </b><span id="tenDangnhap"></span></li>
-                            <li><b>Mật khẩu: </b><span id="matkhau"></span><span id="passEye"><img width="22" src="../img/closePassEye.png" alt=""></span></li>
+                            <li><b>Mật khẩu: </b><span id="matkhau"></span><span id="passEye"><img width="22"
+                                        src="../img/closePassEye.png" alt=""></span></li>
                             <li><b>Họ và tên: </b><span id="hoten"></span></li>
                             <li><b>Số điện thoại: </b><span id="sdt"></span></li>
                         </ul>
@@ -91,19 +99,15 @@
     <main>
         <div>
             <h1>Site map</h1>
-            <img src="../img/sitemap.png" alt="" width="90%" usemap="#sitemap">
-            <map name="sitemap">
-                <area shape="circle" coords="460, 55, 35" href="trangchu.html" alt="">
-                <area shape="rect" coords="60, 190, 130, 253" href="danhsachsanpham.html" alt="">
-                <area shape="circle" coords="245, 415, 38" href="dangky.html" alt="">
-                <area shape="circle" coords="410, 415, 35" href="dangnhap.html" alt="" id="areaDN">
-                <area shape="circle" coords="640, 225, 35" href="gioithieu_website_thanhvien.html" alt="">
-                <area shape="circle" coords="810, 210, 25" href="giohang.html" alt="">
-                <area shape="circle" coords="549, 412, 35" href="gioithieu_website_thanhvien.html#phan-1" alt="">
-                <area shape="circle" coords="719, 420, 30" href="gioithieu_website_thanhvien.html#phan-0" alt="">
-            </map>
+            <img src="../img/sitemap.png" alt="Sitemap" id="sitemap" width="70%">
         </div>
     </main>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="zoom_sitemap">
+        <div id="caption"></div>
+    </div>
     <footer>
         <div>
             <div>

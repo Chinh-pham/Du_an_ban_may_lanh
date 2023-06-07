@@ -15,8 +15,13 @@ main .container {
     padding: 10px;
 }
 
-main h2 {
-    margin-left: 33%;
+.container .register-form {
+    width: 100%;
+    margin: 20px auto;
+}
+
+.register-form h2 {
+    text-align: center;
     color: #009999;
 }
 
@@ -28,6 +33,10 @@ main .row label {
     text-align: right;
     display: inline-block;
     width: 24%;
+}
+
+main #gioitinh label:first-child{
+    margin-left: 13%;
 }
 
 main .row input {
@@ -45,7 +54,7 @@ main .row div {
 }
 
 main h4 {
-    margin-left: 38%;
+    text-align: center;
     color: #009999;
 }
 
@@ -74,4 +83,29 @@ main .row:last-child button {
     font-size: 17px;
     padding: 6px 8px;
     margin: 0 2px;
+}
+
+@media (max-width:688px) {
+    main .container {
+        width: 80%;
+    }
+}
+
+@media (max-width:558px) {
+    main .row label {
+        width: 100%;
+        text-align: left;
+    }
+
+    main #gioitinh label:first-child{
+        margin-left: 0;
+    }
+
+    main .row input {
+        width: 93%;
+    }
+
+    main .row div {
+        margin-left: 0;
+    }
 }
