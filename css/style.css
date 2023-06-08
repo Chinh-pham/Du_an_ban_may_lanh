@@ -4,88 +4,6 @@ body {
     padding: 0;
 }
 
-img {
-    max-height: 100%;
-    max-width: 100%;
-}
-
-header {
-    border: 1px solid black;
-    width: 100%;
-    height: 50px;
-    background-color: rgb(242, 246, 250);
-}
-
-header>div {
-    margin: 0 15%;
-    height: 100%;
-}
-
-#logo {
-    text-decoration: none;
-    color: black;
-}
-
-#logo h2 {
-    display: inline-block;
-    position: relative;
-    top: -6px;
-    font-weight: 400;
-    font-style: italic;
-}
-
-#formSearch {
-    display: inline-block;
-    position: relative;
-    top: -10px;
-    margin-left: 100px;
-}
-
-#formSearch input {
-    width: 250px;
-    height: 25px;
-}
-
-#formSearch button {
-    height: 31px;
-    margin-left: -5px;
-}
-
-#headerRight {
-    display: inline-block;
-    position: relative;
-    top: -10px;
-    right: -80px;
-}
-
-#headerRight #gioHang {
-    text-decoration: none;
-    margin: 0 20px;
-}
-
-#gioHang div {
-    display: inline-block;
-    height: 30px;
-    border: 2px solid #2566fe;
-    background-color: #0DCAF0;
-    position: relative;
-    top: -13px;
-    line-height: 10px;
-    padding: 0 15px;
-    padding-bottom: 7px;
-}
-
-#gioHang div span {
-    position: relative;
-    top: 15px;
-}
-
-#headerRight #dangKy,
-#headerRight #dangNhap {
-    text-decoration: none;
-    margin: 0 20px;
-}
-
 header #divTaikhoan {
     display: none;
 }
@@ -162,31 +80,8 @@ header #divTaikhoan {
     font-weight: bold;
 }
 
-nav {
-    border: 1px solid black;
-    width: 100%;
-    height: 50px;
-    background-color: lightblue;
-}
-
-nav div {
-    margin: 0 15%;
-    height: 100%;
-    padding-top: 15px;
-}
-
-nav div a {
-    text-decoration: none;
-    color: black;
-    font-size: 20px;
-    margin-right: 50px;
-}
-
-nav div #khuyenMai {
-    margin-right: 0;
-}
-
-main #products .rowProducts {
+main #products .rowProducts,
+main #cacSP_tuongtu .rowProducts {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(245px, 1fr));
     grid-auto-columns: 20px;
@@ -421,9 +316,11 @@ footer a {
     footer>div div {
         width: 100%;
     }
+
     footer ul {
         padding: 0;
     }
+
     footer>div>div:nth-child(1)>ul {
         padding-top: 50px;
     }

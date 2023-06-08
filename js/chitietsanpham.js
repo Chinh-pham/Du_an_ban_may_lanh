@@ -30,18 +30,18 @@ $(document).ready(function () {
             }
         }
 
-        let rowSP_tuongtu = $("<div></div>")
-        rowSP_tuongtu.attr("class", "rowSP_tuongtu")
+        let rowProducts = $("<div></div>")
+        rowProducts.attr("class", "rowProducts")
         let lengthProducts_in_Row = 0
 
         for (let i = 0; i < arraySP_tuongtu.length; i++) {
-            rowSP_tuongtu.append("<a class='product' href='../html/chitietsanpham.html'><div><div class='productImg'><img src='" + arraySP_tuongtu[i].hinhanh[0] + "' alt=''></div><h3 class='productTen'>" + arraySP_tuongtu[i].ten + "</h3><div class='productGia'>" + arraySP_tuongtu[i].gia + "<sup>đ</sup></div></div></a>")
+            rowProducts.append("<a class='product' href='../html/chitietsanpham.html'><div><div class='productImg'><img src='" + arraySP_tuongtu[i].hinhanh[0] + "' alt=''></div><h3 class='productTen'>" + arraySP_tuongtu[i].ten + "</h3><div class='productGia'>" + arraySP_tuongtu[i].gia + "<sup>đ</sup></div></div></a>")
             lengthProducts_in_Row += 1
             if (lengthProducts_in_Row == 2 || ((lengthProducts_in_Row < 2) && (i + 1 == arraySP_tuongtu.length))) {
-                $("#cacSP_tuongtu").append(rowSP_tuongtu)
+                $("#cacSP_tuongtu").append(rowProducts)
                 lengthProducts_in_Row = 0
-                rowSP_tuongtu = $("<div></div>")
-                rowSP_tuongtu.attr("class", "rowSP_tuongtu")
+                rowProducts = $("<div></div>")
+                rowProducts.attr("class", "rowProducts")
             }
         }
 

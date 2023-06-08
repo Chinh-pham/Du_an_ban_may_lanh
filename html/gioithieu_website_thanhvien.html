@@ -7,59 +7,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Giới thiệu website - Thành viên thực hiện</title>
     <link rel="shortcut icon" href="../img/iconMaylanh.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/gioithieu_website_thanhvien.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/topnav.css">
     <script src="../js/jquery-3.6.0.min.js"></script>
     <script src="../js/taikhoan.js"></script>
+    <script src="../js/responsive.js"></script>
 </head>
 
 <body>
-    <header id="top">
-        <div>
-            <a id="logo" href="trangchu.html">
-                <img src="../img/logoMaylanh.png" width="30" height="30" alt="logo Máy lạnh">
-                <h2>CleanAir</h2>
-            </a>
-            <form id="formSearch" action="">
-                <input type="text" placeholder="Nhập sản phẩm bạn muốn tìm kiếm ...">
-                <button>Tìm kiếm</button>
+    <header>
+        <a href="trangchu.html" class="logo reloadTrang">
+            <img src="../img/logoMaylanh.png" width="30" height="30" alt="logo Máy lạnh">
+            CleanAir
+        </a>
+        <div class="search-container">
+            <form id="formSearch">
+                <input type="text" placeholder="Nhập sản phẩm cần tìm ..." id="inputTimkiem" name="search">
+                <button id="btnTimkiem"><i class="fa fa-search"></i></button>
             </form>
-            <div id="headerRight">
-                <a id="gioHang" href="giohang.html">
+        </div>
+        <div class="header-right">
+            <a class="giohang" href="giohang.html">Giỏ hàng</a>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="toggle_dropdown()">Tài khoản
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content" id="myDropdown">
+                    <a href="dangky.html">Đăng ký</a>
+                    <a href="dangnhap.html">Đăng nhập</a>
+                </div>
+            </div>
+            <div id="divTaikhoan">
+                <span id="taikhoan"></span>
+                <div id="ttTaikhoan">
+                    <ul id="info">
+                        <li><b>Tên đăng nhập: </b><span id="tenDangnhap"></span></li>
+                        <li><b>Mật khẩu: </b><span id="matkhau"></span><span id="passEye"><img width="22"
+                                    src="../img/closePassEye.png" alt=""></span></li>
+                        <li><b>Họ và tên: </b><span id="hoten"></span></li>
+                        <li><b>Số điện thoại: </b><span id="sdt"></span></li>
+                    </ul>
                     <div>
-                        <span>Giỏ hàng</span>
-                    </div>
-                </a>
-                <a id="dangKy" href="dangky.html">Đăng ký</a>
-                <a id="dangNhap" href="dangnhap.html">Đăng nhập</a>
-                <div id="divTaikhoan">
-                    <span id="taikhoan"></span>
-                    <div id="ttTaikhoan">
-                        <ul id="info">
-                            <li><b>Tên đăng nhập: </b><span id="tenDangnhap"></span></li>
-                            <li><b>Mật khẩu: </b><span id="matkhau"></span><span id="passEye"><img width="22"
-                                        src="../img/closePassEye.png" alt=""></span></li>
-                            <li><b>Họ và tên: </b><span id="hoten"></span></li>
-                            <li><b>Số điện thoại: </b><span id="sdt"></span></li>
-                        </ul>
-                        <div>
-                            <button type="button" id="doiMK">Đổi mật khẩu</button>
-                            <button type="button" id="dangXuat">Đăng xuất</button>
-                        </div>
+                        <button type="button" id="doiMK">Đổi mật khẩu</button>
+                        <button type="button" id="dangXuat">Đăng xuất</button>
                     </div>
                 </div>
             </div>
         </div>
     </header>
-    <nav>
-        <div style="">
-            <a href="trangchu.html">Trang chủ</a>
-            <a href="danhsachsanpham.html">Danh sách sản phẩm</a>
-            <a href="gioithieu_website_thanhvien.html">Giới thiệu website</a>
-            <a href="sitemap.html">Site map</a>
-            <a href="#">Liên hệ</a>
-            <a id="khuyenMai" href="#">Khuyến mãi</a>
-        </div>
+    <nav class="topnav" id="myTopnav">
+        <a href="trangchu.html">Trang chủ</a>
+        <a href="danhsachsanpham.html">Danh sách sản phẩm</a>
+        <a href="gioithieu_website_thanhvien.html" class="active">Giới thiệu website</a>
+        <a href="sitemap.html">Site map</a>
+        <a href="javascript:void(0);" class="icon" onclick="respond_topnav()">
+            <i class="fa fa-bars"></i>
+        </a>
     </nav>
     <main>
         <div>
@@ -145,7 +151,8 @@
                             gắn cố định trên tường.</li>
                         <li><strong>Điều hòa trần</strong>: Là loại điều hòa được gắn cố định trên trần nhà, gồm có
                             <a><strong>điều hòa âm trần</strong></a> là loại được gắn âm vào trần nhà và <strong>điều
-                                hòa áp trần</strong> là loại được gắn áp sát vào trần nhà.</li>
+                                hòa áp trần</strong> là loại được gắn áp sát vào trần nhà.
+                        </li>
                         <li><a><strong>Điều hòa cây</strong></a> (máy lạnh đứng): Là loại điều hòa, máy lạnh có thiết kế
                             dạng tủ đứng hình hộp chữ nhật, thường có công suất lớn từ 20.000 BTU trở lên để sử dụng tại
                             các không gian rộng và có hệ thống bánh xe di chuyển tiện lợi.</li>
@@ -163,7 +170,8 @@
                             công nghiệp công suất lớn</strong>. Bên cạnh đó, hiện nay cũng đã xuất hiện loại
                         <a><strong>điều hòa năng lượng mặt trời</strong></a> sử dụng cả điện lưới và điện năng lượng mặt
                         trời để tiết kiệm một phần điện năng tiêu thụ, tuy nhiên giá thành sản phẩm còn cao nên chưa quá
-                        phổ biến.</p>
+                        phổ biến.
+                    </p>
                 </div>
                 <div id="phan-4">
                     <h2>Lưu ý gì khi chọn mua điều hòa, máy lạnh?</h2>
@@ -194,7 +202,8 @@
                             soát độ ẩm tránh mất nước cho da</strong>, <strong>chế độ khử mùi kháng khuẩn</strong>,
                         <strong>chế độ lọc bụi</strong>… Vì thế, người dùng cũng nên lựa chọn các tính năng phù hợp, cần
                         thiết nhất, tránh lãng phí. (<strong>Xem thêm</strong>: <a href="#">Các chế độ thường thấy trên
-                            máy lạnh điều hòa</a>)</p>
+                            máy lạnh điều hòa</a>)
+                    </p>
                     <h3>Chọn điều hòa, máy lạnh hoạt động êm ái, tiết kiệm điện</h3>
                     <p>Điều hòa, máy lạnh là thiết bị tiêu thụ điện năng nhiều nhất trong gia đình nên người dùng nên
                         lưu ý chọn mua các loại điều hòa, máy lạnh tiết kiệm điện để sử dụng. Hiện nay trên thị trường
