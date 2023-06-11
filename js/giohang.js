@@ -15,7 +15,7 @@ $(window).ready(function () {
                 divCacsanpham.attr("id", "cacsanpham")
                 for (let j = 0; j < objDSGioSP[i].sanpham.length; j++) {
                     gioRong = false
-                    let divSanpham = "<div class='sanpham'><div><div class='imgSanPham'><img src='" + objDSGioSP[i].sanpham[j].hinhanh + "' width='60'></div><div class='tenSanPham'><h4>" + objDSGioSP[i].sanpham[j].ten + "</h4></div><div class='giaSanPham'>" + objDSGioSP[i].sanpham[j].gia + "<sup>đ</sup></div></div><div><a class='xoaSanpham' onclick='xoaSanPham(" + i + "," + j + ")'><span><i class='fa fa-delete-left'></i> Xóa</span></a><div class='soluongSanPham'><span>Số lượng: </span><div><button onclick='giamSoluong(" + i + "," + j + ")'>-</button><span class='soluong'>" + objDSGioSP[i].sanpham[j].soluong + "</span><button onclick='tangSoluong(" + i + "," + j + ")'>+</button></div></div></div></div>"
+                    let divSanpham = "<div class='sanpham'><div><div class='imgSanPham'><img src='" + objDSGioSP[i].sanpham[j].hinhanh + "' width='60'></div><div class='tenSanPham'><h4>" + objDSGioSP[i].sanpham[j].ten + "</h4></div><div class='giaSanPham'>" + objDSGioSP[i].sanpham[j].gia + "<sup>đ</sup></div></div><div><div class='xoaSanpham'><a onclick='xoaSanPham(" + i + "," + j + ")'><span><i class='fa fa-delete-left'></i> Xóa</span></a></div><div class='soluongSanPham'><span>Số lượng: </span><div><button onclick='giamSoluong(" + i + "," + j + ")'>-</button><span class='soluong'>" + objDSGioSP[i].sanpham[j].soluong + "</span><button onclick='tangSoluong(" + i + "," + j + ")'>+</button></div></div></div></div>"
                     divCacsanpham.append(divSanpham)
                 }
 

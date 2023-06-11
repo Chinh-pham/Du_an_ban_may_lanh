@@ -112,6 +112,76 @@ header a.giohang {
     background-color: #ddd;
 }
 
+header #divTaikhoan {
+    display: none;
+}
+
+.dropdown #taikhoan {
+    background-color: #ddd;
+    border-radius: 20px;
+    padding: 8px 16px;
+}
+
+.dropdown:hover #taikhoan {
+    color: black;
+    font-weight: bold;
+}
+
+#divTaikhoan #ttTaikhoan {
+    background-color: #ddd;
+    max-width: 320px;
+    border-radius: 8px;
+    padding: 0 5px;
+    right: 10px;
+}
+
+#ttTaikhoan #info {
+    list-style: none;
+    width: 100%;
+    margin-left: -35px;
+}
+
+#ttTaikhoan button {
+    font-size: 15px;
+}
+
+#ttTaikhoan button:hover {
+    cursor: pointer;
+}
+
+#info li {
+    margin: 5px;
+}
+
+#info #passEye:hover {
+    cursor: pointer;
+}
+
+#ttTaikhoan div {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#ttTaikhoan div button {
+    padding: 8px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#ttTaikhoan div button:first-child {
+    color: black;
+    font-weight: bold;
+    background-color: white;
+    padding: 10px 15px;
+}
+
+#ttTaikhoan div button:last-child {
+    background-color: #f04449;
+    color: white;
+    padding: 10px 15px;
+    font-weight: bold;
+}
+
 .show {
     display: block;
 }
@@ -122,7 +192,7 @@ header a.giohang {
     }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 376px) {
     header a {
         display: block;
         float: none;

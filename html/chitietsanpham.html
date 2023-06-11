@@ -61,7 +61,7 @@
         </div>
         <div class="header-right">
             <a class="giohang" href="giohang.html">Giỏ hàng</a>
-            <div class="dropdown">
+            <div class="dropdown" id="dkdn">
                 <button class="dropbtn" onclick="toggle_dropdown()">Tài khoản
                     <i class="fa fa-caret-down"></i>
                 </button>
@@ -70,9 +70,9 @@
                     <a href="dangnhap.html">Đăng nhập</a>
                 </div>
             </div>
-            <div id="divTaikhoan">
-                <span id="taikhoan"></span>
-                <div id="ttTaikhoan">
+            <div id="divTaikhoan" class="dropdown">
+                <button id="taikhoan" class="dropbtn"></button>
+                <div class="dropdown-content" id="ttTaikhoan">
                     <ul id="info">
                         <li><b>Tên đăng nhập: </b><span id="tenDangnhap"></span></li>
                         <li><b>Mật khẩu: </b><span id="matkhau"></span><span id="passEye"><img width="22"

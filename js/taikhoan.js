@@ -1,9 +1,8 @@
 $(window).ready(function () {
     const taikhoan = localStorage.getItem("tkDangnhap")
     if (taikhoan != null) {
-        $("#dangKy").hide()
-        $("#dangNhap").hide()
-        $("#divTaikhoan").css("display", "inline-block")
+        $("#dkdn").hide()
+        $("#divTaikhoan").show()
 
         const ttTaikhoan = JSON.parse(taikhoan)
         let hoten = ttTaikhoan.hoTen.split(" ")
@@ -47,7 +46,7 @@ $(window).ready(function () {
             }
         })
 
-        $("main:not(header)").click(function () {
+        $("main").click(function () {
             $("#ttTaikhoan").css("display", "none")
             $("#passEye>img").attr("src", "../img/closePassEye.png")
             $("#matkhau").text(star)
@@ -70,9 +69,8 @@ $(window).ready(function () {
         $("#dangXuat").click(function () {
             const xacthucDangxuat = confirm("Bạn chắc chắn muốn đăng xuất tài khoản?")
             if (xacthucDangxuat) {
-                $("#dangKy").show()
-                $("#dangNhap").show()
-                $("#divTaikhoan").remove()
+                $("#dkdn").show()
+                $("#divTaikhoan").hide()
                 localStorage.removeItem("tkDangnhap")
                 location.reload()
             }
