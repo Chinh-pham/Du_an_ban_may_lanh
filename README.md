@@ -1,3 +1,7 @@
+ádfgh
+
+
+
 # Website giới thiệu, bán máy lạnh trực tuyến
 
 Dự án được xây dựng trong môn học Hệ thống & Công nghệ Web. Đây là 1 website bán máy lạnh trực tuyến (lưu trữ, truy xuất dữ liệu thông qua JS Web Storage API - chỉ Front-end)
