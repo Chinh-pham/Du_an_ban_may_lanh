@@ -158,13 +158,36 @@
                 <h3>Các sản phẩm tương tự khác:</h3>
             </div>
         </div>
+        <div class="review-container">
+            <h2>Đánh giá sản phẩm</h2>
+    
+            <!-- Danh sách đánh giá -->
+            <div id="review-list"></div>
+    
+            <!-- Form nhập đánh giá -->
+            <div class="review-form">
+                <input type="text" id="username" placeholder="Tên của bạn">
+                <textarea id="review-text" placeholder="Nhận xét của bạn"></textarea>
+                <select id="rating">
+                    <option value="5">⭐⭐⭐⭐⭐</option>
+                    <option value="4">⭐⭐⭐⭐</option>
+                    <option value="3">⭐⭐⭐</option>
+                    <option value="2">⭐⭐</option>
+                    <option value="1">⭐</option>
+                </select>
+                <button onclick="submitReview()">Gửi đánh giá</button>
+            </div>
+        </div>
     </main>
+    
     <!-- The Modal shows zoomed image -->
     <div id="myModal" class="modal">
         <span class="close">&times;</span>
         <img class="modal-content" id="zoom_sitemap">
         <div id="caption"></div>
     </div>
+
+
     <footer>
         <div>
             <div>
