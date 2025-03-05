@@ -161,9 +161,6 @@
         <div class="review-container">
             <h2>Đánh giá sản phẩm</h2>
     
-            <!-- Danh sách đánh giá -->
-            <div id="review-list"></div>
-    
             <!-- Form nhập đánh giá -->
             <div class="review-form">
                 <input type="text" id="username" placeholder="Tên của bạn">
@@ -175,8 +172,11 @@
                     <option value="2">⭐⭐</option>
                     <option value="1">⭐</option>
                 </select>
-                <button onclick="submitReview()">Gửi đánh giá</button>
+                <button id="submit">Gửi đánh giá</button>
             </div>
+
+            <ul id="review-list">
+            </ul>
         </div>
     </main>
     
