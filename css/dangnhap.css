@@ -77,3 +77,45 @@ h1 {
         max-width: 260px;
     }
 }
+/* css phần khi bấm vào pro sẽ hiện các lựa chọn
+/* Dropdown menu */
+.account-container {
+    position: relative;
+    display: inline-block;
+}
+
+.account-button {
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+}
+
+.dropdown-menu {
+    display: none;
+    position: fixed; /* Giữ cố định theo màn hình */
+    top: 60px; /* Điều chỉnh vị trí theo thanh header */
+    right: 10px; /* Điều chỉnh vị trí bên phải */
+    background: white;
+    border: 1px solid #ddd;
+    width: 200px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    padding: 5px 0;
+    z-index: 1000;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 8px 15px;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+.dropdown-menu a:hover {
+    background: #f1f1f1;
+}
