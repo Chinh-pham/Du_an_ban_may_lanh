@@ -217,25 +217,207 @@ main #hinhanhSP:hover {
     }
 }
 
+/* Định dạng tổng thể */
 .review-container {
-    width: 50%;
-    margin: auto;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
-.review-box {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-top: 10px;
+/* Tiêu đề */
+.review-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
 }
 
+/* Form nhập đánh giá */
 .review-form {
-    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .review-form input,
 .review-form textarea,
+.review-form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Style cho textarea */
+.review-form textarea {
+    height: 100px;
+    resize: none;
+}
+
+/* Nút gửi đánh giá */
 .review-form button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.review-form button:hover {
+    background-color: #218838;
+}
+
+/* Danh sách đánh giá */
+#review-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.review-item {
+    background: #f8f9fa;
+    padding: 15px;
+    border-left: 5px solid #28a745;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.review-item h4 {
+    margin: 0;
+    color: #333;
+}
+
+.review-item p {
+    margin: 5px 0 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+.review-item .rating {
+    font-size: 18px;
+    color: #ffcc00;
+}
+
+
+.review-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.review-list li {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+
+.review {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.reviewer {
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+}
+
+.rating {
+    font-size: 14px;
+    color: #f39c12;
+    font-weight: bold;
+}
+
+.review-content {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.4;
+}
+
+#review-form {
+    margin-top: 20px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#review-form input, 
+#review-form textarea, 
+#review-form select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#submit {
+    background: #28a745;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+#submit:hover {
+    background: #218838;
+}
+
+/* css phần khi bấm vào pro sẽ hiện các lựa chọn
+/* Dropdown menu */
+.account-container {
+    position: relative;
+    display: inline-block;
+}
+
+.account-button {
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
     display: block;
     width: 100%;
-    margin-bottom: 10px;
 }
+
+.dropdown-menu {
+    display: none;
+    position: fixed; /* Giữ cố định theo màn hình */
+    top: 60px; /* Điều chỉnh vị trí theo thanh header */
+    right: 10px; /* Điều chỉnh vị trí bên phải */
+    background: white;
+    border: 1px solid #ddd;
+    width: 200px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    padding: 5px 0;
+    z-index: 1000;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 8px 15px;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+.dropdown-menu a:hover {
+    background: #f1f1f1;
+}
+

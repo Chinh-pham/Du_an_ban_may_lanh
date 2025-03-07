@@ -75,5 +75,25 @@ $(window).ready(function () {
                 location.reload()
             }
         })
+        
+// xu ly phan menu 
+
+
+        document.getElementById("taikhoan").addEventListener("click", function (event) {
+            event.stopPropagation(); // Ngăn chặn sự kiện click lan ra ngoài
+            let menu = document.getElementById("dropdownMenu");
+            menu.style.display = (menu.style.display === "block") ? "none" : "block";
+        });
+        
+        // Ẩn menu khi click ra ngoài
+        document.addEventListener("click", function () {
+            document.getElementById("dropdownMenu").style.display = "none";
+        });
+        
+        // Đảm bảo khi bấm vào menu nó không bị đóng
+        document.getElementById("dropdownMenu").addEventListener("click", function (event) {
+            event.stopPropagation();
+        });
+        
     }
 })

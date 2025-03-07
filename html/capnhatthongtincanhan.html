@@ -1,25 +1,22 @@
-<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang chủ - CleanAir mang lại "không khí trong lành" cho gia đình Việt</title>
-    <link rel="shortcut icon" href="../img/iconMaylanh.ico" type="image/x-icon">
+    <title>Cập nhật thông tin cá nhân</title>
+    <link rel="stylesheet" href="../css/capnhatthongtincanhan.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/trangchu.css">
-    <link rel="stylesheet" href="../css/modal.css">
+    <link rel="stylesheet" href="../css/chitietsanpham.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/topnav.css">
-    <script src="../js/jquery-3.6.0.min.js"></script>
-    <script type="module" src="../js/trangchu.js"></script>
-    <script src="../js/taikhoan.js"></script>
-    <script src="../js/responsive.js"></script>
-</head>
+    <script src="../js/capnhatthongtincanhan.js"></script>
 
+
+    
+
+</head>
 <body>
+
     <header>
         <a href="trangchu.html" class="logo reloadTrang">
             <img src="../img/logoMaylanh.png" width="30" height="30" alt="logo Máy lạnh">
@@ -55,7 +52,7 @@
         </div>
     </header>
     <nav class="topnav" id="myTopnav">
-        <a href="trangchu.html" class="active">Trang chủ</a>
+        <a href="trangchu.html">Trang chủ</a>
         <a href="danhsachsanpham.html">Danh sách sản phẩm</a>
         <a href="gioithieu_website_thanhvien.html">Giới thiệu website</a>
         <a href="sitemap.html">Site map</a>
@@ -63,9 +60,67 @@
             <i class="fa fa-bars"></i>
         </a>
     </nav>
-    <main>
-        <div id="products"></div>
-    </main>
+
+
+     <div class="container">
+        <!-- Thông tin cá nhân -->
+        <div class="section">
+            <h3>THÔNG TIN CÁ NHÂN</h3>
+            <div class="section-content">
+                <div class="form-row">
+                    <span>Bạn - 0904397303</span>
+                </div>
+                <div class="form-row gender">
+                    <label>Giới tính:</label>
+                    <div class="radio-group">
+                        <input type="radio" name="gender" id="male">
+                        <label for="male">Anh</label>
+                        <input type="radio" name="gender" id="female">
+                        <label for="female">Chị</label>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <label>Họ & Tên:</label>
+                    <input type="text">
+                    <label>Số điện thoại:</label>
+                    <input type="text" value="0904397303" disabled>
+                </div>
+                <div class="form-actions">
+                    <button class="button">Lưu</button>
+                    <button class="button cancel">Huỷ</button>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Địa chỉ nhận hàng -->
+        <div class="section">
+            <h3>ĐỊA CHỈ NHẬN HÀNG</h3>
+            <div class="section-content">
+                <label for="city">Tỉnh/Thành phố:</label>
+                <select id="city">
+                    <option value="">Chọn Tỉnh/Thành phố</option>
+                </select>
+                <br>
+            
+                <label for="district">Quận/Huyện:</label>
+                <select id="district">
+                    <option value="">Chọn Quận/Huyện</option>
+                </select>
+            <br>
+                <label for="ward">Phường/Xã:</label>
+                <select id="ward">
+                    <option value="">Chọn Phường/Xã</option>
+                </select>
+            <br>
+                <label for="street">Số nhà, tên đường:</label>
+                <input type="text" id="street" placeholder="Nhập số nhà, tên đường">
+            
+                <button id="saveAddress">Lưu địa chỉ</button>
+            </div>
+        </div>
+    </div>
+    
+
     <footer>
         <div>
             <div>
@@ -113,62 +168,5 @@
             </div>
         </div>
     </footer>
-
-    <!-- Modal -->
-
-    <!-- Modal thông báo đã thêm sản phẩm vào giỏ hàng -->
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <span class="close">&times;</span>
-                <h2>Đã thêm vào giỏ hàng</h2>
-            </div>
-            <div class="modal-body">
-                <h3 id="tenSP">Some text in the Modal Body</h3>
-                <p id="giaSP">Some other text...</p>
-            </div>
-            <div class="modal-footer">
-                <p>Xin cảm ơn!</p>
-            </div>
-        </div>
-    </div>
- 
-
-    <script>
-        document.getElementById("menuProfile").addEventListener("click", function () {
-    window.location.href = "capnhatthongtincanhan.html"; // Thay bằng đường dẫn trang cập nhật thông tin của bạn
-});
-
-    
-        function saveProfile() {
-            let profileData = {
-                fullName: document.getElementById("fullName").value,
-                email: document.getElementById("email").value,
-                phone: document.getElementById("phone").value,
-                address: document.getElementById("address").value,
-                dob: document.getElementById("dob").value,
-                gender: document.getElementById("gender").value
-            };
-    
-            localStorage.setItem("userProfile", JSON.stringify(profileData));
-            alert("Cập nhật thông tin thành công!");
-        }
-    
-        function loadProfile() {
-            let savedProfile = localStorage.getItem("userProfile");
-            if (savedProfile) {
-                let profile = JSON.parse(savedProfile);
-                document.getElementById("fullName").value = profile.fullName || "";
-                document.getElementById("email").value = profile.email || "";
-                document.getElementById("phone").value = profile.phone || "";
-                document.getElementById("address").value = profile.address || "";
-                document.getElementById("dob").value = profile.dob || "";
-                document.getElementById("gender").value = profile.gender || "";
-            }
-        }
-    </script>
 </body>
-
-
-
 </html>

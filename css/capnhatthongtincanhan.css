@@ -1,0 +1,136 @@
+
+.container {
+    background: #ffffff;
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Phần tiêu đề */
+h3 {
+    font-size: 18px;
+    color: #333;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+}
+
+/* Section */
+.section {
+    margin-bottom: 20px;
+    width: 50%;
+}
+
+.section-content {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+section {
+    flex: 1;
+}
+
+/* Form hàng ngang */
+.form-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.form-row span {
+    font-size: 16px;
+    color: #555;
+    font-weight: bold;
+}
+
+.form-row label {
+    width: max-content;
+    margin-right: 10px;
+}
+
+/* Ô nhập liệu */
+input[type="text"], select {
+    flex: 1;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: 0.3s;
+    margin-right: 10px;
+}
+
+input[type="text"]:focus, select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+    outline: none;
+}
+
+/* Giới tính */
+.gender {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.radio-group {
+    display: flex;
+    gap: 10px;
+}
+
+.radio-group input {
+    display: none;
+}
+
+.radio-group label {
+    padding: 8px 15px;
+    background: #e0e0e0;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.radio-group input:checked + label {
+    background: #007bff;
+    color: white;
+}
+
+/* Nút bấm */
+.button, #saveAddress {
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.button:hover, #saveAddress:hover {
+    background-color: #0056b3;
+}
+
+.cancel {
+    background-color: #ccc;
+}
+
+.cancel:hover {
+    background-color: #999;
+}
+
+/* Nhóm nút */
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}

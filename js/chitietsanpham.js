@@ -2,6 +2,33 @@ import { arrSP_DSSP } from "./sanpham_array.js"
 
 $(document).ready(function () {
     let stringSP = sessionStorage.getItem("TTCT_SP")
+    const name = JSON.parse(stringSP).ten;
+    let arrReviews = JSON.parse(localStorage.getItem("reviews")) || [];
+    const arrReviewsSP = arrReviews.filter(review => review.tenSP === name);
+    if (arrReviewsSP.length == 0) {
+        arrReviews = [
+            ...arrReviews,
+            {
+                tenSP: name,
+                reviews: []
+            }
+        ]
+        localStorage.setItem("reviews", JSON.stringify(arrReviews));
+    }
+    console.log(arrReviewsSP);
+    
+    let ulHTML = "";
+    arrReviewsSP[0].reviews.forEach(review => {
+        ulHTML += `<li>
+        <div class="review">
+            <div class="reviewer">${review.name}</div>
+            <div class="rating">Đánh giá: ${review.rate} sao</div>
+            <div class="review-content">${review.review}</div>
+        </div>
+    </li>`
+    })
+    document.getElementById("review-list").innerHTML = ulHTML;
+    
     if (stringSP == null) {
         $("body").empty()
         $("body").append("<div style='text-align:center'><h1>Vui lòng quay lại</h1><a style='font-size:20px' href='../html/trangchu.html'>trang chủ</a> hoặc <a style='font-size:20px' href='../html/danhsachsanpham.html'>trang danh sách sản phẩm</a><p>Để chọn và xem thông tin chi tiết sản phẩm bạn mong muốn</p></div>")
@@ -108,4 +135,32 @@ $(document).ready(function () {
             location.href = "../html/giohang.html"
         })
     }
+
+    const buttonSubmit = document.getElementById("submit");
+    const inputName = document.getElementById("username");
+    const inputReview = document.getElementById("review-text");
+    const rating = document.getElementById("rating");
+
+    buttonSubmit.addEventListener("click", function () {
+        const name = inputName.value;
+        const review = inputReview.value;
+        const rate = rating.value;
+        const objReview = {
+            name: name,
+            review: review,
+            rate: rate
+        }
+        const arrReviews = JSON.parse(localStorage.getItem("reviews"));
+        const stringSP = sessionStorage.getItem("TTCT_SP");
+        const nameSP = JSON.parse(stringSP).ten;
+        for (let i = 0; i < arrReviews.length; i++) {
+            if (arrReviews[i].tenSP === nameSP) {
+                arrReviews[i].reviews.push(objReview);
+                localStorage.setItem("reviews", JSON.stringify(arrReviews));
+                break;
+            }
+        }
+        alert("Đã gửi đánh giá!");
+        location.reload();
+    })
 })
