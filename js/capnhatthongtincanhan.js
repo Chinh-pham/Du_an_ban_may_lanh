@@ -5,12 +5,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const streetInput = document.getElementById("street");
     const saveButton = document.getElementById("saveAddress");
 
-    // API URLs
+
     const PROVINCE_API = "https://provinces.open-api.vn/api/";
     const DISTRICT_API = "https://provinces.open-api.vn/api/p/";
     const WARD_API = "https://provinces.open-api.vn/api/d/";
 
-    // Load danh sách tỉnh/thành phố từ API
+
     async function loadProvinces() {
         try {
             const response = await fetch(PROVINCE_API);
@@ -127,3 +127,34 @@ document.addEventListener("DOMContentLoaded", function () {
     districtSelect.addEventListener("change", handleDistrictChange);
     saveButton.addEventListener("click", saveAddress);
 });
+
+//Thông tin cá nhân 
+document.addEventListener("DOMContentLoaded", function () {
+    const btnSave = document.querySelector(".form-actions .button"); // Nút Lưu
+    const btnCancel = document.querySelector(".form-actions .cancel"); // Nút Huỷ
+    const inputName = document.querySelector(".form-row input[type='text']"); // Ô nhập họ tên
+
+    btnSave.addEventListener("click", function () {
+        if (inputName.value.trim() === "") {
+            alert("Vui lòng nhập họ & tên!");
+            return;
+        }
+
+        alert("Thông tin cá nhân đã được lưu!");
+    });
+
+
+    btnCancel.addEventListener("click", function () {
+        inputName.value = "";
+        document.querySelectorAll("input[name='gender']").forEach(radio => {
+            radio.checked = false;
+        });
+
+        inputPhone.value = "";
+        inputEmail.value = "";
+
+        alert("Thông tin đã được huỷ!");
+    });
+
+});
+
