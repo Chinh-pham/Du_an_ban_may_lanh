@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,12 +10,14 @@
     <link rel="stylesheet" href="../css/chitietsanpham.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/topnav.css">
-    <script src="../js/capnhatthongtincanhan.js"></script>
-
-
-    
-
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script type="module" src="../js/trangchu.js"></script>
+    <script src="../js/taikhoan.js"></script>
+    <script src="../js/responsive.js"></script>
 </head>
+<script src="../js/capnhatthongtincanhan.js"></script>
+
+
 <body>
 
     <header>
@@ -62,7 +65,7 @@
     </nav>
 
 
-     <div class="container">
+    <div class="container">
         <!-- Thông tin cá nhân -->
         <div class="section">
             <h3>THÔNG TIN CÁ NHÂN</h3>
@@ -91,7 +94,7 @@
                 </div>
             </div>
         </div>
-    
+
         <!-- Địa chỉ nhận hàng -->
         <div class="section">
             <h3>ĐỊA CHỈ NHẬN HÀNG</h3>
@@ -101,25 +104,25 @@
                     <option value="">Chọn Tỉnh/Thành phố</option>
                 </select>
                 <br>
-            
+
                 <label for="district">Quận/Huyện:</label>
                 <select id="district">
                     <option value="">Chọn Quận/Huyện</option>
                 </select>
-            <br>
+                <br>
                 <label for="ward">Phường/Xã:</label>
                 <select id="ward">
                     <option value="">Chọn Phường/Xã</option>
                 </select>
-            <br>
+                <br>
                 <label for="street">Số nhà, tên đường:</label>
                 <input type="text" id="street" placeholder="Nhập số nhà, tên đường">
-            
+
                 <button id="saveAddress">Lưu địa chỉ</button>
             </div>
         </div>
     </div>
-    
+
 
     <footer>
         <div>
@@ -169,4 +172,5 @@
         </div>
     </footer>
 </body>
+
 </html>
