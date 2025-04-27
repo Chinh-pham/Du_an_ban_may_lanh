@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="shortcut icon" href="../img/iconMaylanh.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/gioithieu_website_thanhvien.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/topnav.css">
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/taikhoan.js"></script>
+    <script src="../js/responsive.js"></script>
+    <style>
+    main {
+        border-top: 1px solid #706e6e;
+        width: 100%;
+        margin: 20px 0;
+        min-height: 700px;
+    }
+    
+    main>div {
+        margin: 30px 15%;
+    }
+    
+    main .phan-wrapper {
+        background: #dbedf9;
+        border: 1px solid #c7e4f4;
+        border-radius: 4px;
+        padding: 5px;
+        margin-top: 5px;
+    }
+    #muc_con{
+        margin-left: 30px;
+    }
+    main .phan-wrapper .phan-header {
+        text-align: center;
+        margin-top: 10px;
+        font-size: 16px;
+    }
+     #imgBanner{
+        display: block;
+        width: 100%;
+        height: 400px;
+    }
+    main #imgGiaohang{
+        float: left;
+        margin-right: 15px;
+        margin-bottom: 20px;
+    }
+    main #imgMayLanh {
+        float: right;
+    }
+    
+    main #bangTomTat {
+        list-style: none;
+    }
+    
+    main #bangTomTat .tomtat {
+        text-decoration: none;
+    }
+    
+    main #bangTomTat .tomtat:hover {
+        color: blue;
+    }
+    
+    #backToTop {
+        position: fixed;
+        right: 60px;
+        bottom: 10px;
+    }
+    
+    /* css phần khi bấm vào pro sẽ hiện các lựa chọn
+    /* Dropdown menu */
+    .account-container {
+        position: relative;
+        display: inline-block;
+    }
+    
+    .account-button {
+        padding: 10px;
+        background: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        display: block;
+        width: 100%;
+    }
+    
+    .dropdown-menu {
+        display: none;
+        position: fixed; /* Giữ cố định theo màn hình */
+        top: 60px; /* Điều chỉnh vị trí theo thanh header */
+        right: 10px; /* Điều chỉnh vị trí bên phải */
+        background: white;
+        border: 1px solid #ddd;
+        width: 200px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        padding: 5px 0;
+        z-index: 1000;
+    }
+    
+    .dropdown-menu a {
+        display: block;
+        padding: 8px 15px;
+        text-decoration: none;
+        color: black;
+        font-size: 14px;
+    }
+    
+    .dropdown-menu a:hover {
+        background: #f1f1f1;
+    }
+</style>
+</head>
+
+<body>
+    <header>
+        <a href="trangchu.html" class="logo reloadTrang">
+            <img src="../img/logoMaylanh.png" width="30" height="30" alt="logo Máy lạnh">
+            CleanAir
+        </a>
+        <div class="search-container">
+            <form id="formSearch">
+                <input type="text" placeholder="Nhập sản phẩm cần tìm ..." id="inputTimkiem" name="search">
+                <button id="btnTimkiem"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        <div class="header-right">
+            <div class="dropdown">
+                <button class="dropbtn" onclick="toggle_dropdown()">Giỏ hàng
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                </div>
+            <div class="dropdown" id="dkdn">
+                <button class="dropbtn" onclick="toggle_dropdown()">Tài khoản
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content" id="myDropdown">
+                    <a href="dangky.html">Đăng ký</a>
+                    <a href="dangnhap.html">Đăng nhập</a>
+                </div>
+            </div>
+            <div id="divTaikhoan" class="dropdown">
+                <button id="taikhoan" class="dropbtn"></button>
+                <div class="dropdown-content" id="ttTaikhoan">
+                    <div class="dropdown-menu" id="dropdownMenu">
+                        <a href="#" id="menuProfile">Cập nhật thông tin cá nhân</a>
+                        <a href="#" id="menuPassword">Đổi mật khẩu</a>
+                        <a href="#" id="menuHistory">Quản lý lịch sử mua hàng</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav class="topnav" id="myTopnav">
+        <a href="trangchu.html">Trang chủ</a>
+        <a href="danhsachsanpham.html">Danh sách sản phẩm</a>
+        <a href="sitemap.html">Site map</a>
+        <a href="khuyenmai.html">Khuyến mãi</a>
+        <a href="javascript:void(0);" class="icon" onclick="respond_topnav()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </nav>
+    <img id="imgBanner" src="../img/banner.jpg"> 
+    <main>
+        <div>
+            <div>
+                <div class="description-catalog">
+                    <div class="title-desc-catalog">
+                        <img id="imgGiaohang" src="../img/chinhsach.png" width="250" height="150">  
+                        <h2 style="text-align: center; color: red">Chính sách bán - giao hàng</h2>
+                    </div>
+                    <div class="content-desc-catalog">
+                        <p>Đôi khi, chúng ta sẽ cảm thấy băn khoăn khi muốn mua một chiếc điều hòa chính hãng mới nào đó vì giá 
+                            bán sản phẩm chưa phù hợp với điều kiện tài chính hiện tại của bản thân. Nếu bạn thường xuyên
+                            rơi vào hoàn cảnh như vậy, những chiếc điện thoại mới, hoặc gần như mới nhưng có giá bán rẻ hơn tại CleanAir
+                            chắc chắn là sự lựa chọn mà bạn nên cân nhắc.</p>
+                    </div>
+                </div>
+                <div class="phan-wrapper">
+                    <div class="phan-header">Xem nhanh nội dung</div>
+                    <ul id="bangTomTat">
+                        <li><a class="tomtat" href="#phan-0">I. Dịch vụ bán hàng</a></li>
+                        <li><a class="tomtat" href="#phan-1">II. Chính sách vận chuyển</a></li>
+                        <li><a class="tomtat" id="muc_con" href="#phan-1">1. Phạm vi áp dụng</a></li>
+                        <li><a class="tomtat" id="muc_con" href="#phan-1">2. Hình thức áp dụng</a></li>
+                        <li><a class="tomtat" id="muc_con" href="#phan-1">3. Thời gian giao hàng</a></li>
+                        <li><a class="tomtat" id="muc_con" href="#phan-2">4. Trách nhiệm với hàng hóa vận chuyển</a></li>
+                        <li><a class="tomtat" id="muc_con" href="#phan-2">5. Dịch vụ lắp đặt sản phẩm</a></li>
+                        <li><a class="tomtat" id="muc_con" href="#phan-2">6. Cam kết</a></li>
+                    </ul>
+                    </div>
+                </div>
+                <div id="phan-0">
+                    <h3>I. Dịch vụ bán hàng:</h3>
+                   <p><strong>1. Sản phẩm mới 100% với chất lượng đảm bảo, nguồn gốc xuất xứ rõ ràng, hàng chính hãng:</strong></p>
+                   <p>- CleanAir cam kết toàn bộ sản phẩm được phân phối đều là hàng chính hãng 100%, mới hoàn toàn, nguyên seal,
+                        có hóa đơn và chứng từ đầy đủ.</p>
+                    <p>- Chúng tôi hợp tác trực tiếp với các nhà sản xuất uy tín trong và ngoài nước, đảm bảo không thông qua trung
+                        gian để giữ nguyên chất lượng và giá trị thực tế của sản phẩm</p>
+                    <p>- Mỗi sản phẩm đều có:</p>
+                    <ul>
+                        <li>Tem nhãn kiểm định chất lượng</li>
+                        <li>Mã vạch, mã QR truy xuất nguồn gốc</li>
+                        <li>Phiếu bảo hành chính hãng</li>
+                        <li>Hướng dẫn sử dụng đi kèm</li>
+                    </ul>
+                    </p>
+                    <p>Ngoài ra, CleanAir nói "không" với hàng giả, hàng nhái, hàng đã qua sử dụng hoặc được tân trang lại. 
+                       Trường hợp phát hiện sai phạm, khách hàng có quyền trả hàng và nhận bồi thường 200% giá trị sản phẩm.</p>
+              
+                   <p><strong>2. Phương thức giao hàng và thanh toán Nhanh chóng - Thuận tiện(Bằng tiền mặt hoặc Chuyển khoản):</strong></p>
+                   <p> CleanAir đặt trải nghiệm mua sắm tiện lợi của khách hàng lên hàng đầu. Do đó, chúng tôi triển khai các hình thức 
+                        thanh toán và giao hàng linh hoạt, dễ dàng, an toàn:</p>
+                    <p><strong>Hình thức thanh toán:</strong></p>
+                    <ul>
+                        <li>Thanh toán khi nhận hàng (COD): Phù hợp với khách hàng muốn kiểm tra hàng trước khi thanh toán.</li>
+                        <li>Chuyển khoản ngân hàng: Hỗ trợ đầy đủ hóa đơn điện tử, hóa đơn VAT theo yêu cầu.</li>
+                        <li>Thanh toán trực tuyến: Qua các cổng thanh toán uy tín như Momo, VNPay, Zalopay...</li>
+                    </ul>
+                   <p><strong>3. Tư vấn cho Khách hàng những sản phẩm với chi phí hợp lý:</strong></p>
+                   <p>CleanAir hiểu rằng mỗi khách hàng có nhu cầu và ngân sách khác nhau. Vì vậy, đội ngũ tư vấn viên của 
+                      chúng tôi luôn lắng nghe và đề xuất giải pháp tối ưu nhất, dựa trên các tiêu chí:</p>
+                      <ul>
+                        <li>Diện tích không gian cần sử dụng</li>
+                        <li>Tính năng mong muốn(lọc bụi, lọc khí, khử mùi, tạo ẩm...)</li>
+                        <li>Ngân sách dự kiến của khách hàng</li>
+                        <li>Thời gian sử dụng/ ngày và môi trường(nhà ở, văn phòng, nhà xưởng...)</li>
+                      </ul>
+                   <p><strong>Tư vấn viên sẽ:</strong></p>
+                   <ul>
+                        <li>So sánh các dòng sản phẩm phù hợp</li>
+                        <li>Giải thích rõ các chỉ số kỹ thuật</li>
+                        <li>Cảnh báo những tính năng dư thừa không cần thiết để giúp tiết kiệm chi phí.</li>
+                        <p>CleanAir không chỉ bán sản phẩm mà còn đồng hàng cùng quý khách hàng trong suốt quá trình sử dụng - từ
+                            trước khi mua đến sau bán hàng, nhằm tối đa hóa hiệu quả đầu tư và trải nghiệm sử dụng.</p>
+                      </ul> 
+                </div>
+        </div>
+                <div id="phan-1" style="clear: both;">
+                    <h3>II. Chính sách vận chuyển:</h3>
+                    <img id="imgGiaohang" src="../img/Chinh-sach-giao-hang.jpg" width="300" height="310">
+                     <p><strong>CleanAir: </strong> Giao hàng tới tất cả các khu vựa tỉnh thành trên phạm vi toàn lãnh 
+                        thổ Việt Nam. Chính sách giao hàng của CleanAir cụ thể như sau:</p>
+                    <p><strong>1. Phạm vi áp dụng:</strong></p>
+                    <p>Tất cả các khách hàng mua sản phẩm tại website chính thức của CleanAir có nhu cầu giao hàng trực tiếp tại nhà.</p>
+                    <p><strong>2. Hình thức áp dụng:</strong></p>
+                    <p>- Đối với khách hàng ở khu vực gần cửa hàng bán kính từ 5-10km sẽ được miễn phí vận chuyển</p>
+                    <p>- Ngoài trường hợp giao hàng miễn phí trên, các trường hợp còn lại sẽ được tính giá giao hàng theo bảng phí vận
+                        chuyển của hãng vận chuyển thứ 3 hoặc theo bảng phí của CleanAir. Chi phí này sẽ đucợ CleanAir thông báo và xác
+                        nhận với quý khách trước khi quý khách tiến hành thanh toán và tiến hành gửi hàng.</p>
+                    <p><strong>3. Thời gian giao hàng:</strong></p>
+                    <p>- Thời gian giao hàng sẽ từ 1-7 ngày tùy vài khoảng cách vận chuyển.</p>
+                    <p>- Trong một số trường hợp khách quan CleanAir có thể giao hàng chậm trễ do những điều kiện bất khả kháng như 
+                        thời tiết xấu, điều kiện giao thông không thuận lợi, xe hỏng hóc trên đường giao hàng, trục trặc trong quá trình
+                        xuất hàng</p>
+                    <p>- Trong thời gian chờ đợi nhận hàng, Quý khách có bất cứ thắc mắc gì về thông tin vận chuyển xin vui lòng liên hệ 
+                        Hotline: 0982353232 của CleanAir để nhận trợ giúp.</p>
+                    <p id="phan-2"><strong>4. Trách nhiệm với hàng hóa vận chuyển:</strong></p>
+                    <p>- Dịch vụ vận chuyển của CleanAir sẽ chịu trách nhiệm với hàng hóa và các rủi ro như mất mát hoặc hư hại của hàng 
+                        hóa trong suốt quá trình vận chuyển đến quý khách</p>
+                    <p>- Quý khách có trách nhiệm kiểm tra hàng khi nhận hàng. Nếu có vấn đề gì thông báo ngay cho Bộ phận chăm sóc khách 
+                        theo số Hotline trên. </p>
+                    <p>- Nếu dịch vụ vận chuyển do quý khách chỉ định và lựa chọn thì quý khách sẽ chịu trách nhiệm với hàng hóa và các 
+                        rủi ro như mất mát hoặc hư hại của hàng hóa trong suốt quá trình vận chuyển hàng từ CleanAir đến quý khách.
+                        Khách hàng sẽ chịu trách nhiệm cước phí và tổn thất liên quan.</p>
+                    <p><strong>5. Dịch vụ lắp đặt:</strong></p>
+                    <p>- CleanAir thực hiện việc lắp đặt sản phẩm tại nhà theo yêu cầu của khách hàng.</p>
+                    <p>- Khách hàng sẽ thanh toán chi phí công lắp đặt, vật tư sử dụng thực tế theo "Bảng giá cung cấp vật tư, dịch vụ
+                        giao nhận, lắp đặt" sau khi khách hàng đã được hưởng tất cả hình thức khuyến mại của CleanAir tại thời điểm mua hàng.</p>
+                    <p><strong>6. Cam kết: </strong></p>
+                    <p>CleanAir sẽ giao hàng tới tất cả các tỉnh thành trong phạm vi toàn quốc. Với đội ngũ nhân viên kỹ thuật, giao hàng chuyên nghiệp.
+                        Chúng tôi còn liên kết với các hãng vận chuyển hàng hóa chuyên nghiệp và uy tín trên thị trường... đảm bảo cho hàng
+                        hóa được an toàn và đúng hẹn với khách hàng.
+                        Mọi ý kiến đóng góp của quý khách vui lòng liên hệ với chúng tôi qua Email: CleanAirVietNam@gmail.com hoặc gọi vào số Hotline: 0982353232
+                    </p>
+                    <p><b><i>Rất hân hạnh được phục vụ quý khách!</i></b></p>
+                </div>
+             
+    </main>
+    <div id="backToTop">
+        <a href="#top"><img src="../img/mũi tên.jfif" alt="" width="100px"></a>
+    </div>
+    <footer>
+        <div>
+            <div>
+                <ul>
+                    <span>Thông tin về</span>
+                    <li><a href="gioithieu_website_thanhvien.html">Giới thiệu website</a></li>
+                    <li><a href="gioithieu_website_thanhvien.html#0">Các thành viên thực hiện</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <span>Dịch vụ khách hàng</span>
+                    <li><a href="quanlyvanchuyen.html">Vận chuyển</a></li>
+                    <li><a href="sitemap.html">Site Map</a></li>
+                    <li><a href="khuyenmai.html">Khuyến mãi</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <span>Tài khoản</span>
+                    <li><a href="#">Tài khoản của tôi</a></li>
+                    <li><a href="dangnhap.html">Đăng nhập</a></li>
+                    <li><a href="dangky.html">Đăng ký</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <span>Sản phẩm</span>
+                    <li><a href="giohang.html">Giỏ hàng của tôi</a></li>
+                    <li><a href="#">Khuyến mãi</a></li>
+                    <li><a href="#">Kinh nghiệm mua hàng</a></li>
+                </ul>
+            </div>
+            <div>
+                <div>
+                    <p>CleanAir Store© 2022. Công ty thiết bị máy lạnh TPHCM.</p>
+                    <p>Address: 999 Nguyễn Kiệm, Phường 3, Gò Vấp, Thành phố Hồ Chí Minh, Việt Nam</p>
+                </div>
+                <div>
+                    <p><a href="#">Powered By Open Cart</a></p>
+                    <span>
+                        <img src="../img/bocongthuong.png" alt="" width="90">
+                    </span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

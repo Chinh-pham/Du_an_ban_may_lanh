@@ -252,7 +252,11 @@
             </form>
         </div>
         <div class="header-right">
-            <a class="giohang" href="giohang.html">Giỏ hàng</a>
+            <div class="dropdown">
+            <button class="dropbtn" onclick="toggle_dropdown()">Giỏ hàng
+                <i class="fa fa-caret-down"></i>
+            </button>
+            </div>
             <div class="dropdown" id="dkdn">
                 <button class="dropbtn" onclick="toggle_dropdown()">Tài khoản
                     <i class="fa fa-caret-down"></i>
@@ -277,9 +281,8 @@
     <nav class="topnav" id="myTopnav">
         <a href="trangchu.html">Trang chủ</a>
         <a href="danhsachsanpham.html">Danh sách sản phẩm</a>
-        <a href="gioithieu_website_thanhvien.html">Giới thiệu website</a>
-        <a href="sitemap.html">Site map</a>
-        <a href="khuyenmai.html">Khuyến mãi</a>
+        <a href="khuyenmai.html" class="active">Khuyến mãi</a>
+        <a href="quanlyvanchuyen.html">Quản lý vận chuyển</a>
         <a href="javascript:void(0);" class="icon" onclick="respond_topnav()">
             <i class="fa fa-bars"></i>
         </a>
@@ -501,7 +504,7 @@
             <div>
                 <ul>
                     <span>Dịch vụ khách hàng</span>
-                    <li><a href="#">Liên hệ chúng tôi</a></li>
+                    <li><a href="chinhsach.html">Chính sách bán - giao hàng</a></li>
                     <li><a href="sitemap.html">Site Map</a></li>
                     <li><a href="khuyenmai.html">Khuyến mãi</a></li>
                 </ul>
