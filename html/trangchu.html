@@ -13,19 +13,34 @@
     <link rel="stylesheet" href="../css/modal.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/topnav.css">
+ HEAD
+    <link rel="stylesheet" href="../css/FlashSale.css">
+
     <link rel="stylesheet" href="../css/darkmode.css">
+ 0a59cd5be5e806fbfeb75ddf53e6dd9d69585f89
     <script src="../js/jquery-3.6.0.min.js"></script>
     <script type="module" src="../js/trangchu.js"></script>
     <script src="../js/taikhoan.js"></script>
     <script src="../js/responsive.js"></script>
+ HEAD
+    <script src="../js/muasanphamflashsale.js"></script>
+    <!-- <script src="../js/FlashSale.js"></script> -->
+
     <script src="../js/darkmode.js"></script>
     <script src="../js/recentlyviewed.js"></script>
+ 0a59cd5be5e806fbfeb75ddf53e6dd9d69585f89
 </head>
+
+
+
+
+
+
 
 <body>
     <header>
         <a href="trangchu.html" class="logo reloadTrang">
-            <img src="../img/logoMaylanh.png" width="30" height="30" alt="logo Máy lạnh">
+            <img src="../img/logoMaylanh.png" width="50" height="50" alt="logo Máy lạnh">
             CleanAir
         </a>
         <div class="search-container">
@@ -47,17 +62,20 @@
                 </div>
             </div>
             <div id="divTaikhoan" class="dropdown">
+
+
                 <button id="taikhoan" class="dropbtn"></button>
                 <div class="dropdown-content" id="ttTaikhoan">
                     <div class="dropdown-menu" id="dropdownMenu">
-                        <a href="#" id="menuProfile">Cập nhật thông tin cá nhân</a>
-                        <a href="#" id="menuPassword">Đổi mật khẩu</a>
-                        <a href="#" id="menuHistory">Quản lý lịch sử mua hàng</a>
+                        <a href="capnhatthongtincanhan.html" id="menuProfile">Cập nhật thông tin cá nhân</a>
+                        <a href="Doimatkhau.html" id="menuPassword">Đổi mật khẩu</a>
+                        <a href="Quanlylichsumuahang.html" id="menuHistory">Quản lý lịch sử mua hàng</a>
                     </div>
                 </div>
             </div>
         </div>
     </header>
+
     <nav class="topnav" id="myTopnav">
         <a href="trangchu.html" class="active">Trang chủ</a>
         <a href="danhsachsanpham.html">Danh sách sản phẩm</a>
@@ -69,9 +87,77 @@
             <i class="fa fa-bars"></i>
         </a>
     </nav>
+
+    <!-- Flash Sale Modal -->
+    <div id="flashSaleModal" class="flash-sale-overlay" style="display: none;">
+        <div class="flash-sale-content">
+            <span class="close-flash-sale" onclick="closeFlashSale()">&times;</span>
+            <h2>FLASH SALE ĐẶC BIỆT!</h2>
+            <p>Chỉ hôm nay - giảm giá tới 50%!</p>
+            <a href="javascript:void(0);" class="flash-sale-button" onclick="showFlashSaleContent()">Xem ngay</a>
+        </div>
+    </div>
+
+    <!-- Nội dung Flash Sale -->
+    <div id="flashSaleSection" style="display: none; padding: 20px;">
+        <div class="flash-sale-header">
+            <img src="../img/flash sale.png" alt="">
+            <h2>FLASH SALE ĐANG DIỄN RA!</h2>
+        
+            <div class="timer">
+                Kết thúc sau:
+                <span id="hours">00</span> :
+                <span id="minutes">00</span> :
+                <span id="seconds">00</span>
+            </div>
+            <div style="margin-top: 5px;">Chương trình từ 00:00 đến 07:59 ngày mai</div>
+        </div>
+
+        <div class="product-grid">
+            <div class="product">
+                <img src="https://cdnv2.tgdd.vn/mwg-static/dmx/Products/Images/2002/334017/may-lanh-casper-inverter-1-hp-gc-09ib36-1-638731546742404507-700x467.jpg"
+                    alt="Casper">
+                <div class="product-name">Casper Inverter 1 HP GC-09IB36</div>
+                <div class="price">6.290.000₫</div>
+                <div class="old-price">8.290.000₫</div>
+                <div class="discount">-24%</div>
+                <div class="stock">🔥 Còn 43/100 suất</div>
+                <button class="btn-buy">Mua ngay</button>
+            </div>
+
+            <div class="product">
+                <img src="https://cdn.tgdd.vn/Products/Images/2002/320701/lg-inverter-1-hp-v10win1-1-1-700x467.jpg"
+                    alt="TV QLED">
+                <div class="product-name">Máy lạnh LG Inverter 1 HP V10WIN1</div>
+                <div class="price">13.990.000₫</div>
+                <div class="old-price">20.990.000₫</div>
+                <div class="discount">-33%</div>
+                <div class="stock">🔥 Còn 22/30 suất</div>
+                <button class="btn-buy">Mua ngay</button>
+            </div>
+
+            <div class="product">
+                <img src="https://cdnv2.tgdd.vn/mwg-static/dmx/Products/Images/2002/334017/may-lanh-casper-inverter-1-hp-gc-09ib36-1-638731546742404507-700x467.jpg"
+                    alt="Tủ lạnh Aqua">
+                <div class="product-name">Máy lạnh Casper Inverter 1 HP GC-09IB36</div>
+                <div class="price">3.390.000₫</div>
+                <div class="old-price">4.790.000₫</div>
+                <div class="discount">-29%</div>
+                <div class="stock">🔥 Còn 15/40 suất</div>
+                <button class="btn-buy">Mua ngay</button>
+            </div>
+        </div>
+    </div>
+
+
     <main>
+        <div id="goiYChoBan">
+            <p style="font-size: 29px; font-weight: bold; margin-left: 350px;">Gợi ý cho bạn</p>
+        </div>
         <div id="products"></div>
     </main>
+
+
     <footer>
         <div>
             <div>
@@ -138,14 +224,29 @@
             </div>
         </div>
     </div>
- 
+
+
+
 
     <script>
-        document.getElementById("menuProfile").addEventListener("click", function () {
-    window.location.href = "capnhatthongtincanhan.html"; // Thay bằng đường dẫn trang cập nhật thông tin của bạn
-});
 
-    
+        document.getElementById("menuProfile").addEventListener("click", function () {
+            window.location.href = "capnhatthongtincanhan.html"; // Thay bằng đường dẫn trang cập nhật thông tin của bạn
+        });
+
+        //sang trang Doimatkhau
+        document.getElementById("menuPassword").addEventListener("click", function () {
+            window.location.href = "Doimatkhau.html"; // Trang đổi mật khẩu
+        });
+
+        document.getElementById("menuPassword").addEventListener("click", function () {
+            window.location.href = "Doimatkhau.html"; // Trang đổi mật khẩu
+        });
+
+
+
+
+
         function saveProfile() {
             let profileData = {
                 fullName: document.getElementById("fullName").value,
@@ -155,11 +256,11 @@
                 dob: document.getElementById("dob").value,
                 gender: document.getElementById("gender").value
             };
-    
+
             localStorage.setItem("userProfile", JSON.stringify(profileData));
             alert("Cập nhật thông tin thành công!");
         }
-    
+
         function loadProfile() {
             let savedProfile = localStorage.getItem("userProfile");
             if (savedProfile) {
@@ -174,16 +275,63 @@
         }
 
         // Xử lý khi bấm vào "Quản lý lịch sử mua hàng"
-$("#menuHistory").click(function () {
-    window.location.href = "Quanlylichsumuahang.html";
-});
+        $("#menuHistory").click(function () {
+            window.location.href = "Quanlylichsumuahang.html";
+        });
+
+        // xử lý nút X tắt Flash Sale
+        function closeFlashSale() {
+            document.getElementById("flashSaleModal").style.display = "none";
+        }
+
+        window.onload = function () {
+            setTimeout(function () {
+                document.getElementById("flashSaleModal").style.display = "flex";
+            }, 1000); // hiển thị sau 1 giây
+        }
+
+
+        function showFlashSaleContent() {
+            document.getElementById("flashSaleModal").style.display = "none";
+            document.getElementById("flashSaleSection").style.display = "block";
+        }
+
+        // Timer
+        const now = new Date();
+        const deadline = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 8, 0, 0);
+
+        function updateTimer() {
+            const current = new Date();
+            const diff = deadline - current;
+
+            if (diff <= 0) {
+                document.getElementById('hours').innerText = '00';
+                document.getElementById('minutes').innerText = '00';
+                document.getElementById('seconds').innerText = '00';
+                clearInterval(timerInterval);
+                return;
+            }
+
+            const hours = String(Math.floor((diff / (1000 * 60 * 60)) % 24)).padStart(2, '0');
+            const minutes = String(Math.floor((diff / (1000 * 60)) % 60)).padStart(2, '0');
+            const seconds = String(Math.floor((diff / 1000) % 60)).padStart(2, '0');
+
+            document.getElementById('hours').innerText = hours;
+            document.getElementById('minutes').innerText = minutes;
+            document.getElementById('seconds').innerText = seconds;
+        }
+
+        const timerInterval = setInterval(updateTimer, 1000);
+        updateTimer();
+
+
+
+
 
 
 
 
     </script>
 </body>
-
-
 
 </html>
