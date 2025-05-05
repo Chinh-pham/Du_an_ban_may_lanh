@@ -55,6 +55,8 @@
     </style>
     <script>
         function goToHomePage() {
+            localStorage.removeItem('tkDangnhap');
+        sessionStorage.removeItem('tkDangnhap');
             window.location.href = 'trangchu.html';
         }
     </script>

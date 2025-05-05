@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng nhập tài khoản - CleanAir mang lại "không khí trong lành" cho gia đình Việt</title>
-    <link rel="shortcut icon" href="../img/iconMaylanh.ico" type="image/x-icon">
+    <title>Dổi mật khẩu</title>
+    <link rel="stylesheet" href="../css/Doimatkhau.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/dangnhap.css">
+    <link rel="stylesheet" href="../css/chitietsanpham.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/topnav.css">
     <script src="../js/jquery-3.6.0.min.js"></script>
-    <script src="../js/dangnhap.js"></script>
+    <script type="module" src="../js/trangchu.js"></script>
+    <script src="../js/taikhoan.js"></script>
     <script src="../js/responsive.js"></script>
-</head>
 
+</head>
 <body>
+
     <header>
         <a href="trangchu.html" class="logo reloadTrang">
             <img src="../img/logoMaylanh.png" width="30" height="30" alt="logo Máy lạnh">
@@ -61,26 +61,26 @@
             <i class="fa fa-bars"></i>
         </a>
     </nav>
-    <main>
-        <div class="container">
-            <div class="register-form">
-                <form action="" id="formDN">
-                    <h1>Đăng Nhập Tài Khoản</h1>
-                    <div class="input-box">
-                        <input type="text" placeholder="Tên đăng nhập" id="txtTenDangnhap">
-                        <span id="messTenDangnhap"></span>
-                    </div>
-                    <div class="input-box">
-                        <input type="password" placeholder="Mật khẩu" id="txtMatkhau">
-                        <span id="messMatkhau"></span>
-                    </div>
-                    <div class="btn-box">
-                        <button type="submit" id="dangnhap">Đăng nhập</button>
-                    </div>
-                </form>
-            </div>
+
+    <div class="container">
+        <h2>Đổi Mật Khẩu</h2>
+        <div class="input-group">
+            <label for="oldPassword">Mật khẩu cũ</label>
+            <input type="password" id="oldPassword">
         </div>
-    </main>
+        <div class="input-group">
+            <label for="newPassword">Mật khẩu mới</label>
+            <input type="password" id="newPassword">
+        </div>
+        <div class="input-group">
+            <label for="confirmPassword">Nhập lại mật khẩu mới</label>
+            <input type="password" id="confirmPassword">
+        </div>
+        <p class="error" id="errorMessage"></p>
+        <button onclick="changePassword()">Xác nhận</button>
+    </div>
+
+
     <footer>
         <div>
             <div>

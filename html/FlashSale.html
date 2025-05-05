@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flash Sale</title>
+    <style>
+        /* body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .flash-sale-header {
+            background-color: #ffefef;
+            text-align: center;
+            padding: 30px 20px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .flash-sale-header h2 {
+            margin: 0 0 10px;
+            font-size: 24px;
+            color: #e53935;
+        }
+
+        .timer {
+            font-size: 22px;
+            color: #333;
+        }
+
+        .timer span {
+            background-color: white;
+            padding: 5px 10px;
+            margin: 0 4px;
+            border-radius: 6px;
+            font-weight: bold;
+            min-width: 40px;
+            display: inline-block;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+        }
+
+        .product {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .product:hover {
+            transform: translateY(-5px);
+        }
+
+        .product img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        .product-name {
+            font-size: 16px;
+    margin: 8px 0;
+    /* Xoá height cố định */
+    /* height: auto;
+    overflow: hidden;
+    line-height: 1.4;
+        }
+
+        .price {
+            color: #e53935;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            color: #888;
+            font-size: 14px;
+        }
+
+        .discount {
+            color: #555;
+            font-size: 14px;
+            margin: 4px 0;
+        }
+
+        .stock {
+            background-color: #fff3cd;
+            border: 1px solid #ffeeba;
+            color: #856404;
+            padding: 5px;
+            border-radius: 8px;
+            margin: 10px 0;
+            font-size: 14px;
+        }
+
+        .btn-buy {
+            background-color: #e53935;
+            color: white;
+            padding: 10px 18px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .btn-buy:hover {
+            background-color: #c62828;
+        }
+    </style> */ */
+</head>
+<body>
+ 
+
+    <script>
+        // Đặt thời gian kết thúc là 08:00 sáng ngày mai
+        const now = new Date();
+        const deadline = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 8, 0, 0);
+
+        function updateTimer() {
+            const current = new Date();
+            const diff = deadline - current;
+
+            if (diff <= 0) {
+                document.getElementById('hours').innerText = '00';
+                document.getElementById('minutes').innerText = '00';
+                document.getElementById('seconds').innerText = '00';
+                clearInterval(timerInterval);
+                return;
+            }
+
+            const hours = String(Math.floor((diff / (1000 * 60 * 60)) % 24)).padStart(2, '0');
+            const minutes = String(Math.floor((diff / (1000 * 60)) % 60)).padStart(2, '0');
+            const seconds = String(Math.floor((diff / 1000) % 60)).padStart(2, '0');
+
+            document.getElementById('hours').innerText = hours;
+            document.getElementById('minutes').innerText = minutes;
+            document.getElementById('seconds').innerText = seconds;
+        }
+
+        const timerInterval = setInterval(updateTimer, 1000);
+        updateTimer();
+    </script>
+
+</body>
+</html>

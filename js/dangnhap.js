@@ -77,5 +77,8 @@ $(window).ready(function () {
         } else {
             $("#dangnhap").attr("type", "button")
         }
+
+
+        
     })
 })
