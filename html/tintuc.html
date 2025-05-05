@@ -1,27 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang chủ - CleanAir mang lại "không khí trong lành" cho gia đình Việt</title>
+    <title>Tin tức máy lạnh - CleanAir mang lại "không khí trong lành" cho gia đình Việt</title>
     <link rel="shortcut icon" href="../img/iconMaylanh.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/trangchu.css">
-    <link rel="stylesheet" href="../css/modal.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/topnav.css">
+    <link rel="stylesheet" href="../css/tintuc.css">
     <link rel="stylesheet" href="../css/darkmode.css">
     <script src="../js/jquery-3.6.0.min.js"></script>
-    <script type="module" src="../js/trangchu.js"></script>
+    <!-- <script src="../js/tintuc.js"></script> -->
     <script src="../js/taikhoan.js"></script>
     <script src="../js/responsive.js"></script>
     <script src="../js/darkmode.js"></script>
-    <script src="../js/recentlyviewed.js"></script>
 </head>
-
 <body>
     <header>
         <a href="trangchu.html" class="logo reloadTrang">
@@ -35,7 +31,6 @@
             </form>
         </div>
         <div class="header-right">
-            <!-- Dark mode toggle will be added by JavaScript -->
             <a class="giohang" href="giohang.html">Giỏ hàng</a>
             <div class="dropdown" id="dkdn">
                 <button class="dropbtn" onclick="toggle_dropdown()">Tài khoản
@@ -46,32 +41,65 @@
                     <a href="dangnhap.html">Đăng nhập</a>
                 </div>
             </div>
-            <div id="divTaikhoan" class="dropdown">
-                <button id="taikhoan" class="dropbtn"></button>
-                <div class="dropdown-content" id="ttTaikhoan">
-                    <div class="dropdown-menu" id="dropdownMenu">
-                        <a href="#" id="menuProfile">Cập nhật thông tin cá nhân</a>
-                        <a href="#" id="menuPassword">Đổi mật khẩu</a>
-                        <a href="#" id="menuHistory">Quản lý lịch sử mua hàng</a>
-                    </div>
-                </div>
-            </div>
         </div>
     </header>
     <nav class="topnav" id="myTopnav">
-        <a href="trangchu.html" class="active">Trang chủ</a>
+        <a href="trangchu.html">Trang chủ</a>
         <a href="danhsachsanpham.html">Danh sách sản phẩm</a>
         <a href="gioithieu_website_thanhvien.html">Giới thiệu website</a>
         <a href="sitemap.html">Site map</a>
         <a href="khuyenmai.html">Khuyến mãi</a>
-        <a href="tintuc.html">Tin tức</a>
+        <a href="tintuc.html" class="active">Tin tức</a>
         <a href="javascript:void(0);" class="icon" onclick="respond_topnav()">
             <i class="fa fa-bars"></i>
         </a>
     </nav>
     <main>
-        <div id="products"></div>
+        <h1 class="page-title">Tin tức về điều hòa và tiết kiệm năng lượng</h1>
+        
+        <div class="news-container">
+            <div class="news-item">
+                <img src="../img/news1.jpg" alt="Công nghệ Inverter">
+                <div class="news-content">
+                    <h2><a href="tintuc-inverter.html">Công nghệ Inverter mới giúp tiết kiệm 50% điện năng</a></h2>
+                    <span class="date">15/08/2023</span>
+                    <p>Các nhà sản xuất máy lạnh hàng đầu vừa công bố công nghệ Inverter thế hệ mới có khả năng tiết kiệm lên đến 50% điện năng so với các mẫu truyền thống...</p>
+                    <a href="tintuc-inverter.html" class="read-more">Đọc tiếp</a>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <img src="../img/news2.jpeg" alt="Bảo trì máy lạnh">
+                <div class="news-content">
+                    <h2><a href="tintuc-baotri.html">Cách bảo trì máy lạnh đúng cách trong mùa hè</a></h2>
+                    <span class="date">22/07/2023</span>
+                    <p>Việc bảo trì máy lạnh đúng cách không chỉ giúp thiết bị hoạt động hiệu quả mà còn kéo dài tuổi thọ sản phẩm. Dưới đây là những phương pháp bảo trì được các chuyên gia khuyến nghị...</p>
+                    <a href="tintuc-baotri.html" class="read-more">Đọc tiếp</a>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <img src="../img/news3.jpeg" alt="Máy lạnh tiết kiệm điện">
+                <div class="news-content">
+                    <h2><a href="tintuc-tietkiemdien.html">Top 5 máy lạnh tiết kiệm điện nhất năm 2023</a></h2>
+                    <span class="date">05/06/2023</span>
+                    <p>Trong bối cảnh giá điện tăng cao, việc lựa chọn máy lạnh tiết kiệm điện trở nên quan trọng hơn bao giờ hết. Dưới đây là 5 mẫu máy lạnh được đánh giá là tiết kiệm điện nhất thị trường hiện nay...</p>
+                    <a href="tintuc-tietkiemdien.html" class="read-more">Đọc tiếp</a>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <img src="../img/news4.jpg" alt="Công nghệ lọc không khí">
+                <div class="news-content">
+                    <h2><a href="tintuc-lockhongkhi.html">Máy lạnh sử dụng công nghệ lọc không khí diệt virus</a></h2>
+                    <span class="date">12/05/2023</span>
+                    <p>Trong thời đại dịch COVID-19, các nhà sản xuất đã phát triển máy lạnh tích hợp công nghệ lọc không khí và diệt virus. Những sản phẩm này không chỉ làm mát không gian sống mà còn bảo vệ sức khỏe cả gia đình...</p>
+                    <a href="tintuc-lockhongkhi.html" class="read-more">Đọc tiếp</a>
+                </div>
+            </div>
+        </div>
     </main>
+    
     <footer>
         <div>
             <div>
@@ -119,71 +147,5 @@
             </div>
         </div>
     </footer>
-
-    <!-- Modal -->
-
-    <!-- Modal thông báo đã thêm sản phẩm vào giỏ hàng -->
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <span class="close">&times;</span>
-                <h2>Đã thêm vào giỏ hàng</h2>
-            </div>
-            <div class="modal-body">
-                <h3 id="tenSP">Some text in the Modal Body</h3>
-                <p id="giaSP">Some other text...</p>
-            </div>
-            <div class="modal-footer">
-                <p>Xin cảm ơn!</p>
-            </div>
-        </div>
-    </div>
- 
-
-    <script>
-        document.getElementById("menuProfile").addEventListener("click", function () {
-    window.location.href = "capnhatthongtincanhan.html"; // Thay bằng đường dẫn trang cập nhật thông tin của bạn
-});
-
-    
-        function saveProfile() {
-            let profileData = {
-                fullName: document.getElementById("fullName").value,
-                email: document.getElementById("email").value,
-                phone: document.getElementById("phone").value,
-                address: document.getElementById("address").value,
-                dob: document.getElementById("dob").value,
-                gender: document.getElementById("gender").value
-            };
-    
-            localStorage.setItem("userProfile", JSON.stringify(profileData));
-            alert("Cập nhật thông tin thành công!");
-        }
-    
-        function loadProfile() {
-            let savedProfile = localStorage.getItem("userProfile");
-            if (savedProfile) {
-                let profile = JSON.parse(savedProfile);
-                document.getElementById("fullName").value = profile.fullName || "";
-                document.getElementById("email").value = profile.email || "";
-                document.getElementById("phone").value = profile.phone || "";
-                document.getElementById("address").value = profile.address || "";
-                document.getElementById("dob").value = profile.dob || "";
-                document.getElementById("gender").value = profile.gender || "";
-            }
-        }
-
-        // Xử lý khi bấm vào "Quản lý lịch sử mua hàng"
-$("#menuHistory").click(function () {
-    window.location.href = "Quanlylichsumuahang.html";
-});
-
-
-
-
-    </script>
 </body>
-
-
-
 </html>

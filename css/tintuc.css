@@ -1,0 +1,244 @@
+/* Main news page styling */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.page-title {
+    text-align: center;
+    margin: 20px 0 30px;
+    color: #2196F3;
+    font-size: 28px;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 15px;
+}
+
+/* News container */
+.news-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.news-item {
+    display: flex;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin-bottom: 30px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.news-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.news-item img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.news-content {
+    padding: 20px;
+    flex: 1;
+}
+
+.news-item h2 {
+    color: #2196F3;
+    font-size: 22px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.news-content h2 a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.news-content h2 a:hover {
+    color: #2196F3;
+}
+
+.news-item .date {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.news-item p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.news-item .read-more {
+    display: inline-block;
+    background-color: #2196F3;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.news-item .read-more:hover {
+    background-color: #0b7dda;
+}
+
+/* News detail page styles */
+.news-detail {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.news-detail h1 {
+    color: #2196F3;
+    margin-bottom: 10px;
+}
+
+.news-detail .date {
+    color: #666;
+    font-style: italic;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.news-detail .feature-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.news-detail p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.news-detail h2 {
+    color: #333;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.news-detail ul, .news-detail ol {
+    margin-bottom: 20px;
+    padding-left: 20px;
+    line-height: 1.6;
+}
+
+.news-detail li {
+    margin-bottom: 10px;
+}
+
+.news-detail .back-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #2196F3;
+    text-decoration: none;
+}
+
+.news-detail .back-link:hover {
+    text-decoration: underline;
+}
+
+/* Specific styled components */
+.tech-highlight {
+    background-color: #e3f2fd;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 15px 0;
+}
+
+.tech-highlight h3 {
+    color: #0d47a1;
+    margin-top: 0;
+}
+
+.maintenance-step {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin: 15px 0;
+    border-left: 4px solid #2196F3;
+}
+
+.maintenance-step h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.product-item {
+    border: 1px solid #eee;
+    padding: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.product-item img {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.product-item .product-info {
+    flex: 1;
+}
+
+.product-item h3 {
+    margin-top: 0;
+    color: #2196F3;
+}
+
+.product-item .rating {
+    color: #ffc107;
+    margin: 5px 0;
+}
+
+.energy-efficiency {
+    background-color: #e8f5e9;
+    padding: 10px;
+    display: inline-block;
+    margin-top: 10px;
+    border-radius: 4px;
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .news-item {
+        flex-direction: column;
+    }
+    
+    .news-item img {
+        width: 100%;
+        height: 200px;
+    }
+    
+    .product-item {
+        flex-direction: column;
+    }
+    
+    .product-item img {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}
