@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tư vấn mua hàng - CleanAir mang lại "không khí trong lành" cho gia đình Việt</title>
+    <link rel="shortcut icon" href="../img/iconMaylanh.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/modal.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/topnav.css">
+    <link rel="stylesheet" href="../css/darkmode.css">
+    <link rel="stylesheet" href="../css/print.css">
+    <link rel="stylesheet" href="../css/scrolltotop.css">
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/taikhoan.js"></script>
+    <script src="../js/responsive.js"></script>
+    <script src="../js/darkmode.js"></script>
+    <script src="../js/print.js"></script>
+    <script src="../js/scrolltotop.js"></script>
+    <style>
+        /* General page styling */
+        main {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Table of contents styling */
+        .phan-wrapper {
+            background: linear-gradient(to right, #2196F3, #21CBF3);
+            border-radius: 8px;
+            margin: 25px 0;
+            box-shadow: 0 4px 15px rgba(33, 150, 243, 0.2);
+            overflow: hidden;
+        }
+
+        .phan-header {
+            padding: 15px 20px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        #bangTomTat {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #bangTomTat li {
+            padding: 0;
+            margin: 0;
+        }
+
+        #bangTomTat a.tomtat {
+            display: block;
+            padding: 12px 20px;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        #bangTomTat a.tomtat:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding-left: 25px;
+        }
+
+        /* Advice sections */
+        .advice-section {
+            padding: 30px;
+            margin: 30px 0;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            position: relative;
+            border-top: 4px solid #2196F3;
+            transition: transform 0.3s ease;
+        }
+
+        .advice-section:hover {
+            transform: translateY(-5px);
+        }
+
+        .advice-section h2 {
+            color: #2196F3;
+            margin-bottom: 20px;
+            font-size: 28px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .advice-section h2::after {
+            content: "";
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background-color: #2196F3;
+            border-radius: 2px;
+        }
+
+        .advice-section h3 {
+            color: #0d47a1;
+            margin: 20px 0 15px;
+            font-size: 20px;
+        }
+
+        .advice-section p {
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #444;
+            font-size: 16px;
+        }
+
+        .advice-section ul li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 25px;
+            line-height: 1.6;
+        }
+
+        .advice-section ul li::before {
+            content: "\f00c";
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: #2196F3;
+        }
+
+        /* Images */
+        .advice-image {
+            max-width: 100%;
+            height: auto;
+            margin: 25px 0;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .advice-image:hover {
+            transform: scale(1.02);
+        }
+
+        /* Tip boxes */
+        .tip-box {
+            background-color: #e3f2fd;
+            border-left: 4px solid #2196F3;
+            padding: 20px 25px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+            position: relative;
+            box-shadow: 0 3px 10px rgba(33, 150, 243, 0.15);
+        }
+
+        .tip-box::before {
+            content: "\f0eb";
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            top: 20px;
+            left: -12px;
+            background-color: #2196F3;
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+        }
+
+        .tip-box h3 {
+            color: #0d47a1;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        /* Comparison tables */
+        .comparison-table {
+            width: 100%;
+            margin: 25px 0;
+            overflow-x: auto;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .comparison-table table {
+            width: 100%;
+            border-collapse: collapse;
+            border-style: hidden;
+        }
+
+        .comparison-table th, .comparison-table td {
+            border: 1px solid #e0e0e0;
+            padding: 15px;
+            text-align: left;
+        }
+
+        .comparison-table th {
+            background: linear-gradient(to right, #2196F3, #21CBF3);
+            color: white;
+            font-weight: 500;
+            position: sticky;
+            top: 0;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background-color: #f7f9fc;
+        }
+
+        .comparison-table tr {
+            transition: background-color 0.3s ease;
+        }
+
+        .comparison-table tr:hover {
+            background-color: #e3f2fd;
+        }
+
+        /* Responsive design for tables */
+        @media screen and (max-width: 768px) {
+            .comparison-table {
+                overflow-x: scroll;
+            }
+            
+            .advice-section {
+                padding: 20px;
+            }
+            
+            .comparison-table th, .comparison-table td {
+                padding: 12px 10px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="trangchu.html" class="logo reloadTrang">
+            <img src="../img/logoMaylanh.png" width="30" height="30" alt="logo Máy lạnh">
+            CleanAir
+        </a>
+        <div class="search-container">
+            <form id="formSearch">
+                <input type="text" placeholder="Nhập sản phẩm cần tìm ..." id="inputTimkiem" name="search">
+                <button id="btnTimkiem"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        <div class="header-right">
+            <a class="giohang" href="giohang.html">Giỏ hàng</a>
+            <div class="dropdown" id="dkdn">
+                <button class="dropbtn" onclick="toggle_dropdown()">Tài khoản
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content" id="myDropdown">
+                    <a href="dangky.html">Đăng ký</a>
+                    <a href="dangnhap.html">Đăng nhập</a>
+                </div>
+            </div>
+            <div id="divTaikhoan" class="dropdown">
+                <button id="taikhoan" class="dropbtn"></button>
+                <div class="dropdown-content" id="ttTaikhoan">
+                    <div class="dropdown-menu" id="dropdownMenu">
+                        <a href="#" id="menuProfile">Cập nhật thông tin cá nhân</a>
+                        <a href="#" id="menuPassword">Đổi mật khẩu</a>
+                        <a href="#" id="menuHistory">Quản lý lịch sử mua hàng</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <nav class="topnav" id="myTopnav">
+        <a href="trangchu.html">Trang chủ</a>
+        <a href="danhsachsanpham.html">Danh sách sản phẩm</a>
+        <a href="gioithieu_website_thanhvien.html">Giới thiệu website</a>
+        <a href="tuvanmuahang.html" class="active">Tư vấn</a>
+        <a href="khuyenmai.html">Khuyến mãi</a>
+        <a href="javascript:void(0);" class="icon" onclick="respond_topnav()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </nav>
+
+    <main>
+        <div class="phan-wrapper">
+            <div class="phan-header">Xem nhanh nội dung</div>
+            <ul id="bangTomTat">
+                <li><a class="tomtat" href="#phan-1">1. Cách chọn công suất điều hòa phù hợp</a></li>
+                <li><a class="tomtat" href="#phan-2">2. So sánh các loại điều hòa</a></li>
+                <li><a class="tomtat" href="#phan-3">3. Tiết kiệm điện năng khi sử dụng</a></li>
+                <li><a class="tomtat" href="#phan-4">4. Các tính năng hiện đại nên có</a></li>
+                <li><a class="tomtat" href="#phan-5">5. Hướng dẫn lắp đặt và bảo trì</a></li>
+            </ul>
+        </div>
+
+        <div class="advice-section" id="phan-1">
+            <h2>1. Cách chọn công suất điều hòa phù hợp</h2>
+            <p>Việc lựa chọn công suất điều hòa phù hợp với diện tích phòng là yếu tố quan trọng hàng đầu để đảm bảo hiệu quả làm mát và tiết kiệm điện năng.</p>
+            
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Diện tích phòng (m²)</th>
+                            <th>Công suất phù hợp (BTU)</th>
+                            <th>Loại điều hòa đề xuất</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Dưới 15 m²</td>
+                            <td>9.000 BTU</td>
+                            <td>1 HP</td>
+                        </tr>
+                        <tr>
+                            <td>15-20 m²</td>
+                            <td>12.000 BTU</td>
+                            <td>1.5 HP</td>
+                        </tr>
+                        <tr>
+                            <td>20-30 m²</td>
+                            <td>18.000 BTU</td>
+                            <td>2 HP</td>
+                        </tr>
+                        <tr>
+                            <td>30-40 m²</td>
+                            <td>24.000 BTU</td>
+                            <td>2.5 HP</td>
+                        </tr>
+                        <tr>
+                            <td>40-60 m²</td>
+                            <td>30.000 BTU</td>
+                            <td>3 HP</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="tip-box">
+                <h3>Lưu ý quan trọng:</h3>
+                <p>Ngoài diện tích, bạn cần xem xét thêm các yếu tố sau khi chọn công suất điều hòa:</p>
+                <ul>
+                    <li>Số lượng người thường xuyên trong phòng</li>
+                    <li>Số lượng thiết bị điện tử phát nhiệt</li>
+                    <li>Hướng phòng và mức độ tiếp xúc với ánh nắng</li>
+                    <li>Chiều cao trần nhà</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="advice-section" id="phan-2">
+            <h2>2. So sánh các loại điều hòa</h2>
+            <p>Trên thị trường hiện nay có nhiều loại điều hòa khác nhau, mỗi loại có những ưu nhược điểm riêng phù hợp với từng nhu cầu sử dụng.</p>
+
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Loại điều hòa</th>
+                            <th>Ưu điểm</th>
+                            <th>Nhược điểm</th>
+                            <th>Phù hợp với</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Điều hòa 1 chiều</td>
+                            <td>Giá thành rẻ, tiết kiệm điện</td>
+                            <td>Chỉ làm mát, không sưởi ấm</td>
+                            <td>Khu vực miền Nam, nơi ít cần sưởi ấm</td>
+                        </tr>
+                        <tr>
+                            <td>Điều hòa 2 chiều</td>
+                            <td>Có thể làm mát và sưởi ấm</td>
+                            <td>Giá cao hơn, tiêu thụ điện nhiều hơn</td>
+                            <td>Miền Bắc và miền Trung, nơi có mùa đông lạnh</td>
+                        </tr>
+                        <tr>
+                            <td>Điều hòa Inverter</td>
+                            <td>Tiết kiệm điện, hoạt động êm</td>
+                            <td>Giá thành cao hơn</td>
+                            <td>Sử dụng thường xuyên, dài hạn</td>
+                        </tr>
+                        <tr>
+                            <td>Điều hòa Non-Inverter</td>
+                            <td>Giá thành rẻ, dễ sửa chữa</td>
+                            <td>Tốn điện hơn, ồn hơn</td>
+                            <td>Sử dụng ngắn hạn, không thường xuyên</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="advice-section" id="phan-3">
+            <h2>3. Tiết kiệm điện năng khi sử dụng</h2>
+            <p>Điều hòa là thiết bị tiêu thụ điện năng lớn trong gia đình. Dưới đây là một số lời khuyên giúp bạn tiết kiệm điện khi sử dụng điều hòa.</p>
+            
+            <div class="tip-box">
+                <h3>Cách sử dụng điều hòa tiết kiệm điện:</h3>
+                <ul>
+                    <li>Đặt nhiệt độ ở mức 25-27°C (tiết kiệm 10% điện năng cho mỗi độ tăng)</li>
+                    <li>Sử dụng kèm quạt để phân phối không khí mát đều khắp phòng</li>
+                    <li>Đóng kín cửa sổ, cửa ra vào khi sử dụng điều hòa</li>
+                    <li>Vệ sinh màng lọc định kỳ mỗi tháng</li>
+                    <li>Bảo dưỡng điều hòa 6 tháng/lần</li>
+                    <li>Sử dụng chức năng hẹn giờ thông minh</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="advice-section" id="phan-4">
+            <h2>4. Các tính năng hiện đại nên có</h2>
+            <p>Các điều hòa hiện đại đi kèm nhiều tính năng thông minh giúp nâng cao hiệu quả sử dụng và bảo vệ sức khỏe người dùng.</p>
+            
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tính năng</th>
+                            <th>Lợi ích</th>
+                            <th>Đề xuất</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Công nghệ Inverter</td>
+                            <td>Tiết kiệm điện, vận hành êm ái</td>
+                            <td>Cần thiết</td>
+                        </tr>
+                        <tr>
+                            <td>Bộ lọc không khí kháng khuẩn</td>
+                            <td>Lọc bụi mịn, vi khuẩn, nấm mốc</td>
+                            <td>Rất cần thiết, đặc biệt cho gia đình có trẻ nhỏ</td>
+                        </tr>
+                        <tr>
+                            <td>Chế độ làm lạnh nhanh</td>
+                            <td>Đạt nhiệt độ mong muốn nhanh chóng</td>
+                            <td>Tiện ích</td>
+                        </tr>
+                        <tr>
+                            <td>Kết nối Wi-Fi/Điều khiển từ xa</td>
+                            <td>Điều khiển qua smartphone từ xa</td>
+                            <td>Tiện ích cao</td>
+                        </tr>
+                        <tr>
+                            <td>Cảm biến hiện diện</td>
+                            <td>Tự động điều chỉnh nhiệt độ khi có người</td>
+                            <td>Tiết kiệm điện</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="advice-section" id="phan-5">
+            <h2>5. Hướng dẫn lắp đặt và bảo trì</h2>
+            <p>Lắp đặt và bảo trì đúng cách sẽ giúp điều hòa hoạt động hiệu quả và kéo dài tuổi thọ.</p>
+            
+            <h3>Lắp đặt:</h3>
+            <ul>
+                <li>Vị trí dàn nóng: Nên đặt ở nơi thoáng khí, tránh ánh nắng trực tiếp</li>
+                <li>Vị trí dàn lạnh: Cách trần 10-15cm, cách cửa ra vào để không khí lưu thông tốt</li>
+                <li>Ống đồng: Nên sử dụng ống đồng chất lượng cao và có độ dài phù hợp</li>
+                <li>Đường điện: Cần lắp đặt dây điện riêng cho điều hòa với CB phù hợp</li>
+            </ul>
+            
+            <h3>Bảo trì:</h3>
+            <ul>
+                <li>Vệ sinh màng lọc 2-4 tuần/lần</li>
+                <li>Vệ sinh dàn tản nhiệt 6 tháng/lần</li>
+                <li>Kiểm tra gas 1 năm/lần</li>
+                <li>Kiểm tra đường điện, rò rỉ nước 6 tháng/lần</li>
+            </ul>
+            
+            <div class="tip-box">
+                <h3>Dịch vụ tại CleanAir:</h3>
+                <p>CleanAir cung cấp dịch vụ lắp đặt và bảo trì chuyên nghiệp với đội ngũ kỹ thuật viên có trình độ cao. Gọi <strong>1900 1234</strong> để được hỗ trợ.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div>
+            <div>
+                <ul>
+                    <span>Thông tin về</span>
+                    <li><a href="gioithieu_website_thanhvien.html">Giới thiệu website</a></li>
+                    <li><a href="gioithieu_website_thanhvien.html#phan-0">Các thành viên thực hiện</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <span>Dịch vụ khách hàng</span>
+                    <li><a href="#">Liên hệ chúng tôi</a></li>
+                    <li><a href="sitemap.html">Site Map</a></li>
+                    <li><a href="#">Khuyến mãi</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <span>Tài khoản</span>
+                    <li><a href="#">Tài khoản của tôi</a></li>
+                    <li><a href="dangnhap.html">Đăng nhập</a></li>
+                    <li><a href="dangky.html">Đăng ký</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <span>Sản phẩm</span>
+                    <li><a href="giohang.html">Giỏ hàng của tôi</a></li>
+                    <li><a href="#">Khuyến mãi</a></li>
+                    <li><a href="tuvanmuahang.html">Tư vấn mua hàng</a></li>
+                </ul>
+            </div>
+            <div>
+                <div>
+                    <p>CleanAir Store© 2022. Công ty thiết bị máy lạnh TPHCM.</p>
+                    <p>Address: 999 Nguyễn Kiệm, Phường 3, Gò Vấp, Thành phố Hồ Chí Minh, Việt Nam</p>
+                </div>
+                <div>
+                    <p><a href="#">Powered By Open Cart</a></p>
+                    <span>
+                        <img src="../img/bocongthuong.png" alt="" width="90">
+                    </span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("menuProfile").addEventListener("click", function () {
+            window.location.href = "capnhatthongtincanhan.html";
+        });
+
+        document.getElementById("menuPassword").addEventListener("click", function () {
+            window.location.href = "doimatkhau.html";
+        });
+
+        document.getElementById("menuHistory").addEventListener("click", function () {
+            window.location.href = "lichsumuahang.html";
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khuyến mãi dành cho hội viên - CleanAir mang lại "không khí trong lành" cho gia đình Việt</title>
+    <link rel="shortcut icon" href="../img/iconMaylanh.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/modal.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/topnav.css">
+    <link rel="stylesheet" href="../css/darkmode.css">
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/taikhoan.js"></script>
+    <script src="../js/responsive.js"></script>
+    <script src="../js/darkmode.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* General page styling */
+        main {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Table of contents styling */
+        .phan-wrapper {
+            background: linear-gradient(to right, #2196F3, #21CBF3);
+            border-radius: 8px;
+            margin: 25px 0;
+            box-shadow: 0 4px 15px rgba(33, 150, 243, 0.2);
+            overflow: hidden;
+        }
+
+        .phan-header {
+            padding: 15px 20px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        #bangTomTat {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #bangTomTat li {
+            padding: 0;
+            margin: 0;
+        }
+
+        #bangTomTat a.tomtat {
+            display: block;
+            padding: 12px 20px;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        #bangTomTat a.tomtat:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding-left: 25px;
+        }
+
+        /* Advice sections */
+        .advice-section {
+            padding: 30px;
+            margin: 30px 0;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            position: relative;
+            border-top: 4px solid #2196F3;
+            transition: transform 0.3s ease;
+        }
+
+        .advice-section:hover {
+            transform: translateY(-5px);
+        }
+
+        .advice-section h2 {
+            color: #2196F3;
+            margin-bottom: 20px;
+            font-size: 28px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .advice-section h2::after {
+            content: "";
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background-color: #2196F3;
+            border-radius: 2px;
+        }
+
+        .advice-section h3 {
+            color: #0d47a1;
+            margin: 20px 0 15px;
+            font-size: 20px;
+        }
+
+        .advice-section p {
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #444;
+            font-size: 16px;
+        }
+
+        .advice-section ul li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 25px;
+            line-height: 1.6;
+        }
+
+        .advice-section ul li::before {
+            content: "\f00c";
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: #2196F3;
+        }
+
+        /* Images */
+        .advice-image {
+            max-width: 100%;
+            height: auto;
+            margin: 25px 0;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .advice-image:hover {
+            transform: scale(1.02);
+        }
+
+        /* Tip boxes */
+        .tip-box {
+            background-color: #e3f2fd;
+            border-left: 4px solid #2196F3;
+            padding: 20px 25px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+            position: relative;
+            box-shadow: 0 3px 10px rgba(33, 150, 243, 0.15);
+        }
+
+        .tip-box::before {
+            content: "\f0eb";
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            top: 20px;
+            left: -12px;
+            background-color: #2196F3;
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+        }
+
+        .tip-box h3 {
+            color: #0d47a1;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        /* Comparison tables */
+        .comparison-table {
+            width: 100%;
+            margin: 25px 0;
+            overflow-x: auto;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .comparison-table table {
+            width: 100%;
+            border-collapse: collapse;
+            border-style: hidden;
+        }
+
+        .comparison-table th, .comparison-table td {
+            border: 1px solid #e0e0e0;
+            padding: 15px;
+            text-align: left;
+        }
+
+        .comparison-table th {
+            background: linear-gradient(to right, #2196F3, #21CBF3);
+            color: white;
+            font-weight: 500;
+            position: sticky;
+            top: 0;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background-color: #f7f9fc;
+        }
+
+        .comparison-table tr {
+            transition: background-color 0.3s ease;
+        }
+
+        .comparison-table tr:hover {
+            background-color: #e3f2fd;
+        }
+
+        /* Responsive design for tables */
+        @media screen and (max-width: 768px) {
+            .comparison-table {
+                overflow-x: scroll;
+            }
+            
+            .advice-section {
+                padding: 20px;
+            }
+            
+            .comparison-table th, .comparison-table td {
+                padding: 12px 10px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="trangchu.html" class="logo reloadTrang">
+            <img src="../img/logoMaylanh.png" width="30" height="30" alt="logo Máy lạnh">
+            CleanAir
+        </a>
+        <div class="search-container">
+            <form id="formSearch">
+                <input type="text" placeholder="Nhập sản phẩm cần tìm ..." id="inputTimkiem" name="search">
+                <button id="btnTimkiem"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        <div class="header-right">
+            <a class="giohang" href="giohang.html">Giỏ hàng</a>
+            <div class="dropdown" id="dkdn">
+                <button class="dropbtn" onclick="toggle_dropdown()">Tài khoản
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content" id="myDropdown">
+                    <a href="dangky.html">Đăng ký</a>
+                    <a href="dangnhap.html">Đăng nhập</a>
+                </div>
+            </div>
+            <div id="divTaikhoan" class="dropdown">
+                <button id="taikhoan" class="dropbtn"></button>
+                <div class="dropdown-content" id="ttTaikhoan">
+                    <div class="dropdown-menu" id="dropdownMenu">
+                        <a href="#" id="menuProfile">Cập nhật thông tin cá nhân</a>
+                        <a href="#" id="menuPassword">Đổi mật khẩu</a>
+                        <a href="#" id="menuHistory">Quản lý lịch sử mua hàng</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav class="topnav" id="myTopnav">
+        <a href="trangchu.html">Trang chủ</a>
+        <a href="danhsachsanpham.html">Danh sách sản phẩm</a>
+        <a href="gioithieu_website_thanhvien.html">Giới thiệu website</a>
+        <a href="sitemap.html">Site map</a>
+        <a href="khuyenmai.html">Khuyến mãi</a>
+        <a href="javascript:void(0);" class="icon" onclick="respond_topnav()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </nav>
+
+    <main>
+        <div class="phan-wrapper">
+            <div class="phan-header">Các chương trình khuyến mãi dành cho khách hàng thân thiết tại CleanAir</div>
+            <ul id="bangTomTat">
+                <li><a class="tomtat" href="#phan-1">1. Giảm 10% cho tất cả sản phẩm</a></li>
+                <li><a class="tomtat" href="#phan-2">2. Tặng voucher 100.000 VNĐ cho đơn hàng từ 1.000.000 VNĐ</a></li>
+                <li><a class="tomtat" href="#phan-3">3. Nhận quà tặng đặc biệt tại cửa hàng vào ngày sinh nhật</a></li>
+                <div class="phan-header">Điều kiện áp dụng</div>
+                <li><a class="tomtat" href="#phan-1">1. Chỉ áp dụng cho khách hàng có thẻ thành viên.</a></li>
+                <li><a class="tomtat" href="#phan-2">2. Không áp dụng đồng thời với các chương trình khác.</a></li>
+            </ul>
+        </div>
+
+        <div class="advice-section" id="phan-1">
+            <h2>1. Giảm 10% cho tất cả sản phẩm</h2>
+            <p>Chương trình khuyến mãi giảm ngay 10% cho tất cả các sản phẩm khi mua tại CleanAir.</p>
+            <img src="../img/voucher.png" width="350" height="250" alt="giam10%">
+    
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Chương trình khuyến mãi</th>
+                            <th>Giá trị ưu đãi</th>
+                            <th>Điều kiện áp dụng</th>
+                            <th>Thời gian áp dụng</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Giảm giá sản phẩm</td>
+                            <td>10%</td>
+                            <td>Áp dụng cho tất cả sản phẩm</td>
+                            <td>Từ 01/03/2024 đến 31/03/2024</td>
+                        </tr>
+                        <tr>
+                            <td>Giảm giá cho khách hàng VIP</td>
+                            <td>20%</td>
+                            <td>Chỉ áp dụng cho thành viên VIP</td>
+                            <td>Từ 01/03/2024 đến 31/03/2024</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        
+            <div class="tip-box">
+                <h3>Lưu ý quan trọng:</h3>
+                <ul>
+                    <li>Chương trình chỉ áp dụng cho khách hàng thành viên.</li>
+                    <li>Không áp dụng đồng thời với các chương trình khác.</li>
+                    <li>Không áp dụng cho sản phẩm đã giảm giá sẵn.</li>
+                </ul>
+            </div>
+        </div>
+        
+
+
+
+        <div class="advice-section" id="phan-2">
+            <h2>2. Tặng voucher 100K cho đơn hàng từ 1 triệu</h2>
+            <p>Nhận ngay voucher 100.000 VNĐ khi mua sắm với hóa đơn từ 1.000.000 VNĐ tại CleanAir.</p>
+            <img src="../img/giam100k.png" width="350" height="250" alt="giam100k">
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Chương trình khuyến mãi</th>
+                            <th>Giá trị ưu đãi</th>
+                            <th>Điều kiện áp dụng</th>
+                            <th>Thời gian áp dụng</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Tặng voucher(có thể sử dụng luôn)</td>
+                            <td>100.000 VNĐ</td>
+                            <td>Đơn hàng từ 1.000.000 VNĐ</td>
+                            <td>Từ 01/03/2024 đến 31/03/2024</td>
+                        </tr>
+                        <tr>
+                            <td>Tặng voucher chỉ áp dụng cho đơn hàng tiếp theo</td>
+                            <td>100.000 VNĐ</td>
+                            <td>Hóa đơn tiếp theo từ 500.000 VNĐ</td>
+                            <td>Trong vòng 30 ngày kể từ ngày nhận voucher</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        
+            <div class="tip-box">
+                <h3>Lưu ý quan trọng:</h3>
+                <ul>
+                    <li>Voucher không có giá trị quy đổi thành tiền mặt.</li>
+                    <li>Không áp dụng cùng các chương trình giảm giá khác.</li>
+                    <li>Mỗi khách hàng chỉ nhận được 01 voucher cho mỗi hóa đơn hợp lệ.</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="advice-section" id="phan-3">
+            <h2>3. Nhận quà đặc biệt tại cửa hàng vào ngày sinh nhật</h2>
+            <p>Khách hàng ghé thăm cửa hàng đúng ngày sinh nhật sẽ nhận được quà tặng đặc biệt từ CleanAir.</p>
+            <img src="../img/vouchersn.png" width="350" height="250" alt="giam100k">
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Chương trình</th>
+                            <th>Quà tặng</th>
+                            <th>Điều kiện nhận</th>
+                            <th>Thời gian áp dụng</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Quà tặng sinh nhật</td>
+                            <td>Sản phẩm chăm sóc không khí</td>
+                            <td>Đến cửa hàng đúng ngày sinh nhật</td>
+                            <td>Áp dụng quanh năm</td>
+                        </tr>
+                        <tr>
+                            <td>Voucher giảm giá</td>
+                            <td>500.000 VNĐ</td>
+                            <td>Đơn hàng từ 1.000.000 VNĐ</td>
+                            <td>Trong vòng 7 ngày từ sinh nhật</td>
+                        </tr>
+                        <tr>
+                            <td>Ưu đãi thành viên</td>
+                            <td>Giảm 10% tất cả sản phẩm</td>
+                            <td>Thành viên CleanAir</td>
+                            <td>Trong ngày sinh nhật</td>
+                        </tr>
+                        <tr>
+                            <td>Check-in nhận quà</td>
+                            <td>Phần quà bí mật</td>
+                            <td>Đăng ảnh check-in tại cửa hàng</td>
+                            <td>Chỉ áp dụng ngày sinh nhật</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        
+            <div class="tip-box">
+                <h3>Lưu ý quan trọng:</h3>
+                <ul>
+                    <li>Khách hàng cần xuất trình CMND/CCCD để xác minh ngày sinh.</li>
+                    <li>Chương trình áp dụng tại các cửa hàng CleanAir trên toàn quốc.</li>
+                    <li>Không áp dụng cùng các chương trình khuyến mãi khác.</li>
+                </ul>
+            </div>
+        </div>
+       
+        <div class="advice-section" id="phan-4">
+            <h2>4. Mua từ 2 sản phẩm trên 1 bill</h2>
+            <p>Khách hàng khi mua từ 2 sản phẩm trở lên trong cùng một đơn hàng sẽ nhận ngay ưu đãi hấp dẫn từ CleanAir.</p>
+        
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Chương trình</th>
+                            <th>Quà tặng</th>
+                            <th>Điều kiện nhận</th>
+                            <th>Thời gian áp dụng</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Giảm giá trực tiếp</td>
+                            <td>Giảm 15% tổng hóa đơn</td>
+                            <td>Mua từ 2 sản phẩm bất kỳ</td>
+                            <td>Áp dụng quanh năm</td>
+                        </tr>
+                        <tr>
+                            <td>Tặng kèm sản phẩm</td>
+                            <td>Một sản phẩm mini</td>
+                            <td>Mua từ 3 sản phẩm trở lên</td>
+                            <td>Chương trình giới hạn</td>
+                        </tr>
+                        <tr>
+                            <td>Voucher lần sau</td>
+                            <td>Voucher 200.000 VNĐ</td>
+                            <td>Đơn hàng từ 1.000.000VNĐ</td>
+                            <td>Áp dụng trong 30 ngày</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        
+            <div class="tip-box">
+                <h3>Lưu ý quan trọng:</h3>
+                <ul>
+                    <li>Chỉ áp dụng cho sản phẩm nguyên giá, không áp dụng với sản phẩm đang giảm giá.</li>
+                    <li>Chương trình có thể kết thúc sớm nếu hết quà tặng.</li>
+                    <li>Không áp dụng đồng thời với các chương trình khuyến mãi khác.</li>
+                </ul>
+                <h3>Dịch vụ tại CleanAir:</h3>
+                <p>CleanAir cung cấp dịch vụ lắp đặt và bảo trì chuyên nghiệp với đội ngũ kỹ thuật viên có trình độ cao. Gọi <strong>1900 1234</strong> để được hỗ trợ.</p>
+            </div>
+        </div>
+        
+        
+    </main>
+
+    <footer>
+        <div>
+            <div>
+                <ul>
+                    <span>Thông tin về</span>
+                    <li><a href="gioithieu_website_thanhvien.html">Giới thiệu website</a></li>
+                    <li><a href="gioithieu_website_thanhvien.html#phan-0">Các thành viên thực hiện</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <span>Dịch vụ khách hàng</span>
+                    <li><a href="#">Liên hệ chúng tôi</a></li>
+                    <li><a href="sitemap.html">Site Map</a></li>
+                    <li><a href="khuyenmai.html">Khuyến mãi</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <span>Tài khoản</span>
+                    <li><a href="#">Tài khoản của tôi</a></li>
+                    <li><a href="dangnhap.html">Đăng nhập</a></li>
+                    <li><a href="dangky.html">Đăng ký</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <span>Sản phẩm</span>
+                    <li><a href="giohang.html">Giỏ hàng của tôi</a></li>
+                    <li><a href="#">Khuyến mãi</a></li>
+                    <li><a href="tuvanmuahang.html">Tư vấn mua hàng</a></li>
+                </ul>
+            </div>
+            <div>
+                <div>
+                    <p>CleanAir Store© 2022. Công ty thiết bị máy lạnh TPHCM.</p>
+                    <p>Address: 999 Nguyễn Kiệm, Phường 3, Gò Vấp, Thành phố Hồ Chí Minh, Việt Nam</p>
+                </div>
+                <div>
+                    <p><a href="#">Powered By Open Cart</a></p>
+                    <span>
+                        <img src="../img/bocongthuong.png" alt="" width="90">
+                    </span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("menuProfile").addEventListener("click", function () {
+            window.location.href = "capnhatthongtincanhan.html";
+        });
+
+        document.getElementById("menuPassword").addEventListener("click", function () {
+            window.location.href = "doimatkhau.html";
+        });
+
+        document.getElementById("menuHistory").addEventListener("click", function () {
+            window.location.href = "lichsumuahang.html";
+        });
+    </script>
+</body>
+
+</html>

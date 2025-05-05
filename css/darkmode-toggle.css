@@ -1,0 +1,110 @@
+/* Improved Dark Mode Toggle Styling */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+    position: relative;
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 24px;
+    position: relative;
+    width: 50px;
+    cursor: pointer;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+    border-radius: 34px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.slider:before {
+    background-color: white;
+    bottom: 4px;
+    content: "";
+    height: 16px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 16px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider-icons {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 7px;
+    box-sizing: border-box;
+    align-items: center;
+    height: 100%;
+    font-size: 12px;
+}
+
+.slider-icons span {
+    z-index: 1;
+    line-height: 24px;
+}
+
+.slider-icons span:first-child {
+    margin-left: 2px;
+}
+
+.slider-icons span:last-child {
+    margin-right: 2px;
+}
+
+/* Hover and active effects */
+.theme-switch:hover .slider {
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+.theme-switch:active .slider:before {
+    width: 18px;
+}
+
+/* Animation effect for toggle */
+@keyframes toggleOn {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(20px) scale(1.2); }
+    100% { transform: translateX(26px); }
+}
+
+@keyframes toggleOff {
+    0% { transform: translateX(26px); }
+    50% { transform: translateX(6px) scale(1.2); }
+    100% { transform: translateX(0); }
+}
+
+input:checked + .slider:before {
+    animation: toggleOn 0.3s forwards;
+}
+
+input:not(:checked) + .slider:before {
+    animation: toggleOff 0.3s forwards;
+}
