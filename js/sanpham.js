@@ -107,14 +107,14 @@ class Sanpham {
                         if (taikhoan.ten_dangnhap === objDSGioSP[i].tendangnhap) {
                             giaodichMoi = false
                             let sanphamDuocThemNhieuLan = false
-                            for (let j = 0; j < objDSGioSP[i].sanpham.length; j++){
-                                if (giohang.sanpham[0].ten === objDSGioSP[i].sanpham[j].ten){
+                            for (let j = 0; j < objDSGioSP[i].sanpham.length; j++) {
+                                if (giohang.sanpham[0].ten === objDSGioSP[i].sanpham[j].ten) {
                                     sanphamDuocThemNhieuLan = true
                                     objDSGioSP[i].sanpham[j].soluong += 1
                                     break
                                 }
                             }
-                            if (!sanphamDuocThemNhieuLan){
+                            if (!sanphamDuocThemNhieuLan) {
                                 giohang.sanpham[0].soluong = 1
                                 objDSGioSP[i].sanpham.push(giohang.sanpham[0])
                             }
@@ -131,7 +131,7 @@ class Sanpham {
             }, 2000)
         })
     }
-    locSanpham(boloc, arr) {    
+    locSanpham(boloc, arr) {
         $("#inputTimkiem").val("")
         $(".rowProducts").remove()
         if (boloc[0] == "congsuat" && boloc[1] == "hang" && boloc[2] == "gia" && boloc[3] == "tienich" && boloc[4] == "macdinh") {

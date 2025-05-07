@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cách bảo trì máy lạnh đúng cách trong mùa hè - CleanAir</title>
+    <link rel="shortcut icon" href="../img/iconMaylanh.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/topnav.css">
+    <link rel="stylesheet" href="../css/tintuc.css">
+    <link rel="stylesheet" href="../css/darkmode.css">
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/tintuc.js"></script>
+    <script src="../js/taikhoan.js"></script>
+    <script src="../js/responsive.js"></script>
+    <script src="../js/darkmode.js"></script>
+    <style>
+        .news-detail {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .news-detail h1 {
+            color: #2196F3;
+            margin-bottom: 10px;
+        }
+        .news-detail .date {
+            color: #666;
+            font-style: italic;
+            display: block;
+            margin-bottom: 20px;
+        }
+        .news-detail .feature-image {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+        .news-detail p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .news-detail .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: #2196F3;
+            text-decoration: none;
+        }
+        .news-detail .back-link:hover {
+            text-decoration: underline;
+        }
+        .maintenance-step {
+            background-color: #f9f9f9;
+            padding: 15px;
+            margin: 15px 0;
+            border-left: 4px solid #2196F3;
+        }
+        .maintenance-step h3 {
+            margin-top: 0;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="trangchu.html" class="logo reloadTrang">
+            <img src="../img/logoMaylanh.png" width="30" height="30" alt="logo Máy lạnh">
+            CleanAir
+        </a>
+        <div class="search-container">
+            <form id="formSearch">
+                <input type="text" placeholder="Nhập sản phẩm cần tìm ..." id="inputTimkiem" name="search">
+                <button id="btnTimkiem"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        <div class="header-right">
+            <a class="giohang" href="giohang.html">Giỏ hàng</a>
+            <div class="dropdown" id="dkdn">
+                <button class="dropbtn" onclick="toggle_dropdown()">Tài khoản
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content" id="myDropdown">
+                    <a href="dangky.html">Đăng ký</a>
+                    <a href="dangnhap.html">Đăng nhập</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav class="topnav" id="myTopnav">
+        <a href="trangchu.html">Trang chủ</a>
+        <a href="danhsachsanpham.html">Danh sách sản phẩm</a>
+        <a href="gioithieu_website_thanhvien.html">Giới thiệu website</a>
+        <a href="sitemap.html">Site map</a>
+        <a href="khuyenmai.html">Khuyến mãi</a>
+        <a href="tintuc.html" class="active">Tin tức</a>
+        <a href="javascript:void(0);" class="icon" onclick="respond_topnav()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </nav>
+    <main>
+        <div class="news-detail">
+            <h1>Cách bảo trì máy lạnh đúng cách trong mùa hè</h1>
+            <span class="date">22/07/2023</span>
+            <img src="../img/news2.jpeg" alt="Bảo trì máy lạnh" class="feature-image">
+            
+            <p>Việc bảo trì máy lạnh đúng cách không chỉ giúp thiết bị hoạt động hiệu quả mà còn kéo dài tuổi thọ sản phẩm. Đặc biệt trong mùa hè, khi máy lạnh hoạt động liên tục với công suất cao, việc bảo trì càng trở nên quan trọng. Dưới đây là những phương pháp bảo trì được các chuyên gia khuyến nghị.</p>
+            
+            <h2>Lý do cần bảo trì máy lạnh định kỳ</h2>
+            
+            <p>Theo các chuyên gia, máy lạnh cần được bảo trì ít nhất 6 tháng một lần, đặc biệt là trước mùa hè. Việc bảo trì đều đặn mang lại nhiều lợi ích như:</p>
+            
+            <ul>
+                <li>Giúp máy hoạt động hiệu quả, tiết kiệm điện năng</li>
+                <li>Kéo dài tuổi thọ của thiết bị</li>
+                <li>Đảm bảo không khí trong lành, giảm thiểu vi khuẩn, nấm mốc</li>
+                <li>Giảm nguy cơ hỏng hóc đột xuất</li>
+                <li>Tiết kiệm chi phí sửa chữa lớn về sau</li>
+            </ul>
+            
+            <h2>Các bước bảo trì máy lạnh tại nhà</h2>
+            
+            <div class="maintenance-step">
+                <h3>1. Vệ sinh màng lọc thường xuyên</h3>
+                <p>Màng lọc (filter) là bộ phận cần được vệ sinh thường xuyên nhất, lý tưởng là 2 tuần/lần. Chỉ cần tháo màng lọc ra, rửa bằng nước ấm và xà phòng nhẹ, sau đó phơi khô hoàn toàn trước khi lắp lại. Màng lọc bẩn là nguyên nhân chính làm giảm hiệu suất làm lạnh và tăng tiêu thụ điện.</p>
+            </div>
+            
+            <div class="maintenance-step">
+                <h3>2. Kiểm tra và vệ sinh dàn tản nhiệt</h3>
+                <p>Dàn tản nhiệt trong và ngoài cần được vệ sinh định kỳ 6 tháng/lần. Bạn có thể sử dụng máy hút bụi với đầu hút mềm để làm sạch bụi bẩn bám trên dàn tản nhiệt trong nhà. Đối với dàn nóng bên ngoài, hãy đảm bảo không có lá cây, bụi bẩn bám vào và sử dụng bình xịt áp lực nhẹ để làm sạch.</p>
+            </div>
+            
+            <div class="maintenance-step">
+                <h3>3. Kiểm tra đường ống thoát nước</h3>
+                <p>Đường ống thoát nước thường bị tắc nghẽn do rêu, bụi bẩn, gây chảy nước và ảnh hưởng đến hiệu suất làm lạnh. Hãy đảm bảo ống thoát nước thông thoáng bằng cách đổ một cốc nước vào khay hứng nước. Nếu nước không chảy ra ngoài, có thể đường ống đã bị tắc và cần được thông.</p>
+            </div>
+            
+            <div class="maintenance-step">
+                <h3>4. Kiểm tra gas điều hòa</h3>
+                <p>Nếu bạn thấy máy lạnh không còn mát như trước, có thể gas đã bị thiếu. Đây là công việc cần có chuyên gia thực hiện, vì gas điều hòa cần được nạp đúng áp suất và loại gas phù hợp với từng thiết bị.</p>
+            </div>
+            
+            <div class="maintenance-step">
+                <h3>5. Kiểm tra các linh kiện điện</h3>
+                <p>Các kết nối điện, dây điện cần được kiểm tra định kỳ để đảm bảo an toàn. Nếu phát hiện dây điện bị mòn, các đầu nối bị oxy hóa, hãy liên hệ với thợ chuyên nghiệp để thay thế.</p>
+            </div>
+            
+            <h2>Khi nào nên gọi chuyên gia?</h2>
+            
+            <p>Mặc dù có thể tự thực hiện một số công việc bảo trì cơ bản, bạn nên gọi chuyên gia trong các trường hợp sau:</p>
+            
+            <ul>
+                <li>Khi cần vệ sinh kỹ dàn tản nhiệt bên trong</li>
+                <li>Khi máy phát ra tiếng ồn bất thường</li>
+                <li>Khi hiệu suất làm lạnh giảm đáng kể</li>
+                <li>Khi cần kiểm tra và nạp gas</li>
+                <li>Khi có sự cố về điện</li>
+            </ul>
+            
+            <p>Với việc bảo trì đúng cách và định kỳ, máy lạnh của bạn sẽ hoạt động hiệu quả trong suốt mùa hè nóng bức, đồng thời tiết kiệm chi phí điện năng đáng kể.</p>
+            
+            <a href="tintuc.html" class="back-link">&larr; Quay lại trang tin tức</a>
+        </div>
+    </main>
+    
+    <footer>
+        <div>
+            <div>
+                <ul>
+                    <span>Thông tin về</span>
+                    <li><a href="gioithieu_website_thanhvien.html">Giới thiệu website</a></li>
+                    <li><a href="gioithieu_website_thanhvien.html#phan-0">Các thành viên thực hiện</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <span>Dịch vụ khách hàng</span>
+                    <li><a href="#">Liên hệ chúng tôi</a></li>
+                    <li><a href="sitemap.html">Site Map</a></li>
+                    <li><a href="khuyenmai.html">Khuyến mãi</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <span>Tài khoản</span>
+                    <li><a href="#">Tài khoản của tôi</a></li>
+                    <li><a href="dangnhap.html">Đăng nhập</a></li>
+                    <li><a href="dangky.html">Đăng ký</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <span>Sản phẩm</span>
+                    <li><a href="giohang.html">Giỏ hàng của tôi</a></li>
+                    <li><a href="#">Khuyến mãi</a></li>
+                    <li><a href="#">Kinh nghiệm mua hàng</a></li>
+                </ul>
+            </div>
+            <div>
+                <div>
+                    <p>CleanAir Store© 2022. Công ty thiết bị máy lạnh TPHCM.</p>
+                    <p>Address: 999 Nguyễn Kiệm, Phường 3, Gò Vấp, Thành phố Hồ Chí Minh, Việt Nam</p>
+                </div>
+                <div>
+                    <p><a href="#">Powered By Open Cart</a></p>
+                    <span>
+                        <img src="../img/bocongthuong.png" alt="" width="90">
+                    </span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

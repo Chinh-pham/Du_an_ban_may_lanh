@@ -1,26 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng ký tài khoản - CleanAir mang lại "không khí trong lành" cho gia đình Việt</title>
-    <link rel="shortcut icon" href="../img/iconMaylanh.ico" type="image/x-icon">
+    <title>Quản lý Lịch sử Mua hàng</title>
+    <link rel="stylesheet" href="../css/Quanlylichsumuahang.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/dangky.css">
+    <link rel="stylesheet" href="../css/chitietsanpham.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/topnav.css">
     <link rel="stylesheet" href="../css/darkmode.css">
+    <link rel="stylesheet" href="../css/darkmode-toggle.css">
     <script src="../js/jquery-3.6.0.min.js"></script>
-    <script src="../js/dangky.js"></script>
+    <script type="module" src="../js/trangchu.js"></script>
     <script src="../js/taikhoan.js"></script>
     <script src="../js/responsive.js"></script>
     <script src="../js/darkmode.js"></script>
 </head>
-
 <body>
+
     <header>
         <a href="trangchu.html" class="logo reloadTrang">
             <img src="../img/logoMaylanh.png" width="30" height="30" alt="logo Máy lạnh">
@@ -64,85 +63,51 @@
             <i class="fa fa-bars"></i>
         </a>
     </nav>
-    <main>
-        <div class="container">
-            <div class="register-form">
-                <h2>Đăng Ký Tài Khoản</h2>
-                <form action="">
-                    <div class="row">
-                        <label for="txtTenDangnhap">Tên đăng nhập:</label>
-                        <input type="text" id="txtTenDangnhap" placeholder="Nhập vào tên đăng nhập" required>
-                        <span>*</span>
-                        <div>
-                            <span id="messTenDangnhap"></span>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <label for="txtMatkhau">Mật khẩu:</label>
-                        <input type="password" id="txtMatkhau" placeholder="Nhập vào mật khẩu" required>
-                        <span>*</span>
-                        <div>
-                            <span id="messMatkhau"></span>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <label for="txtNLMK">Nhập lại mật khẩu:</label>
-                        <input type="password" id="txtNLMK" placeholder="Nhập vào xác nhận mật khẩu" required>
-                        <span>*</span>
-                        <div>
-                            <span id="messNLMK"></span>
-                        </div>
-                    </div>
-                    <h4>THÔNG TIN CÁ NHÂN</h4>
-                    <div class="row">
-                        <label for="txtHoten">Họ và tên:</label>
-                        <input type="text" id="txtHoten" placeholder="Nhập vào họ tên" required>
-                        <span>*</span>
-                        <div>
-                            <span id="messHoten"></span>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <label for="ngaysinh">Ngày sinh:</label>
-                        <input type="date" id="ngaysinh">
-                        <div>
-                            <span id="messNgaysinh"></span>
-                        </div>
-                    </div>
-                    <div class="row" id="gioitinh">
-                        <label for="">Giới tính:</label>
-                        <input type="radio" id="nam" name="gioitinh" checked>
-                        <label for="nam">Nam</label>
-                        <input type="radio" id="nu" name="gioitinh">
-                        <label for="nu">Nữ</label>
-                    </div>
-                    <div class="row">
-                        <label for="txtDiachi">Địa chỉ:</label>
-                        <input type="text" id="txtDiachi" placeholder="Nhập vào địa chỉ">
-                    </div>
-                    <div class="row">
-                        <label for="txtDT">Điện thoại:</label>
-                        <input type="text" id="txtDT" placeholder="Nhập vào số điện thoại (10 số)" required>
-                        <span>*</span>
-                        <div>
-                            <span id="messDT"></span>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <label for="txtEmail">Email:</label>
-                        <input type="email" id="txtEmail" placeholder="Email có dạng ten@tencongty.com">
-                        <div>
-                            <span id="messEmail"></span>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <button type="submit" id="dangky">Đăng ký</button>
-                        <button type="reset" id="huy">Hủy</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </main>
+
+    <h2>Quản lý Lịch sử Mua hàng</h2>
+    <div class="filter-container">
+        <label for="search">Tìm kiếm:</label>
+        <input type="text" id="search" placeholder="Nhập tên sản phẩm...">
+        <label for="status">Trạng thái:</label>
+        <select id="status">
+            <option value="all">Tất cả</option>
+            <option value="pending">Chờ xử lý</option>
+            <option value="shipped">Đã giao</option>
+            <option value="cancelled">Đã hủy</option>
+        </select>
+        <button onclick="filterOrders()">Lọc</button>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Mã đơn</th>
+                <th>Tên sản phẩm</th>
+                <th>Ngày mua</th>
+                <th>Trạng thái</th>
+            </tr>
+        </thead>
+        <tbody id="order-table">
+            <tr>
+                <td>001</td>
+                <td>Máy lạnh Samsung</td>
+                <td>2025-03-01</td>
+                <td data-status="shipped">Đã giao</td>
+            </tr>
+            <tr>
+                <td>002</td>
+                <td>Máy lạnh Daikin</td>
+                <td>2025-02-25</td>
+                <td data-status="pending">Chờ xử lý</td>
+            </tr>
+            <tr>
+                <td>003</td>
+                <td>Máy lạnh LG</td>
+                <td>2025-02-20</td>
+                <td data-status="cancelled">Đã hủy</td>
+            </tr>
+        </tbody>
+    </table>
+
     <footer>
         <div>
             <div>
@@ -190,6 +155,24 @@
             </div>
         </div>
     </footer>
-</body>
 
+
+    <script>
+        function filterOrders() {
+            let searchValue = document.getElementById("search").value.toLowerCase();
+            let statusValue = document.getElementById("status").value;
+            let rows = document.querySelectorAll("#order-table tr");
+            
+            rows.forEach(row => {
+                let name = row.cells[1].textContent.toLowerCase();
+                let status = row.cells[3].getAttribute("data-status");
+                
+                let matchSearch = name.includes(searchValue);
+                let matchStatus = (statusValue === "all" || status === statusValue);
+                
+                row.style.display = (matchSearch && matchStatus) ? "table-row" : "none";
+            });
+        }
+    </script>
+</body>
 </html>

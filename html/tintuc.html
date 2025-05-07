@@ -1,28 +1,24 @@
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cập nhật thông tin cá nhân</title>
-    <link rel="stylesheet" href="../css/capnhatthongtincanhan.css">
+    <title>Tin tức máy lạnh - CleanAir mang lại "không khí trong lành" cho gia đình Việt</title>
+    <link rel="shortcut icon" href="../img/iconMaylanh.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/chitietsanpham.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/topnav.css">
+    <link rel="stylesheet" href="../css/tintuc.css">
     <link rel="stylesheet" href="../css/darkmode.css">
     <script src="../js/jquery-3.6.0.min.js"></script>
-    <script type="module" src="../js/trangchu.js"></script>
+    <!-- <script src="../js/tintuc.js"></script> -->
     <script src="../js/taikhoan.js"></script>
     <script src="../js/responsive.js"></script>
- HEAD
     <script src="../js/darkmode.js"></script>
-    <script src="../js/capnhatthongtincanhan.js"></script>
-0a59cd5be5e806fbfeb75ddf53e6dd9d69585f89
 </head>
-
 <body>
-
     <header>
         <a href="trangchu.html" class="logo reloadTrang">
             <img src="../img/logoMaylanh.png" width="30" height="30" alt="logo Máy lạnh">
@@ -45,16 +41,6 @@
                     <a href="dangnhap.html">Đăng nhập</a>
                 </div>
             </div>
-            <div id="divTaikhoan" class="dropdown">
-                <button id="taikhoan" class="dropbtn"></button>
-                <div class="dropdown-content" id="ttTaikhoan">
-                    <div class="dropdown-menu" id="dropdownMenu">
-                        <a href="./capnhatthongtincanhan.html" id="menuProfile">Cập nhật thông tin cá nhân</a>
-                        <a href="./Doimatkhau.html" id="menuPassword">Đổi mật khẩu</a>
-                        <a href="./Quanlylichsumuahang.html" id="menuHistory">Quản lý lịch sử mua hàng</a>
-                    </div>
-                </div>
-            </div>
         </div>
     </header>
     <nav class="topnav" id="myTopnav">
@@ -62,71 +48,58 @@
         <a href="danhsachsanpham.html">Danh sách sản phẩm</a>
         <a href="gioithieu_website_thanhvien.html">Giới thiệu website</a>
         <a href="sitemap.html">Site map</a>
+        <a href="khuyenmai.html">Khuyến mãi</a>
+        <a href="tintuc.html" class="active">Tin tức</a>
         <a href="javascript:void(0);" class="icon" onclick="respond_topnav()">
             <i class="fa fa-bars"></i>
         </a>
     </nav>
+    <main>
+        <h1 class="page-title">Tin tức về điều hòa và tiết kiệm năng lượng</h1>
+        
+        <div class="news-container">
+            <div class="news-item">
+                <img src="../img/news1.jpg" alt="Công nghệ Inverter">
+                <div class="news-content">
+                    <h2><a href="tintuc-inverter.html">Công nghệ Inverter mới giúp tiết kiệm 50% điện năng</a></h2>
+                    <span class="date">15/08/2023</span>
+                    <p>Các nhà sản xuất máy lạnh hàng đầu vừa công bố công nghệ Inverter thế hệ mới có khả năng tiết kiệm lên đến 50% điện năng so với các mẫu truyền thống...</p>
+                    <a href="tintuc-inverter.html" class="read-more">Đọc tiếp</a>
+                </div>
+            </div>
 
+            <div class="news-item">
+                <img src="../img/news2.jpeg" alt="Bảo trì máy lạnh">
+                <div class="news-content">
+                    <h2><a href="tintuc-baotri.html">Cách bảo trì máy lạnh đúng cách trong mùa hè</a></h2>
+                    <span class="date">22/07/2023</span>
+                    <p>Việc bảo trì máy lạnh đúng cách không chỉ giúp thiết bị hoạt động hiệu quả mà còn kéo dài tuổi thọ sản phẩm. Dưới đây là những phương pháp bảo trì được các chuyên gia khuyến nghị...</p>
+                    <a href="tintuc-baotri.html" class="read-more">Đọc tiếp</a>
+                </div>
+            </div>
 
-    <div class="container">
-        <!-- Thông tin cá nhân -->
-        <div class="section">
-            <h3>THÔNG TIN CÁ NHÂN</h3>
-            <div class="section-content">
-                <div class="form-row">
-                    <span>Bạn - 0904397303</span>
+            <div class="news-item">
+                <img src="../img/news3.jpeg" alt="Máy lạnh tiết kiệm điện">
+                <div class="news-content">
+                    <h2><a href="tintuc-tietkiemdien.html">Top 5 máy lạnh tiết kiệm điện nhất năm 2023</a></h2>
+                    <span class="date">05/06/2023</span>
+                    <p>Trong bối cảnh giá điện tăng cao, việc lựa chọn máy lạnh tiết kiệm điện trở nên quan trọng hơn bao giờ hết. Dưới đây là 5 mẫu máy lạnh được đánh giá là tiết kiệm điện nhất thị trường hiện nay...</p>
+                    <a href="tintuc-tietkiemdien.html" class="read-more">Đọc tiếp</a>
                 </div>
-                <div class="form-row gender">
-                    <label>Giới tính:</label>
-                    <div class="radio-group">
-                        <input type="radio" name="gender" id="male">
-                        <label for="male">Anh</label>
-                        <input type="radio" name="gender" id="female">
-                        <label for="female">Chị</label>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <label>Họ & Tên:</label>
-                    <input type="text">
-                    <label>Số điện thoại:</label>
-                    <input type="text" value="0904397303" disabled>
-                </div>
-                <div class="form-actions">
-                    <button class="button">Lưu</button>
-                    <button class="button cancel">Huỷ</button>
+            </div>
+
+            <div class="news-item">
+                <img src="../img/news4.jpg" alt="Công nghệ lọc không khí">
+                <div class="news-content">
+                    <h2><a href="tintuc-lockhongkhi.html">Máy lạnh sử dụng công nghệ lọc không khí diệt virus</a></h2>
+                    <span class="date">12/05/2023</span>
+                    <p>Trong thời đại dịch COVID-19, các nhà sản xuất đã phát triển máy lạnh tích hợp công nghệ lọc không khí và diệt virus. Những sản phẩm này không chỉ làm mát không gian sống mà còn bảo vệ sức khỏe cả gia đình...</p>
+                    <a href="tintuc-lockhongkhi.html" class="read-more">Đọc tiếp</a>
                 </div>
             </div>
         </div>
-
-        <!-- Địa chỉ nhận hàng -->
-        <div class="section">
-            <h3>ĐỊA CHỈ NHẬN HÀNG</h3>
-            <div class="section-content">
-                <label for="city">Tỉnh/Thành phố:</label>
-                <select id="city">
-                    <option value="">Chọn Tỉnh/Thành phố</option>
-                </select>
-                <br>
-
-                <label for="district">Quận/Huyện:</label>
-                <select id="district">
-                    <option value="">Chọn Quận/Huyện</option>
-                </select>
-                <br>
-                <label for="ward">Phường/Xã:</label>
-                <select id="ward">
-                    <option value="">Chọn Phường/Xã</option>
-                </select>
-                <br>
-                <label for="street">Số nhà, tên đường:</label>
-                <input type="text" id="street" placeholder="Nhập số nhà, tên đường">
-
-                <button id="saveAddress">Lưu địa chỉ</button>
-            </div>
-        </div>
-    </div>
-
-
+    </main>
+    
     <footer>
         <div>
             <div>
@@ -141,7 +114,7 @@
                     <span>Dịch vụ khách hàng</span>
                     <li><a href="#">Liên hệ chúng tôi</a></li>
                     <li><a href="sitemap.html">Site Map</a></li>
-                    <li><a href="#">Khuyến mãi</a></li>
+                    <li><a href="khuyenmai.html">Khuyến mãi</a></li>
                 </ul>
             </div>
             <div>
@@ -175,5 +148,4 @@
         </div>
     </footer>
 </body>
-
 </html>

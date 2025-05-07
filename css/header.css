@@ -3,6 +3,7 @@ header {
     border: 1px solid black;
     padding: 6px 14%;
     overflow: hidden;
+    height: 90px;
 }
 
 header a {
@@ -18,7 +19,8 @@ header a {
 }
 
 header a.logo {
-    font-size: 24px;
+    margin: 20px;
+    font-size: 43px;
     font-weight: bold;
 }
 
@@ -38,13 +40,17 @@ header a.giohang {
 
 .header-right {
     float: right;
+    margin-top: 20px;
+
 }
 
 #formSearch input[type=text] {
-    padding: 6px;
+    padding: 20px;
     margin-top: 8px;
-    font-size: 17px;
-    border: none;
+    font-size: 18px;
+    border-radius: 41px;
+    margin: 13px;
+   width: 350px;
 }
 
 .search-container {
@@ -53,10 +59,10 @@ header a.giohang {
 
 .search-container button {
     padding: 6px 10px;
-    margin-top: 8px;
+    margin-top: 20px;
     margin-right: 16px;
     background: #ddd;
-    font-size: 17px;
+    font-size: 30px;
     border: none;
     cursor: pointer;
 }

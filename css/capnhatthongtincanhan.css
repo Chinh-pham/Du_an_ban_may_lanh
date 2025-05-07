@@ -36,6 +36,7 @@ section {
     flex: 1;
 }
 
+
 /* Form hàng ngang */
 .form-row {
     display: flex;
@@ -55,7 +56,8 @@ section {
 }
 
 /* Ô nhập liệu */
-input[type="text"], select {
+input[type="text"],
+select {
     flex: 1;
     padding: 10px;
     margin-top: 5px;
@@ -66,7 +68,8 @@ input[type="text"], select {
     margin-right: 10px;
 }
 
-input[type="text"]:focus, select:focus {
+input[type="text"]:focus,
+select:focus {
     border-color: #007bff;
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
     outline: none;
@@ -97,13 +100,14 @@ input[type="text"]:focus, select:focus {
     transition: 0.3s;
 }
 
-.radio-group input:checked + label {
+.radio-group input:checked+label {
     background: #007bff;
     color: white;
 }
 
 /* Nút bấm */
-.button, #saveAddress {
+.button,
+#saveAddress {
     width: 100%;
     background-color: #007bff;
     color: white;
@@ -116,7 +120,8 @@ input[type="text"]:focus, select:focus {
     margin-top: 10px;
 }
 
-.button:hover, #saveAddress:hover {
+.button:hover,
+#saveAddress:hover {
     background-color: #0056b3;
 }
 

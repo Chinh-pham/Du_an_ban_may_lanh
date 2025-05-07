@@ -5,19 +5,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Khuyến mãi dành cho hội viên - CleanAir mang lại "không khí trong lành" cho gia đình Việt</title>
+    <title>Tư vấn mua hàng - CleanAir mang lại "không khí trong lành" cho gia đình Việt</title>
     <link rel="shortcut icon" href="../img/iconMaylanh.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/modal.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/topnav.css">
     <link rel="stylesheet" href="../css/darkmode.css">
+    <link rel="stylesheet" href="../css/print.css">
+    <link rel="stylesheet" href="../css/scrolltotop.css">
     <script src="../js/jquery-3.6.0.min.js"></script>
     <script src="../js/taikhoan.js"></script>
     <script src="../js/responsive.js"></script>
     <script src="../js/darkmode.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="../js/print.js"></script>
+    <script src="../js/scrolltotop.js"></script>
     <style>
         /* General page styling */
         main {
@@ -79,7 +82,6 @@
             position: relative;
             border-top: 4px solid #2196F3;
             transition: transform 0.3s ease;
-
         }
 
         .advice-section:hover {
@@ -124,8 +126,9 @@
             padding-left: 25px;
             line-height: 1.6;
         }
+
         .advice-section ul li::before {
-            content: "\f00c"; /* dấu check */
+            content: "\f00c";
             font-family: 'Font Awesome 5 Free';
             font-weight: 900;
             position: absolute;
@@ -144,7 +147,7 @@
         }
 
         .advice-image:hover {
-            transform: scale(1.02); /* phóng to phần tử lên 102% kích thước gốc*/
+            transform: scale(1.02);
         }
 
         /* Tip boxes */
@@ -254,17 +257,12 @@
             </form>
         </div>
         <div class="header-right">
-            <div class="dropdown">
-            <button class="dropbtn" onclick="toggle_dropdown()">Giỏ hàng
-                <i class="fa fa-caret-down"></i>
-            </button>
-            </div>
+            <a class="giohang" href="giohang.html">Giỏ hàng</a>
             <div class="dropdown" id="dkdn">
                 <button class="dropbtn" onclick="toggle_dropdown()">Tài khoản
                     <i class="fa fa-caret-down"></i>
                 </button>
-                <div class="dropdown-content" id="myDropdown"> <!--Khi chưa đăng nhập, sẽ hiện nút "Tài Khoản", có 2 lựa chọn -->
-
+                <div class="dropdown-content" id="myDropdown">
                     <a href="dangky.html">Đăng ký</a>
                     <a href="dangnhap.html">Đăng nhập</a>
                 </div>
@@ -281,219 +279,215 @@
             </div>
         </div>
     </header>
+    
     <nav class="topnav" id="myTopnav">
         <a href="trangchu.html">Trang chủ</a>
         <a href="danhsachsanpham.html">Danh sách sản phẩm</a>
-        <a href="khuyenmai.html" class="active">Khuyến mãi</a>
-        <a href="quanlyvanchuyen.html">Quản lý vận chuyển</a>
-        <a href="javascript:void(0);" class="icon" onclick="respond_topnav()"> <!--Khi click vào nút này, sẽ gọi respond_topnav() thường dùng để bật/tắt menu điều hướng khi ở màn hình nhỏ-->
-
+        <a href="gioithieu_website_thanhvien.html">Giới thiệu website</a>
+        <a href="tuvanmuahang.html" class="active">Tư vấn</a>
+        <a href="khuyenmai.html">Khuyến mãi</a>
+        <a href="javascript:void(0);" class="icon" onclick="respond_topnav()">
             <i class="fa fa-bars"></i>
         </a>
     </nav>
 
     <main>
         <div class="phan-wrapper">
-            <div class="phan-header">Các chương trình khuyến mãi dành cho khách hàng thân thiết tại CleanAir</div>
+            <div class="phan-header">Xem nhanh nội dung</div>
             <ul id="bangTomTat">
-                <li><a class="tomtat" href="#phan-1">1. Giảm 10% cho tất cả sản phẩm</a></li>
-                <li><a class="tomtat" href="#phan-2">2. Tặng voucher 100.000 VNĐ cho đơn hàng từ 1.000.000 VNĐ</a></li>
-                <li><a class="tomtat" href="#phan-3">3. Nhận quà tặng đặc biệt tại cửa hàng vào ngày sinh nhật</a></li>
-                <div class="phan-header">Điều kiện áp dụng</div>
-                <li><a class="tomtat" href="#phan-1">1. Chỉ áp dụng cho khách hàng có thẻ thành viên.</a></li>
-                <li><a class="tomtat" href="#phan-2">2. Không áp dụng đồng thời với các chương trình khác.</a></li>
+                <li><a class="tomtat" href="#phan-1">1. Cách chọn công suất điều hòa phù hợp</a></li>
+                <li><a class="tomtat" href="#phan-2">2. So sánh các loại điều hòa</a></li>
+                <li><a class="tomtat" href="#phan-3">3. Tiết kiệm điện năng khi sử dụng</a></li>
+                <li><a class="tomtat" href="#phan-4">4. Các tính năng hiện đại nên có</a></li>
+                <li><a class="tomtat" href="#phan-5">5. Hướng dẫn lắp đặt và bảo trì</a></li>
             </ul>
         </div>
 
         <div class="advice-section" id="phan-1">
-            <h2>1. Giảm 10% cho tất cả sản phẩm</h2>
-            <p>Chương trình khuyến mãi giảm ngay 10% cho tất cả các sản phẩm khi mua tại CleanAir.</p>
-            <img src="../img/voucher.png" width="350" height="250" alt="giam10%">
-    
+            <h2>1. Cách chọn công suất điều hòa phù hợp</h2>
+            <p>Việc lựa chọn công suất điều hòa phù hợp với diện tích phòng là yếu tố quan trọng hàng đầu để đảm bảo hiệu quả làm mát và tiết kiệm điện năng.</p>
+            
             <div class="comparison-table">
                 <table>
                     <thead>
                         <tr>
-                            <th>Chương trình khuyến mãi</th>
-                            <th>Giá trị ưu đãi</th>
-                            <th>Điều kiện áp dụng</th>
-                            <th>Thời gian áp dụng</th>
+                            <th>Diện tích phòng (m²)</th>
+                            <th>Công suất phù hợp (BTU)</th>
+                            <th>Loại điều hòa đề xuất</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Giảm giá sản phẩm</td>
-                            <td>10%</td>
-                            <td>Áp dụng cho tất cả sản phẩm</td>
-                            <td>Từ 01/03/2024 đến 31/03/2024</td>
+                            <td>Dưới 15 m²</td>
+                            <td>9.000 BTU</td>
+                            <td>1 HP</td>
                         </tr>
                         <tr>
-                            <td>Giảm giá cho khách hàng VIP</td>
-                            <td>20%</td>
-                            <td>Chỉ áp dụng cho thành viên VIP</td>
-                            <td>Từ 01/03/2024 đến 31/03/2024</td>
+                            <td>15-20 m²</td>
+                            <td>12.000 BTU</td>
+                            <td>1.5 HP</td>
+                        </tr>
+                        <tr>
+                            <td>20-30 m²</td>
+                            <td>18.000 BTU</td>
+                            <td>2 HP</td>
+                        </tr>
+                        <tr>
+                            <td>30-40 m²</td>
+                            <td>24.000 BTU</td>
+                            <td>2.5 HP</td>
+                        </tr>
+                        <tr>
+                            <td>40-60 m²</td>
+                            <td>30.000 BTU</td>
+                            <td>3 HP</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-        
+
             <div class="tip-box">
                 <h3>Lưu ý quan trọng:</h3>
+                <p>Ngoài diện tích, bạn cần xem xét thêm các yếu tố sau khi chọn công suất điều hòa:</p>
                 <ul>
-                    <li>Chương trình chỉ áp dụng cho khách hàng thành viên.</li>
-                    <li>Không áp dụng đồng thời với các chương trình khác.</li>
-                    <li>Không áp dụng cho sản phẩm đã giảm giá sẵn.</li>
+                    <li>Số lượng người thường xuyên trong phòng</li>
+                    <li>Số lượng thiết bị điện tử phát nhiệt</li>
+                    <li>Hướng phòng và mức độ tiếp xúc với ánh nắng</li>
+                    <li>Chiều cao trần nhà</li>
                 </ul>
             </div>
         </div>
-        
-
-
 
         <div class="advice-section" id="phan-2">
-            <h2>2. Tặng voucher 100K cho đơn hàng từ 1 triệu</h2>
-            <p>Nhận ngay voucher 100.000 VNĐ khi mua sắm với hóa đơn từ 1.000.000 VNĐ tại CleanAir.</p>
-            <img src="../img/giam100k.png" width="350" height="250" alt="giam100k">
+            <h2>2. So sánh các loại điều hòa</h2>
+            <p>Trên thị trường hiện nay có nhiều loại điều hòa khác nhau, mỗi loại có những ưu nhược điểm riêng phù hợp với từng nhu cầu sử dụng.</p>
+
             <div class="comparison-table">
                 <table>
                     <thead>
                         <tr>
-                            <th>Chương trình khuyến mãi</th>
-                            <th>Giá trị ưu đãi</th>
-                            <th>Điều kiện áp dụng</th>
-                            <th>Thời gian áp dụng</th>
+                            <th>Loại điều hòa</th>
+                            <th>Ưu điểm</th>
+                            <th>Nhược điểm</th>
+                            <th>Phù hợp với</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Tặng voucher(có thể sử dụng luôn)</td>
-                            <td>100.000 VNĐ</td>
-                            <td>Đơn hàng từ 1.000.000 VNĐ</td>
-                            <td>Từ 01/03/2024 đến 31/03/2024</td>
+                            <td>Điều hòa 1 chiều</td>
+                            <td>Giá thành rẻ, tiết kiệm điện</td>
+                            <td>Chỉ làm mát, không sưởi ấm</td>
+                            <td>Khu vực miền Nam, nơi ít cần sưởi ấm</td>
                         </tr>
                         <tr>
-                            <td>Tặng voucher chỉ áp dụng cho đơn hàng tiếp theo</td>
-                            <td>100.000 VNĐ</td>
-                            <td>Hóa đơn tiếp theo từ 500.000 VNĐ</td>
-                            <td>Trong vòng 30 ngày kể từ ngày nhận voucher</td>
+                            <td>Điều hòa 2 chiều</td>
+                            <td>Có thể làm mát và sưởi ấm</td>
+                            <td>Giá cao hơn, tiêu thụ điện nhiều hơn</td>
+                            <td>Miền Bắc và miền Trung, nơi có mùa đông lạnh</td>
+                        </tr>
+                        <tr>
+                            <td>Điều hòa Inverter</td>
+                            <td>Tiết kiệm điện, hoạt động êm</td>
+                            <td>Giá thành cao hơn</td>
+                            <td>Sử dụng thường xuyên, dài hạn</td>
+                        </tr>
+                        <tr>
+                            <td>Điều hòa Non-Inverter</td>
+                            <td>Giá thành rẻ, dễ sửa chữa</td>
+                            <td>Tốn điện hơn, ồn hơn</td>
+                            <td>Sử dụng ngắn hạn, không thường xuyên</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-        
-            <div class="tip-box">
-                <h3>Lưu ý quan trọng:</h3>
-                <ul>
-                    <li>Voucher không có giá trị quy đổi thành tiền mặt.</li>
-                    <li>Không áp dụng cùng các chương trình giảm giá khác.</li>
-                    <li>Mỗi khách hàng chỉ nhận được 01 voucher cho mỗi hóa đơn hợp lệ.</li>
-                </ul>
-            </div>
         </div>
-        
+
         <div class="advice-section" id="phan-3">
-            <h2>3. Nhận quà đặc biệt tại cửa hàng vào ngày sinh nhật</h2>
-            <p>Khách hàng ghé thăm cửa hàng đúng ngày sinh nhật sẽ nhận được quà tặng đặc biệt từ CleanAir.</p>
-            <img src="../img/vouchersn.png" width="350" height="250" alt="giam100k">
-            <div class="comparison-table">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Chương trình</th>
-                            <th>Quà tặng</th>
-                            <th>Điều kiện nhận</th>
-                            <th>Thời gian áp dụng</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Quà tặng sinh nhật</td>
-                            <td>Sản phẩm chăm sóc không khí</td>
-                            <td>Đến cửa hàng đúng ngày sinh nhật</td>
-                            <td>Áp dụng quanh năm</td>
-                        </tr>
-                        <tr>
-                            <td>Voucher giảm giá</td>
-                            <td>500.000 VNĐ</td>
-                            <td>Đơn hàng từ 1.000.000 VNĐ</td>
-                            <td>Trong vòng 7 ngày từ sinh nhật</td>
-                        </tr>
-                        <tr>
-                            <td>Ưu đãi thành viên</td>
-                            <td>Giảm 10% tất cả sản phẩm</td>
-                            <td>Thành viên CleanAir</td>
-                            <td>Trong ngày sinh nhật</td>
-                        </tr>
-                        <tr>
-                            <td>Check-in nhận quà</td>
-                            <td>Phần quà bí mật</td>
-                            <td>Đăng ảnh check-in tại cửa hàng</td>
-                            <td>Chỉ áp dụng ngày sinh nhật</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        
+            <h2>3. Tiết kiệm điện năng khi sử dụng</h2>
+            <p>Điều hòa là thiết bị tiêu thụ điện năng lớn trong gia đình. Dưới đây là một số lời khuyên giúp bạn tiết kiệm điện khi sử dụng điều hòa.</p>
+            
             <div class="tip-box">
-                <h3>Lưu ý quan trọng:</h3>
+                <h3>Cách sử dụng điều hòa tiết kiệm điện:</h3>
                 <ul>
-                    <li>Khách hàng cần xuất trình CMND/CCCD để xác minh ngày sinh.</li>
-                    <li>Chương trình áp dụng tại các cửa hàng CleanAir trên toàn quốc.</li>
-                    <li>Không áp dụng cùng các chương trình khuyến mãi khác.</li>
+                    <li>Đặt nhiệt độ ở mức 25-27°C (tiết kiệm 10% điện năng cho mỗi độ tăng)</li>
+                    <li>Sử dụng kèm quạt để phân phối không khí mát đều khắp phòng</li>
+                    <li>Đóng kín cửa sổ, cửa ra vào khi sử dụng điều hòa</li>
+                    <li>Vệ sinh màng lọc định kỳ mỗi tháng</li>
+                    <li>Bảo dưỡng điều hòa 6 tháng/lần</li>
+                    <li>Sử dụng chức năng hẹn giờ thông minh</li>
                 </ul>
             </div>
         </div>
-       
+
         <div class="advice-section" id="phan-4">
-            <h2>4. Mua từ 2 sản phẩm trên 1 bill</h2>
-            <p>Khách hàng khi mua từ 2 sản phẩm trở lên trong cùng một đơn hàng sẽ nhận ngay ưu đãi hấp dẫn từ CleanAir.</p>
-        
+            <h2>4. Các tính năng hiện đại nên có</h2>
+            <p>Các điều hòa hiện đại đi kèm nhiều tính năng thông minh giúp nâng cao hiệu quả sử dụng và bảo vệ sức khỏe người dùng.</p>
+            
             <div class="comparison-table">
                 <table>
                     <thead>
                         <tr>
-                            <th>Chương trình</th>
-                            <th>Quà tặng</th>
-                            <th>Điều kiện nhận</th>
-                            <th>Thời gian áp dụng</th>
+                            <th>Tính năng</th>
+                            <th>Lợi ích</th>
+                            <th>Đề xuất</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Giảm giá trực tiếp</td>
-                            <td>Giảm 15% tổng hóa đơn</td>
-                            <td>Mua từ 2 sản phẩm bất kỳ</td>
-                            <td>Áp dụng quanh năm</td>
+                            <td>Công nghệ Inverter</td>
+                            <td>Tiết kiệm điện, vận hành êm ái</td>
+                            <td>Cần thiết</td>
                         </tr>
                         <tr>
-                            <td>Tặng kèm sản phẩm</td>
-                            <td>Một sản phẩm mini</td>
-                            <td>Mua từ 3 sản phẩm trở lên</td>
-                            <td>Chương trình giới hạn</td>
+                            <td>Bộ lọc không khí kháng khuẩn</td>
+                            <td>Lọc bụi mịn, vi khuẩn, nấm mốc</td>
+                            <td>Rất cần thiết, đặc biệt cho gia đình có trẻ nhỏ</td>
                         </tr>
                         <tr>
-                            <td>Voucher lần sau</td>
-                            <td>Voucher 200.000 VNĐ</td>
-                            <td>Đơn hàng từ 1.000.000VNĐ</td>
-                            <td>Áp dụng trong 30 ngày</td>
+                            <td>Chế độ làm lạnh nhanh</td>
+                            <td>Đạt nhiệt độ mong muốn nhanh chóng</td>
+                            <td>Tiện ích</td>
+                        </tr>
+                        <tr>
+                            <td>Kết nối Wi-Fi/Điều khiển từ xa</td>
+                            <td>Điều khiển qua smartphone từ xa</td>
+                            <td>Tiện ích cao</td>
+                        </tr>
+                        <tr>
+                            <td>Cảm biến hiện diện</td>
+                            <td>Tự động điều chỉnh nhiệt độ khi có người</td>
+                            <td>Tiết kiệm điện</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-        
+        </div>
+
+        <div class="advice-section" id="phan-5">
+            <h2>5. Hướng dẫn lắp đặt và bảo trì</h2>
+            <p>Lắp đặt và bảo trì đúng cách sẽ giúp điều hòa hoạt động hiệu quả và kéo dài tuổi thọ.</p>
+            
+            <h3>Lắp đặt:</h3>
+            <ul>
+                <li>Vị trí dàn nóng: Nên đặt ở nơi thoáng khí, tránh ánh nắng trực tiếp</li>
+                <li>Vị trí dàn lạnh: Cách trần 10-15cm, cách cửa ra vào để không khí lưu thông tốt</li>
+                <li>Ống đồng: Nên sử dụng ống đồng chất lượng cao và có độ dài phù hợp</li>
+                <li>Đường điện: Cần lắp đặt dây điện riêng cho điều hòa với CB phù hợp</li>
+            </ul>
+            
+            <h3>Bảo trì:</h3>
+            <ul>
+                <li>Vệ sinh màng lọc 2-4 tuần/lần</li>
+                <li>Vệ sinh dàn tản nhiệt 6 tháng/lần</li>
+                <li>Kiểm tra gas 1 năm/lần</li>
+                <li>Kiểm tra đường điện, rò rỉ nước 6 tháng/lần</li>
+            </ul>
+            
             <div class="tip-box">
-                <h3>Lưu ý quan trọng:</h3>
-                <ul>
-                    <li>Chỉ áp dụng cho sản phẩm nguyên giá, không áp dụng với sản phẩm đang giảm giá.</li>
-                    <li>Chương trình có thể kết thúc sớm nếu hết quà tặng.</li>
-                    <li>Không áp dụng đồng thời với các chương trình khuyến mãi khác.</li>
-                </ul>
                 <h3>Dịch vụ tại CleanAir:</h3>
                 <p>CleanAir cung cấp dịch vụ lắp đặt và bảo trì chuyên nghiệp với đội ngũ kỹ thuật viên có trình độ cao. Gọi <strong>1900 1234</strong> để được hỗ trợ.</p>
             </div>
         </div>
-        
-        
     </main>
 
     <footer>
@@ -508,9 +502,9 @@
             <div>
                 <ul>
                     <span>Dịch vụ khách hàng</span>
-                    <li><a href="chinhsach.html">Chính sách bán - giao hàng</a></li>
+                    <li><a href="#">Liên hệ chúng tôi</a></li>
                     <li><a href="sitemap.html">Site Map</a></li>
-                    <li><a href="khuyenmai.html">Khuyến mãi</a></li>
+                    <li><a href="#">Khuyến mãi</a></li>
                 </ul>
             </div>
             <div>

@@ -1,26 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng ký tài khoản - CleanAir mang lại "không khí trong lành" cho gia đình Việt</title>
-    <link rel="shortcut icon" href="../img/iconMaylanh.ico" type="image/x-icon">
+    <title>Dổi mật khẩu</title>
+    <link rel="stylesheet" href="../css/Doimatkhau.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/dangky.css">
+    <link rel="stylesheet" href="../css/chitietsanpham.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/topnav.css">
-    <link rel="stylesheet" href="../css/darkmode.css">
     <script src="../js/jquery-3.6.0.min.js"></script>
-    <script src="../js/dangky.js"></script>
+    <script type="module" src="../js/trangchu.js"></script>
     <script src="../js/taikhoan.js"></script>
     <script src="../js/responsive.js"></script>
-    <script src="../js/darkmode.js"></script>
-</head>
 
+</head>
 <body>
+
     <header>
         <a href="trangchu.html" class="logo reloadTrang">
             <img src="../img/logoMaylanh.png" width="30" height="30" alt="logo Máy lạnh">
@@ -64,85 +61,26 @@
             <i class="fa fa-bars"></i>
         </a>
     </nav>
-    <main>
-        <div class="container">
-            <div class="register-form">
-                <h2>Đăng Ký Tài Khoản</h2>
-                <form action="">
-                    <div class="row">
-                        <label for="txtTenDangnhap">Tên đăng nhập:</label>
-                        <input type="text" id="txtTenDangnhap" placeholder="Nhập vào tên đăng nhập" required>
-                        <span>*</span>
-                        <div>
-                            <span id="messTenDangnhap"></span>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <label for="txtMatkhau">Mật khẩu:</label>
-                        <input type="password" id="txtMatkhau" placeholder="Nhập vào mật khẩu" required>
-                        <span>*</span>
-                        <div>
-                            <span id="messMatkhau"></span>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <label for="txtNLMK">Nhập lại mật khẩu:</label>
-                        <input type="password" id="txtNLMK" placeholder="Nhập vào xác nhận mật khẩu" required>
-                        <span>*</span>
-                        <div>
-                            <span id="messNLMK"></span>
-                        </div>
-                    </div>
-                    <h4>THÔNG TIN CÁ NHÂN</h4>
-                    <div class="row">
-                        <label for="txtHoten">Họ và tên:</label>
-                        <input type="text" id="txtHoten" placeholder="Nhập vào họ tên" required>
-                        <span>*</span>
-                        <div>
-                            <span id="messHoten"></span>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <label for="ngaysinh">Ngày sinh:</label>
-                        <input type="date" id="ngaysinh">
-                        <div>
-                            <span id="messNgaysinh"></span>
-                        </div>
-                    </div>
-                    <div class="row" id="gioitinh">
-                        <label for="">Giới tính:</label>
-                        <input type="radio" id="nam" name="gioitinh" checked>
-                        <label for="nam">Nam</label>
-                        <input type="radio" id="nu" name="gioitinh">
-                        <label for="nu">Nữ</label>
-                    </div>
-                    <div class="row">
-                        <label for="txtDiachi">Địa chỉ:</label>
-                        <input type="text" id="txtDiachi" placeholder="Nhập vào địa chỉ">
-                    </div>
-                    <div class="row">
-                        <label for="txtDT">Điện thoại:</label>
-                        <input type="text" id="txtDT" placeholder="Nhập vào số điện thoại (10 số)" required>
-                        <span>*</span>
-                        <div>
-                            <span id="messDT"></span>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <label for="txtEmail">Email:</label>
-                        <input type="email" id="txtEmail" placeholder="Email có dạng ten@tencongty.com">
-                        <div>
-                            <span id="messEmail"></span>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <button type="submit" id="dangky">Đăng ký</button>
-                        <button type="reset" id="huy">Hủy</button>
-                    </div>
-                </form>
-            </div>
+
+    <div class="container">
+        <h2>Đổi Mật Khẩu</h2>
+        <div class="input-group">
+            <label for="oldPassword">Mật khẩu cũ</label>
+            <input type="password" id="oldPassword">
         </div>
-    </main>
+        <div class="input-group">
+            <label for="newPassword">Mật khẩu mới</label>
+            <input type="password" id="newPassword">
+        </div>
+        <div class="input-group">
+            <label for="confirmPassword">Nhập lại mật khẩu mới</label>
+            <input type="password" id="confirmPassword">
+        </div>
+        <p class="error" id="errorMessage"></p>
+        <button onclick="changePassword()">Xác nhận</button>
+    </div>
+
+
     <footer>
         <div>
             <div>
